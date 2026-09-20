@@ -1,0 +1,19 @@
+{
+  "goal": "extension",
+  "required_roots": 220,
+  "covered_roots": 0,
+  "nodes": 490,
+  "covered_leaves": 0,
+  "open_leaves": 460,
+  "refuted": 0,
+  "worker_seconds": 354.67740869522095,
+  "verdict": "INCOMPLETE",
+  "settings": {
+    "wall_budget_seconds": 90,
+    "workers": 4,
+    "slice_seconds": 15,
+    "smt_seconds": 3,
+    "rounds_per_slice": 20,
+    "batch": 8
+  }
+}

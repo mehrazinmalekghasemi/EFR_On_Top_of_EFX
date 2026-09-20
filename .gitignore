@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+checkpoint/
+payload/
+restored/
+collected/
+run/
+week-run/
+pilot/
+campaign-summary.json
+campaign-summary.md
+.DS_Store

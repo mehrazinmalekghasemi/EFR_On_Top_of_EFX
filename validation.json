@@ -1,0 +1,12 @@
+{
+  "tests_passed": 19,
+  "test_command": "python3 -m unittest -v test_engine test_ci",
+  "workflow_validation": "YAML structure and all embedded bash scripts parsed successfully",
+  "local_integration": "Exact search, independent verification, archive creation, restore and continued search completed",
+  "resume_before_witnesses": 120,
+  "resume_after_witnesses": 144,
+  "all_original_witnesses_preserved": true,
+  "missing_shard_negative_control": "Summary refused to declare a theorem and reported missing shards",
+  "github_execution_performed": false,
+  "whole_domain_proof_completed": false
+}

@@ -1,0 +1,183 @@
+name: EFR parallel search
+run-name: EFR ${{ inputs.mode }} / ${{ inputs.goal }} / ${{ inputs.shards }} shards
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: Search and checkpoint, or independently verify an existing run
+        type: choice
+        options: [search, verify]
+        default: search
+      goal:
+        description: Mathematical goal (keep unchanged when resuming)
+        type: choice
+        options: [extension, efr, efx9]
+        default: extension
+      shards:
+        description: Parallel jobs (keep unchanged when resuming)
+        type: choice
+        options: ['1', '4', '10', '20']
+        default: '4'
+      minutes:
+        description: Minutes per shard, from 1 to 270 (15 for first test; 270 for long runs)
+        type: number
+        default: 15
+      resume_run:
+        description: Previous completed workflow run ID; leave empty ONLY for a new search
+        type: string
+        default: ''
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: efr-search-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  PYTHONUNBUFFERED: '1'
+  OMP_NUM_THREADS: '1'
+  OPENBLAS_NUM_THREADS: '1'
+  MKL_NUM_THREADS: '1'
+  NUMBA_NUM_THREADS: '1'
+
+jobs:
+  prepare:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    outputs:
+      matrix: ${{ steps.plan.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Validate run settings
+        id: plan
+        env:
+          MODE: ${{ inputs.mode }}
+          GOAL: ${{ inputs.goal }}
+          SHARDS: ${{ inputs.shards }}
+          MINUTES: ${{ inputs.minutes }}
+          RESUME_RUN: ${{ inputs.resume_run }}
+        run: python ci.py plan
+      - name: Install and run correctness tests
+        run: |
+          python -m pip install -r requirements.txt
+          python -m unittest -v test_engine test_ci
+      - name: Check that the previous run has finished
+        if: inputs.resume_run != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RESUME_RUN: ${{ inputs.resume_run }}
+        run: |
+          status="$(gh run view "$RESUME_RUN" --json status --jq .status)"
+          if [ "$status" != completed ]; then
+            echo 'Wait until the previous run has finished before resuming.' >&2
+            exit 1
+          fi
+
+  search:
+    needs: prepare
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix: ${{ fromJSON(needs.prepare.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Download this shard's previous checkpoint
+        if: inputs.resume_run != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RESUME_RUN: ${{ inputs.resume_run }}
+          ARTIFACT_NAME: efr-${{ inputs.goal }}-n${{ inputs.shards }}-s${{ matrix.shard }}
+        run: gh run download "$RESUME_RUN" --name "$ARTIFACT_NAME" --dir restored
+      - name: Run or resume the exact search
+        env:
+          MODE: ${{ inputs.mode }}
+          GOAL: ${{ inputs.goal }}
+          SHARDS: ${{ inputs.shards }}
+          SHARD: ${{ matrix.shard }}
+          MINUTES: ${{ inputs.minutes }}
+          RESUME_RUN: ${{ inputs.resume_run }}
+        run: |
+          workers=$(python -c 'import os; print(max(1, min(3, (os.cpu_count() or 2)-1)))')
+          resume_args=()
+          if [ -n "$RESUME_RUN" ]; then
+            resume_args=(--resume restored/checkpoint.tar.gz)
+          fi
+          python ci.py shard --mode "$MODE" --goal "$GOAL" \
+            --shards "$SHARDS" --shard "$SHARD" --minutes "$MINUTES" \
+            --workers "$workers" "${resume_args[@]}"
+      - name: Save checkpoint and shard report
+        if: always() && hashFiles('payload/checkpoint.tar.gz') != ''
+        uses: actions/upload-artifact@v7
+        with:
+          name: efr-${{ inputs.goal }}-n${{ inputs.shards }}-s${{ matrix.shard }}
+          path: payload/
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 14
+          overwrite: true
+
+      - name: Save lightweight progress report
+        if: always() && hashFiles('payload/result.json') != ''
+        uses: actions/upload-artifact@v7
+        with:
+          name: report-efr-${{ inputs.goal }}-n${{ inputs.shards }}-s${{ matrix.shard }}
+          path: payload/result.json
+          if-no-files-found: error
+          retention-days: 14
+          overwrite: true
+
+  summary:
+    needs: [prepare, search]
+    if: always() && needs.prepare.result == 'success'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Download this run's lightweight shard reports
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RUN_ID: ${{ github.run_id }}
+          ARTIFACT_PATTERN: report-efr-${{ inputs.goal }}-n${{ inputs.shards }}-s*
+        run: gh run download "$RUN_ID" --pattern "$ARTIFACT_PATTERN" --dir collected
+      - name: Write overall progress and resume instructions
+        env:
+          GOAL: ${{ inputs.goal }}
+          SHARDS: ${{ inputs.shards }}
+        run: python ci.py collect collected --goal "$GOAL" --shards "$SHARDS"
+      - name: Upload overall report
+        if: always() && hashFiles('campaign-summary.json') != ''
+        uses: actions/upload-artifact@v7
+        with:
+          name: campaign-report
+          path: |
+            campaign-summary.json
+            campaign-summary.md
+          retention-days: 14
+          overwrite: true

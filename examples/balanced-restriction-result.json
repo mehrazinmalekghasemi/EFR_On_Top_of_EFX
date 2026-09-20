@@ -1,0 +1,219 @@
+{
+  "status": "ABSENT",
+  "goal": "extension",
+  "restrictions": {
+    "predecessor_pattern": [
+      2,
+      2,
+      2,
+      3
+    ],
+    "max_recipient_size": 10
+  },
+  "witnesses": [],
+  "profiles": [
+    {
+      "deleted": 1,
+      "efx_count": 0,
+      "extension_count": 0,
+      "recipient_size_counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "partitions_scanned": 1260,
+      "complete": true
+    },
+    {
+      "deleted": 2,
+      "efx_count": 0,
+      "extension_count": 0,
+      "recipient_size_counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "partitions_scanned": 1260,
+      "complete": true
+    },
+    {
+      "deleted": 3,
+      "efx_count": 0,
+      "extension_count": 0,
+      "recipient_size_counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "partitions_scanned": 1260,
+      "complete": true
+    },
+    {
+      "deleted": 4,
+      "efx_count": 0,
+      "extension_count": 0,
+      "recipient_size_counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "partitions_scanned": 1260,
+      "complete": true
+    },
+    {
+      "deleted": 5,
+      "efx_count": 0,
+      "extension_count": 0,
+      "recipient_size_counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "partitions_scanned": 1260,
+      "complete": true
+    },
+    {
+      "deleted": 6,
+      "efx_count": 0,
+      "extension_count": 0,
+      "recipient_size_counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "partitions_scanned": 1260,
+      "complete": true
+    },
+    {
+      "deleted": 7,
+      "efx_count": 0,
+      "extension_count": 0,
+      "recipient_size_counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "partitions_scanned": 1260,
+      "complete": true
+    },
+    {
+      "deleted": 8,
+      "efx_count": 0,
+      "extension_count": 0,
+      "recipient_size_counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "partitions_scanned": 1260,
+      "complete": true
+    },
+    {
+      "deleted": 9,
+      "efx_count": 0,
+      "extension_count": 0,
+      "recipient_size_counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "partitions_scanned": 1260,
+      "complete": true
+    },
+    {
+      "deleted": 0,
+      "efx_count": 30240,
+      "extension_count": 0,
+      "recipient_size_counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "partitions_scanned": 1260,
+      "complete": true
+    }
+  ],
+  "complete": true,
+  "arithmetic": "int64",
+  "seconds": 1.829894369000158
+}
