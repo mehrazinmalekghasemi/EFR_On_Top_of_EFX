@@ -1,0 +1,42 @@
+name: Coordinated EFX rebundling experiment
+on:
+  push:
+    branches: [improve-search-and-capacity-theory]
+    paths:
+      - rebundle.py
+      - rebundle_experiment.py
+      - test_rebundle.py
+      - .github/workflows/rebundle-experiment.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  rebundle:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    env:
+      PYTHONUNBUFFERED: '1'
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      NUMBA_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: python -m pip install -r requirements.txt
+      - name: Correctness tests including minimal repair distance
+        run: python -m unittest -v test_engine test_ci test_improvements test_exchange test_rebundle
+      - name: Find nearest extendable EFX predecessors
+        run: python rebundle_experiment.py --stress 100 --out results/rebundle.json
+      - name: Preserve exact witnesses and lower-radius scan counts
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: coordinated-rebundling
+          path: results/
+          retention-days: 14
+          if-no-files-found: warn
