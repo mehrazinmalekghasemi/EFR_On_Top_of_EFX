@@ -176,9 +176,9 @@ A witness for `extension` encodes BOTH the predecessor's EFX inequalities and th
 - UNKNOWN: retain an open region. No coverage conclusion.
 - Exhaustive oracle failure: retain the exact valuation and distinguish the failed theorem from the direct-EFR diagnostic.
 
-The solver is incremental within a task. It never rebuilds all prior constraints between individual witness batches. Every batch is checkpointed. When a slice stalls, the coordinator may pin the next favorite of one agent and enqueue **all** possible remaining choices. Non-strict order constraints ensure the children cover the parent, including ties. Child tasks inherit the parent's witnesses and run independently. `--no-split` instead keeps refining a root's finite witness menu; the unlimited idealized CEGAR procedure has only finitely many possible witnesses, but that finite bound is too large to imply practicality.
+The solver is incremental within a task. It never rebuilds all prior constraints between individual witness batches. Every batch is checkpointed. After the configured number of visits (default two), the coordinator may pin the next favorite of one agent and enqueue **all** possible remaining choices. Non-strict order constraints ensure the children cover the parent, including ties. Child tasks inherit the parent's witnesses and run independently. `--no-split` instead keeps refining a root's finite witness menu; the unlimited idealized CEGAR procedure has only finitely many possible witnesses, but that finite bound is too large to imply practicality.
 
-Default budgets are 60 seconds per region task, 10 seconds per SMT call, 64 refinement rounds, and 8 point witnesses per round. They are configurable heuristics, not proven optimal values. Full rankings still may be hard: at maximum rank depth an open node remains open. Splitting is sound and creates parallel work, but is not guaranteed to reduce total CPU time.
+Initial budgets are 60 seconds per region task and 10 seconds per SMT call; repeat visits double both budgets up to 4x. Splitting starts after two visits by default. There are 64 refinement rounds and 8 point witnesses per round. They are configurable heuristics, not proven optimal values. Full rankings still may be hard: at maximum rank depth an open node is requeued with bounded larger budgets. Splitting is sound and creates parallel work, but is not guaranteed to reduce total CPU time.
 
 `verify.py` imports neither the search code nor the point oracle. It:
 
@@ -276,3 +276,5 @@ The supplied PDF concerns monotone, non-additive valuations and defines EFR via 
 - rejection of a falsely marked covered region and a malformed/missing child cover.
 
 Files: `oracle.py`, `search.py`, `verify.py`, `benchmark.py`, `test_engine.py`, `requirements.txt`, `run_week.sh`, example matrices/results, and measured reports. No week-long campaign has been run as part of this delivery.
+
+See `EXTENSION_THEORY.md` for exact fixed-predecessor diagnostics, a stronger least-good counterexample, and the proved whole-bundle repair theorem.

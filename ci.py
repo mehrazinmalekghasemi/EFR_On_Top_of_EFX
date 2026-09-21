@@ -101,6 +101,11 @@ def shard_progress(checkpoint,goal,shards,shard):
     closed=sum(covered(r,set()) for r in owned)
     return {'owned_roots':len(owned),'search_covered_roots':closed,'nodes':len(nodes),
             'open_nodes':sum(n.get('status') in ('OPEN','ERROR') for n in nodes.values()),
+            'covered_leaves':sum(n.get('status')=='COVERED' for n in nodes.values()),
+            'witnesses_added':sum(n.get('witnesses_added',0) for n in nodes.values()),
+            'unknown_visits':sum(n.get('unknown_visits',0) for n in nodes.values()),
+            'solver_seconds':sum(n.get('solver_seconds',0) for n in nodes.values()),
+            'oracle_seconds':sum(n.get('oracle_seconds',0) for n in nodes.values()),
             'errors':sum(n.get('status')=='ERROR' for n in nodes.values()),
             'refuted':sum(n.get('status')=='REFUTED' for n in nodes.values())}
 
@@ -110,6 +115,7 @@ def run_shard(a):
     if a.goal not in ('extension','efr','efx9') or a.mode not in ('search','verify'):
         raise ValueError('Invalid goal or mode')
     if a.mode=='verify' and not a.resume:raise ValueError('Verify mode requires a previous run checkpoint')
+    if not 1<=a.split_after<=10 or not 1<=a.smt_seconds<=120:raise ValueError('Invalid search tuning')
     if not 1<=a.workers<=4:raise ValueError('Use 1 to 4 workers per standard runner')
     checkpoint=Path(a.checkpoint).resolve(); payload=Path(a.payload).resolve()
     expected=identity(a.goal,a.shards,a.shard)
@@ -123,12 +129,13 @@ def run_shard(a):
     for p in checkpoint.glob('verification-*.json'):p.unlink()
     started=time.time()
     report={**expected,'run_id':os.environ.get('GITHUB_RUN_ID','local'),'mode':a.mode,
-            'restored':bool(a.resume),'minutes':a.minutes,'workers':a.workers,'status':'ERROR'}
+            'split_after':a.split_after,'smt_seconds':a.smt_seconds,'restored':bool(a.resume),'minutes':a.minutes,'workers':a.workers,'status':'ERROR'}
     exit_code=0
     try:
         if a.mode=='search':
             cmd=[sys.executable,'search.py','--goal',a.goal,'--shards',str(a.shards),'--shard',str(a.shard),
-                 '--workers',str(a.workers),'--hours',str(a.minutes/60),'--out',str(checkpoint)]
+                 '--workers',str(a.workers),'--hours',str(a.minutes/60),'--out',str(checkpoint),
+                 '--split-after',str(a.split_after),'--smt-seconds',str(a.smt_seconds)]
             report['search_exit']=supervised(cmd,a.minutes*60+45)
             if report['search_exit'] not in (0,124):raise RuntimeError('Search process failed; inspect job logs')
         cmd=[sys.executable,'verify.py',str(checkpoint),'--workers',str(a.workers),
@@ -200,10 +207,10 @@ def collect(a):
     save('campaign-summary.json',result)
     lines=['# EFR search results','',f"**{result['verdict']}**",'',
            f"Received {result['received_shards']}/{a.shards} shard checkpoints.", '',
-           '| Shard | Status | Search-covered roots | Required roots |', '|---:|---|---:|---:|']
+           '| Shard | Status | Search-covered roots | Required roots | Covered leaves | New witnesses | Unknown visits |', '|---:|---|---:|---:|---:|---:|---:|']
     for r in result['reports']:
         p=r.get('progress',{})
-        lines.append(f"| {r['shard']} | {r['status']} | {p.get('search_covered_roots','?')} | {p.get('owned_roots','?')} |")
+        lines.append(f"| {r['shard']} | {r['status']} | {p.get('search_covered_roots','?')} | {p.get('owned_roots','?')} | {p.get('covered_leaves',0)} | {p.get('witnesses_added',0)} | {p.get('unknown_visits',0)} |")
     if result['missing_shards']:lines += ['',f"Missing shards: {result['missing_shards']}. Inspect failed jobs before resuming."]
     else:lines += ['',f"To continue: run this workflow again with resume_run = {result['run_id']}, goal = {a.goal}, shards = {a.shards}."]
     lines += ['','Download checkpoint artifacts before they expire. A green workflow only means execution completed; it does not mean a theorem was proved.']
@@ -218,6 +225,7 @@ if __name__=='__main__':
     subs.add_parser('plan')
     s=subs.add_parser('shard');s.add_argument('--mode',default='search');s.add_argument('--goal',default='extension')
     s.add_argument('--shards',type=int,required=True);s.add_argument('--shard',type=int,required=True)
+    s.add_argument('--split-after',type=int,default=2);s.add_argument('--smt-seconds',type=float,default=10)
     s.add_argument('--minutes',type=float,default=15);s.add_argument('--workers',type=int,default=2)
     s.add_argument('--resume',default='');s.add_argument('--checkpoint',default='checkpoint');s.add_argument('--payload',default='payload')
     c=subs.add_parser('collect');c.add_argument('directory');c.add_argument('--goal',required=True);c.add_argument('--shards',type=int,required=True)

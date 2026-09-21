@@ -91,9 +91,19 @@ def build_solver(v,node,goal,seed):
         s.add(z3.Not(z3.And(*witness_constraints(v,w,goal))))
     return s
 
+def visit_budgets(node, opts):
+    # Bounded escalation; persisted visits make resumption continue the policy.
+    factor=2**min(node.get('visits',0),2)
+    return opts['slice_seconds']*factor, opts['smt_seconds']*factor
+
+def should_split(node, opts):
+    return not opts.get('no_split',False) and node.get('visits',0)>=opts.get('split_after',2)
+
 def work_node(path,config,deadline,opts):
     node=json.loads(Path(path).read_text()); goal=config['goal']; m=config['goods']
-    start=time.time(); local_end=min(deadline,start+opts['slice_seconds'])
+    start=time.time(); slice_budget,smt_budget=visit_budgets(node,opts)
+    local_end=min(deadline,start+slice_budget)
+    node['visits']=node.get('visits',0)+1
     node['status']='OPEN'; node.pop('reason',None)
     v=variables(m); s=build_solver(v,node,goal,opts['seed'])
     seen={witness_key(w,goal) for w in node['witnesses']}
@@ -105,13 +115,15 @@ def work_node(path,config,deadline,opts):
         node['solver_seconds']=node.get('solver_seconds',0)+solver_seconds
         node['oracle_seconds']=node.get('oracle_seconds',0)+oracle_seconds
         node['last_added']=added
+        if reason.startswith('solver unknown:'):
+            node['unknown_visits']=node.get('unknown_visits',0)+1
         atomic(path,node)
         return {'id':node['id'],'status':status,'menu':len(node['witnesses']),
                 'seconds':time.time()-start,'reason':reason}
     for _ in range(opts['rounds']):
         remaining=local_end-time.time()
         if remaining<=0: return finish('OPEN','time slice ended')
-        s.set(timeout=max(1,int(1000*min(opts['smt_seconds'],remaining))))
+        s.set(timeout=max(1,int(1000*min(smt_budget,remaining))))
         t=time.time(); result=s.check(); solver_seconds+=time.time()-t; calls+=1
         if result==z3.unsat:
             # Export a replayable UNSAT instance, NOT a proof object.
@@ -149,6 +161,7 @@ def work_node(path,config,deadline,opts):
             seen.add(key); node['witnesses'].append(w)
             s.add(z3.Not(z3.And(*witness_constraints(v,w,goal))))
             fresh+=1; added+=1
+            node['witnesses_added']=node.get('witnesses_added',0)+1
         if not fresh:
             raise AssertionError('SAT model had only already-excluded witnesses')
         atomic(path,node)  # every batch survives interruption
@@ -241,7 +254,7 @@ def run(args):
                 print(json.dumps(result),flush=True)
                 node=json.loads(p.read_text())
                 if node['status']=='OPEN' and time.time()<deadline:
-                    children=None if args.no_split else split_node(node,config['goods'])
+                    children=split_node(node,config['goods']) if should_split(node,opts) else None
                     if children is not None:
                         i,kids=children
                         for kid in kids:
@@ -251,7 +264,8 @@ def run(args):
                             atomic(cp,kid); pending.append(cp)
                         node['status']='SPLIT'; node['split_agent']=i+1
                         node['children']=[k['id'] for k in kids]; atomic(p,node)
-                    elif args.no_split:
+                    else:
+                        # Also retry fully ranked regions; never silently abandon them.
                         pending.append(p)
                 if node['status']=='REFUTED' and args.stop_on_refutation:
                     pending.clear(); deadline=time.time()
@@ -278,10 +292,11 @@ if __name__=='__main__':
     p.add_argument('--batch',type=int,default=8)
     p.add_argument('--seed',type=int,default=42)
     p.add_argument('--no-split',action='store_true')
+    p.add_argument('--split-after',type=int,default=2,help='Visits before splitting; each retry doubles budgets up to 4x')
     p.add_argument('--shards',type=int,default=1)
     p.add_argument('--shard',type=int,default=0)
     p.add_argument('--stop-on-refutation',action='store_true')
     a=p.parse_args()
-    if min(a.workers,a.rounds,a.batch,a.shards)<=0 or not 0<=a.shard<a.shards or min(a.hours,a.slice_seconds,a.smt_seconds)<=0:
+    if min(a.workers,a.rounds,a.batch,a.shards,a.split_after)<=0 or not 0<=a.shard<a.shards or min(a.hours,a.slice_seconds,a.smt_seconds)<=0:
         p.error('Budgets must be positive and 0 <= shard < shards')
     run(a)

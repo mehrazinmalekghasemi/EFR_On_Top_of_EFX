@@ -142,3 +142,34 @@ python3 oracle.py examples/sample.json --out allocation.json
 Read **THEORY.md** for the capacity lemma, exact matching acceleration, normalization, counterexamples to restricted constructions, benchmark interpretation, and the search/verifier design.
 
 Local validation covers the 19 tests, workflow YAML and shell syntax, and a real short search → archive → restore → continued-search cycle. This package has not been deployed or run on your GitHub account from this chat.
+
+## Search diagnostics and capacity repair update
+
+The workflow now exposes `split_after` (default 2) and `smt_seconds` (default 10).
+A region is retried before splitting, with per-visit and per-query budgets doubled
+on each retry up to 4x. `split_after=1` reproduces the earlier immediate-splitting
+policy for fresh regions. Fully ranked unresolved nodes are now requeued instead
+of disappearing from the active queue. Timeouts still never count as coverage.
+
+Reports now include covered leaves, genuinely added witnesses (inherited copies
+are excluded), solver-unknown visits, and solver versus oracle seconds. These
+counters measure work, not the fraction of the continuous domain proved.
+
+**Start a fresh campaign after this code update (leave `resume_run` empty).**
+The code fingerprint intentionally rejects old checkpoints. Keep the old branch
+or commit if you want to continue the previous campaign; do not bypass the check.
+This scheduling change is a configurable heuristic, not a demonstrated proof
+speedup. Compare equal-budget runs before choosing a large campaign.
+
+`EXTENSION_THEORY.md` contains a stronger fixed-predecessor counterexample and a
+proved sufficient repair theorem for a universally least-valued deleted good.
+`capacity.py` takes exact valuations, predecessor bitmasks, and the deleted-good
+index, reports insertion capacities, and tries whole-bundle envy-cycle rotations:
+
+```bash
+python capacity.py examples/least-good-fixed-predecessor.json
+python -m unittest -v test_engine test_ci test_improvements
+```
+
+Failure of this repair only concerns that sequence of bundle permutations. It
+does not mean that all predecessors fail, or that EFR does not exist.
