@@ -124,3 +124,32 @@ singleton is worth at least 14. The generator seed is 2026.
 
 All results concern this finite test set. In particular the stress family is
 structured and does not cover all valuation profiles or all starting allocations.
+
+## Completed GitHub experiment
+
+[Run 35597667294](https://github.com/mehrazinmalekghasemi/EFR_On_Top_of_EFX/actions/runs/35597667294)
+succeeded at code commit `bab19dc089e77682d2d6185357ba9f52b7cae582`.
+All 33 tests passed. The run found valid extensions for all 113 starts, with no
+UNKNOWN or absence verdict. The exact minimum-distance counts were:
+
+| Minimum memberships changed | Saved traps (13) | New stress starts (100) | Total |
+|---|---:|---:|---:|
+| 0 | 0 | 20 | 20 |
+| 1 | 1 | 0 | 1 |
+| 2 | 0 | 35 | 35 |
+| 3 | 5 | 15 | 20 |
+| 4 | 3 | 28 | 31 |
+| 5 | 4 | 2 | 6 |
+
+The four constructed traps each require five changes, consistent with Lemma 4.
+The nine earlier sampled traps require one, three, or four changes. Two new
+heterogeneous stress starts also require five. No universal upper bound follows
+from this structured finite test set.
+
+Every returned local witness was checked for EFX on the nine-good predecessor,
+EFR after insertion, and the stated movement count. GitHub's aggregate summary
+and all 113 per-case minimum distances matched the local seeded run. Saved
+summaries and detailed locally reproduced witnesses for the 13 original traps
+and two stress cases requiring five changes are in
+`experiment-results/run-35597667294/`. The full original GitHub report is the
+`coordinated-rebundling` artifact on the run page.
