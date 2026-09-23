@@ -1,0 +1,250 @@
+{
+  "profile": [
+    2,
+    2,
+    2,
+    3
+  ],
+  "status": "sat",
+  "values": [
+    [
+      "16",
+      "16",
+      "30",
+      "1",
+      "28",
+      "1",
+      "25",
+      "1",
+      "1",
+      "16"
+    ],
+    [
+      "8",
+      "1",
+      "8",
+      "8",
+      "12",
+      "5",
+      "9",
+      "1",
+      "1",
+      "8"
+    ],
+    [
+      "1",
+      "5",
+      "1",
+      "1",
+      "8",
+      "1",
+      "5",
+      "2",
+      "1",
+      "8"
+    ],
+    [
+      "13",
+      "1",
+      "1",
+      "19",
+      "1",
+      "21",
+      "8",
+      "7",
+      "8",
+      "15"
+    ]
+  ],
+  "initial": [
+    3,
+    12,
+    48,
+    448
+  ],
+  "omitted": 9,
+  "analysis": {
+    "graph": [
+      [],
+      [
+        2
+      ],
+      [],
+      []
+    ],
+    "sources": [
+      0,
+      1,
+      3
+    ],
+    "options": [
+      {
+        "source": 0,
+        "reachable_agents": [
+          0
+        ],
+        "candidates": [
+          {
+            "bundle": 514,
+            "champions": [
+              2
+            ],
+            "reachable": []
+          },
+          {
+            "bundle": 513,
+            "champions": [
+              3
+            ],
+            "reachable": []
+          }
+        ]
+      },
+      {
+        "source": 1,
+        "reachable_agents": [
+          1,
+          2
+        ],
+        "candidates": [
+          {
+            "bundle": 520,
+            "champions": [
+              3
+            ],
+            "reachable": []
+          },
+          {
+            "bundle": 516,
+            "champions": [
+              0
+            ],
+            "reachable": []
+          }
+        ]
+      },
+      {
+        "source": 3,
+        "reachable_agents": [
+          3
+        ],
+        "candidates": [
+          {
+            "bundle": 640,
+            "champions": [
+              2
+            ],
+            "reachable": []
+          },
+          {
+            "bundle": 576,
+            "champions": [
+              0,
+              1,
+              2
+            ],
+            "reachable": []
+          }
+        ]
+      }
+    ],
+    "moves": []
+  },
+  "integer_values": [
+    [
+      16,
+      16,
+      30,
+      1,
+      28,
+      1,
+      25,
+      1,
+      1,
+      16
+    ],
+    [
+      8,
+      1,
+      8,
+      8,
+      12,
+      5,
+      9,
+      1,
+      1,
+      8
+    ],
+    [
+      1,
+      5,
+      1,
+      1,
+      8,
+      1,
+      5,
+      2,
+      1,
+      8
+    ],
+    [
+      13,
+      1,
+      1,
+      19,
+      1,
+      21,
+      8,
+      7,
+      8,
+      15
+    ]
+  ],
+  "nearest_escape": {
+    "status": "FOUND",
+    "max_radius": 5,
+    "completed_radii": [
+      {
+        "radius": 0,
+        "partitions_checked": 1
+      }
+    ],
+    "partitions_checked": 25,
+    "seconds": 0.012768463000156771,
+    "minimum_radius": 1,
+    "witness": {
+      "predecessor": [
+        3,
+        12,
+        16,
+        480
+      ],
+      "deleted": 9,
+      "recipient": 1,
+      "allocation": [
+        3,
+        524,
+        16,
+        480
+      ]
+    },
+    "movement": {
+      "distance": 1,
+      "target_agent_by_initial_block": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "changed_goods": [
+        {
+          "good": 5,
+          "from_slot": 2,
+          "to_slot": 3
+        }
+      ],
+      "omitted_slot": 4
+    },
+    "minimum_certified": true
+  }
+}

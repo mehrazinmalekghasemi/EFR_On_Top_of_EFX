@@ -1,5 +1,11 @@
 # All-deletion counterexample search and a source-based repair lemma
 
+Update: [RESTORATION_LEMMAS.md](RESTORATION_LEMMAS.md) resolves the restoration
+step using the BCFF theorem with a fixed lexicographic potential, strengthens
+the unique-source result to arbitrary bundle sizes, and exhibits a verified
+multiple-source obstruction and an ordinary-transfer escape. The original
+exploratory results below are retained as a historical record.
+
 No counterexample to Mode C or unrestricted additive EFR existence was found.
 These are exploratory local results, not a universal certificate or a GitHub
 Actions run. Throughout, EFX means EFX0, including removal of zero-valued goods.
