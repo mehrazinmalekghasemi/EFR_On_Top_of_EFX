@@ -286,3 +286,11 @@ Berger, Cohen, Feldman, Fiat, *(Almost Full) EFX Exists for Four Agents (and
 Beyond)*, full version https://arxiv.org/abs/2102.10654, Theorem 5.1 and the
 nondegeneracy convention in Section 2. AAAI version:
 https://doi.org/10.1609/aaai.v36i5.20410, Theorem 4.1.
+
+## Follow-up: structural search reductions
+
+[STRUCTURAL_REDUCTIONS.md](STRUCTURAL_REDUCTIONS.md) strengthens the singleton-source
+argument, proves safe-pair and restricted-blocker lemmas, and reduces the extremal
+EFR obstruction catalog from 1344 to 156 structural templates. It includes a
+four-source blocked example and local timing evidence. The complete three-to-four
+day search condition remains unsupported; no multi-day run was launched.
