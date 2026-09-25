@@ -1,5 +1,10 @@
 # Rigorous reductions before an exhaustive EFR search
 
+Follow-up: [TWO_SOURCE_PROGRESS.md](TWO_SOURCE_PROGRESS.md) proves four-source
+progress, exhibits a nondegenerate obstruction to two-agent lexicographic repair,
+and records cross-solver exclusions leaving 103 of the 156 templates below.
+The tables in this note retain the earlier baseline for reproducibility.
+
 ## What is counted, and what is not
 
 These reductions concern a hypothetical extremal obstruction to **unrestricted
