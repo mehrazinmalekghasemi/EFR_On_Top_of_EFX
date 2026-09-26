@@ -41,7 +41,7 @@ def three_agent_completion(V,A):
     return None
 
 
-def replay():
+def replay(output_directory='run/verification'):
     import cvc5,z3
     from structural_efr_search import build
     from two_source_probe import compensation_cuts
@@ -52,7 +52,7 @@ def replay():
         s,v=build(x['case']);compensation_cuts(s,v,x['case']['initial'])
         source_files.append((x['case']['id']+'-compensation',list(s.assertions())))
     for f in directory.glob('*-pareto.smt2'):source_files.append((f.stem,list(z3.parse_smt2_file(str(f)))))
-    portable=directory/'portable';portable.mkdir(exist_ok=True)
+    output=Path(output_directory);portable=output/'portable';portable.mkdir(parents=True,exist_ok=True)
     for name,assertions in source_files:
         # Normalize unary (+ x), which cvc5's parser rejects, to x.
         q=z3.Solver();q.add(*[z3.simplify(x) for x in assertions]);source=q.to_smt2()
@@ -65,19 +65,20 @@ def replay():
             answer=c.invoke(s,sm).strip()
             if answer:replies.append(answer)
         version=s.getVersion();version=version.decode() if isinstance(version,bytes) else version
-        records.append({'file':str(f),'sha256':hashlib.sha256(source.encode()).hexdigest(),'replies':replies,'seconds':time.monotonic()-started,'solver':version,'check_proofs':True})
+        records.append({'file':str(Path('portable')/f.name),'sha256':hashlib.sha256(source.encode()).hexdigest(),'replies':replies,'seconds':time.monotonic()-started,'solver':version,'check_proofs':True})
         print(name,replies,flush=True)
-    (directory/'cvc5-replay.json').write_text(json.dumps(records,indent=2))
+    (output/'cvc5-replay.json').write_text(json.dumps(records,indent=2))
 
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--replay',action='store_true');a=p.parse_args()
-    if a.replay:replay()
+    p=argparse.ArgumentParser();p.add_argument('--replay',action='store_true')
+    p.add_argument('--out',default='run/verification');a=p.parse_args()
+    if a.replay:replay(a.out)
     else:
         from restoration_moves import lift_preserving_start
         from oracle import oracle,verify_witness
         from two_source_moves import compensated_path
-        x=json.loads(Path('experiment-results/two-source/1134_041-lex.json').read_text());V=x['integer_values'];A=x['case']['initial']
+        x=json.loads(Path('experiment-results/two-source/verified-obstruction.json').read_text());V=x['values'];A=x['initial']
         lifted=lift_preserving_start(V,A,9)
         result={'values':V,'initial':A,'omitted':9,'fixed_priority':[0,1,2,3],
                 'base_verification':literal_verification(V,A,9),'lift':lifted,
@@ -88,5 +89,6 @@ if __name__=='__main__':
                 'mode_c':oracle(lifted['values'],limit=1,deadline=time.time()+30)}
         assert result['mode_c']['status']=='FOUND'
         assert verify_witness(lifted['values'],result['mode_c']['witnesses'][0])
-        Path('experiment-results/two-source/verified-obstruction.json').write_text(json.dumps(result,indent=2))
+        output=Path(a.out);output.mkdir(parents=True,exist_ok=True)
+        (output/'verified-obstruction.json').write_text(json.dumps(result,indent=2))
         print(json.dumps({k:result[k] for k in ['base_verification','nondegenerate_verification','three_agent_completion']},indent=2))

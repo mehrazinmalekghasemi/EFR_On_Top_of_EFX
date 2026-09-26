@@ -1,5 +1,7 @@
 # Exact EFX9 → EFR10 search for four additive agents
 
+For the current research classification, see [RESEARCH_STATUS.md](RESEARCH_STATUS.md) and [CASE_ATLAS.md](CASE_ATLAS.md). This note documents the original oracle and full-domain search architecture.
+
 This package implements the proposed delete-a-good / find-EFX / compute-capacities / insert procedure, and a resumable symbolic search over the entire normalized valuation domain. It includes a fast exact point oracle, process parallelism, an independent region-cover verifier, benchmark results, and counterexamples to two overly strong variants of the approach.
 
 **A one-week run is supported. A completed whole-space proof within one week is not guaranteed.** No global existence result is claimed by this delivery. The supplied short region-search pilot did not close the domain. A timeout, an unfinished branch, or a failed restricted heuristic is never counted as a theorem.
@@ -237,7 +239,7 @@ Some previous H1–H5 printouts were statistical proxies rather than precise con
 
 ## What the measurements do and do not establish
 
-`measured-benchmark.json` records 100 integer random profiles and 100 near-identical profiles, with both first-witness and exhaustive-ten-deletion modes, on one worker. `pilot-90-seconds.json` records an actual four-process, 90-second symbolic run. That pilot built witness menus and split regions but closed **zero of 220 roots**. It is evidence that the solver, not point enumeration, dominates this prototype at the tested settings. It is neither a lower bound nor evidence that the unrestricted conjecture is false.
+`experiment-results/benchmarks/measured-benchmark.json` records 100 integer random profiles and 100 near-identical profiles, with both first-witness and exhaustive-ten-deletion modes, on one worker. `experiment-results/benchmarks/pilot-90-seconds.json` records an actual four-process, 90-second symbolic run. That pilot built witness menus and split regions but closed **zero of 220 roots**. It is evidence that the solver, not point enumeration, dominates this prototype at the tested settings. It is neither a lower bound nor evidence that the unrestricted conjecture is false.
 
 Rational solver models can have larger denominators than these integer benchmarks. Arbitrary-precision fallback and growth in SMT menus can make later stages much slower. Warm point-oracle throughput cannot be converted into a proof-completion estimate.
 

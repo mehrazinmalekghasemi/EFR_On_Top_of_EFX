@@ -1,1 +1,532 @@
-[{"file":"experiment-results/two-source/portable/1125_2c1-compensation.smt2","sha256":"aec965ad102f84c084d131c4d6f5d1276851de2db64a65d8bf78e12e2cddeba9","replies":["unsat"],"seconds":0.6018940540000131,"solver":"1.4.0-modified","check_proofs":true},{"file":"experiment-results/two-source/portable/1125_6c1-compensation.smt2","sha256":"ba75703d68c7029325319481a3e5a4f21c6f2a6e7e799cee34f866a7ebd94fb2","replies":["unsat"],"seconds":0.49519737299999633,"solver":"1.4.0-modified","check_proofs":true},{"file":"experiment-results/two-source/portable/1125_241-compensation.smt2","sha256":"f7c3e00e5663a52435e50e168d0abedb26fb198ff2220bdf158538028ee94ae0","replies":["unsat"],"seconds":0.4707162860000267,"solver":"1.4.0-modified","check_proofs":true},{"file":"experiment-results/two-source/portable/1125_641-compensation.smt2","sha256":"4f0cb1fb114e7e1ae6d36128366f17922715bde17449ae5ca165b2aecaa8b734","replies":["unsat"],"seconds":0.4284981849999667,"solver":"1.4.0-modified","check_proofs":true},{"file":"experiment-results/two-source/portable/1125_6c0-compensation.smt2","sha256":"c01eec096753557f7c62802605bd79e2c46795213f301b578991d3ed30f4c6bb","replies":["unsat"],"seconds":0.49678967100004456,"solver":"1.4.0-modified","check_proofs":true},{"file":"experiment-results/two-source/portable/1224_2c1-compensation.smt2","sha256":"7ecc0a2670cbd57ea21f425a05319c5bbfff549b169a2e837801d6e65ef3b6d9","replies":["unsat"],"seconds":0.14538331300002483,"solver":"1.4.0-modified","check_proofs":true},{"file":"experiment-results/two-source/portable/1224_6c1-compensation.smt2","sha256":"c6334683b350afb03c98e544f0effb64fa657f145742a5f2274c3536aae85c38","replies":["unsat"],"seconds":0.159896496999977,"solver":"1.4.0-modified","check_proofs":true},{"file":"experiment-results/two-source/portable/1224_241-compensation.smt2","sha256":"67bfaf3eea8b77917a3ced82c7652264e25b72d373b7e5b2d7344b96a43e6075","replies":["unsat"],"seconds":0.14888020200004348,"solver":"1.4.0-modified","check_proofs":true},{"file":"experiment-results/two-source/portable/1224_641-compensation.smt2","sha256":"1e0f8e1b4b18a3982605669e651a97451270afddb7c252f4e74754ccb3413eda","replies":["unsat"],"seconds":0.14231714599998213,"solver":"1.4.0-modified","check_proofs":true},{"file":"experiment-results/two-source/portable/1224_a58-compensation.smt2","sha256":"b4db86e46fafdf1b551b7111a66ed9b016b11be97c0b44aa0c883946f338b0a6","replies":["unsat"],"seconds":0.12394898700000567,"solver":"1.4.0-modified","check_proofs":true},{"file":"experiment-results/two-source/portable/1224_858-compensation.smt2","sha256":"0dfa90904a8fb3af45f4d26c634765c7f96d3417b2e0c5f15ffcc206fa91297a","replies":["unsat"],"seconds":0.14092902000004415,"solver":"1.4.0-modified","check_proofs":true},{"file":"experiment-results/two-source/portable/1224_a18-compensation.smt2","sha256":"7035773d93d463a6473625c680d1c1eb420e87ccc3f5926487e8206c1ec2078b","replies":["unsat"],"seconds":0.14493560899995828,"solver":"1.4.0-modified","check_proofs":true},{"file":"experiment-results/two-source/portable/1224_248-compensation.smt2","sha256":"94bb80106c2081f1ca38b66dad6bde4f340556d5875aba3ec2ef5a2d058300fa","replies":["unsat"],"seconds":0.15498047899995981,"solver":"1.4.0-modified","check_proofs":true},{"file":"experiment-results/two-source/portable/1224_648-compensation.smt2","sha256":"1b2713a160f8058f03f109fb403fcc7a8926ca0a77074382724de7bd285ab965","replies":["unsat"],"seconds":0.13588808999998037,"solver":"1.4.0-modified","check_proofs":true},{"file":"experiment-results/two-source/portable/1224_448-compensation.smt2","sha256":"a22a68878dbfc40515657ee66c30abecd86a0fe89c0b44744c882862eb9b3d3a","replies":["unsat"],"seconds":0.12491221200002656,"solver":"1.4.0-modified","check_proofs":true},{"file":"experiment-results/two-source/portable/1224_688-compensation.smt2","sha256":"4423756b11da2857e7c50b08eab0f367dccf569f368305c7f9fb3491f536a7c6","replies":["unsat"],"seconds":0.1325470190000715,"solver":"1.4.0-modified","check_proofs":true},{"file":"experiment-results/two-source/portable/1224_488-compensation.smt2","sha256":"f8e53f63b2ec9ea9a1f15fa66c6608e1a70bb994e67f4fcafe2715ddd6c3c639","replies":["unsat"],"seconds":0.14136454599997705,"solver":"1.4.0-modified","check_proofs":true},{"file":"experiment-results/two-source/portable/1224_a08-compensation.smt2","sha256":"c14c9ba27fe920603e08de0eec69c0469aede0d374b83be5ed4b0a034c55f5b6","replies":["unsat"],"seconds":0.13036188000000948,"solver":"1.4.0-modified","check_proofs":true},{"file":"experiment-results/two-source/portable/1233_21a-compensation.smt2","sha256":"d1d1a3919f60ad2dd49701c8b0fecaa7b995b0e7eb66eb37ab2024ce751a235e","replies":["unsat"],"seconds":0.0745575529999769,"solver":"1.4.0-modified","check_proofs":true},{"file":"experiment-results/two-source/portable/1233_a1a-compensation.smt2","sha256":"9a2bbcccc02df54f5cff8fcf111cc54721fd6f15657212d61279b7d129b37a1e","replies":["unsat"],"seconds":0.07094768899992232,"solver":"1.4.0-modified","check_proofs":true},{"file":"experiment-results/two-source/portable/1233_20a-compensation.smt2","sha256":"20ade9d8ef50aad95454d370a0868202f28ca7c79095c003cf31fdd3eb7c9a3e","replies":["unsat"],"seconds":0.06695879799997329,"solver":"1.4.0-modified","check_proofs":true},{"file":"experiment-results/two-source/portable/1233_a0a-compensation.smt2","sha256":"7e7ea34fe0471ff333848da837b5cdc423fe2ff2bca3c8013a26da28ef587592","replies":["unsat"],"seconds":0.06626921400004449,"solver":"1.4.0-modified","check_proofs":true},{"file":"experiment-results/two-source/portable/1233_a58-compensation.smt2","sha256":"6be798a35d8eadbff944b9afdf2dc933bccf5b602bc40fface316499e07eb540","replies":["unsat"],"seconds":0.06976775500004351,"solver":"1.4.0-modified","check_proofs":true},{"file":"experiment-results/two-source/portable/1233_858-compensation.smt2","sha256":"29990f456856a18dbd5574f06d45f364cb744741f8501f8ad6a43b2eab49941f","replies":["unsat"],"seconds":0.06383007599993107,"solver":"1.4.0-modified","check_proofs":true},{"file":"experiment-results/two-source/portable/1233_a18-compensation.smt2","sha256":"e6005d326d4e43528c679b69780229c255fd2550ca7c9b12207ac1d094eea171","replies":["unsat"],"seconds":0.06538349599998128,"solver":"1.4.0-modified","check_proofs":true},{"file":"experiment-results/two-source/portable/1233_348-compensation.smt2","sha256":"06d0f93a24ac1f58fe8007946991dcd2a096e4857d761ada787458c3b3b019e3","replies":["unsat"],"seconds":0.12330522500008101,"solver":"1.4.0-modified","check_proofs":true},{"file":"experiment-results/two-source/portable/1233_848-compensation.smt2","sha256":"74ecd2bdf31c41927000391f56c61eb1863cab61d467a96c19bc2940c99872ba","replies":["unsat"],"seconds":0.14857578299995566,"solver":"1.4.0-modified","check_proofs":true},{"file":"experiment-results/two-source/portable/1233_a50-compensation.smt2","sha256":"a0e7bdc2cc7fd6b5fcf7d9e167c35fe3d575ceadac0c877cc33b146b36a5c82f","replies":["unsat"],"seconds":0.06487238500005788,"solver":"1.4.0-modified","check_proofs":true},{"file":"experiment-results/two-source/portable/1233_850-compensation.smt2","sha256":"463246b36aaa968dd9280ff5032a8360bce66d719e57edbf6ca31d5814be8311","replies":["unsat"],"seconds":0.06811735500002669,"solver":"1.4.0-modified","check_proofs":true},{"file":"experiment-results/two-source/portable/2223_000-compensation.smt2","sha256":"805c3d77e0b4a6caa1dadfa69a429782cf19b946d6f1f715b50a13fb46e06dbb","replies":["unsat"],"seconds":0.11365972999999485,"solver":"1.4.0-modified","check_proofs":true},{"file":"experiment-results/two-source/portable/2223_001-compensation.smt2","sha256":"2ad5d060f9b3995890bc7dcd4beefbcfb43fa3e2c1b16405ce50c85832c52e6f","replies":["unsat"],"seconds":0.11901552299991636,"solver":"1.4.0-modified","check_proofs":true},{"file":"experiment-results/two-source/portable/2223_413-compensation.smt2","sha256":"2709d078f74548918e24e370fa97b747765f973109db2c83f0479e3dc67b3aea","replies":["unsat"],"seconds":0.0783562610000672,"solver":"1.4.0-modified","check_proofs":true},{"file":"experiment-results/two-source/portable/2223_c13-compensation.smt2","sha256":"dc0fd818d3c3bb4bae54d5e686fa4961a8c5f2393a88b12bf0d8069ad2464c2b","replies":["unsat"],"seconds":0.08625395199999275,"solver":"1.4.0-modified","check_proofs":true},{"file":"experiment-results/two-source/portable/2223_813-compensation.smt2","sha256":"f79571284be8e0fc02df83151c81e74f2deb68158b1cf0e5400ab22ed815c4e4","replies":["unsat"],"seconds":0.10980550499994024,"solver":"1.4.0-modified","check_proofs":true},{"file":"experiment-results/two-source/portable/2223_403-compensation.smt2","sha256":"81ddea2f4c7253b91c7974fd029f46def9048d6855672e77713e751a0935e646","replies":["unsat"],"seconds":0.10963095099998554,"solver":"1.4.0-modified","check_proofs":true},{"file":"experiment-results/two-source/portable/2223_c03-compensation.smt2","sha256":"d15bce0e7469a2121c7bde310ebdf9828e6169c504b12a6275ae624faa3c7df0","replies":["unsat"],"seconds":0.0932052629999589,"solver":"1.4.0-modified","check_proofs":true},{"file":"experiment-results/two-source/portable/2223_411-compensation.smt2","sha256":"3e4fcb9c329664bbdc875931e920d26304570fc100dc0b4a5bae8697a2db71a8","replies":["unsat"],"seconds":0.08888943299996299,"solver":"1.4.0-modified","check_proofs":true},{"file":"experiment-results/two-source/portable/2223_c11-compensation.smt2","sha256":"946aed041571cb18edb6b8bbcaef12c2b8dcfcf32ae970cbec4b3236941d9fd6","replies":["unsat"],"seconds":0.08623896599999625,"solver":"1.4.0-modified","check_proofs":true},{"file":"experiment-results/two-source/portable/2223_811-compensation.smt2","sha256":"12600cea2d2023941d023be930b53ff0db2daf84062b9c0b09c022dd3a971834","replies":["unsat"],"seconds":0.11760266499993577,"solver":"1.4.0-modified","check_proofs":true},{"file":"experiment-results/two-source/portable/2223_081-compensation.smt2","sha256":"ccbf2392c69eb526a74a2b0738bffc51101abfdc911d47e208e4f0503eacb31c","replies":["unsat"],"seconds":0.1297290930000372,"solver":"1.4.0-modified","check_proofs":true},{"file":"experiment-results/two-source/portable/2223_281-compensation.smt2","sha256":"f0ab15acca6cc31dfcdf567faa80f4ff9a471220df0da44cab33bf120b632ec6","replies":["unsat"],"seconds":0.08379366099995877,"solver":"1.4.0-modified","check_proofs":true},{"file":"experiment-results/two-source/portable/2223_681-compensation.smt2","sha256":"f166688ec7119f6af8d2a2cbe7ab94c8391f863f6502d03dc436eb98f2e69cc7","replies":["unsat"],"seconds":0.07905282899992017,"solver":"1.4.0-modified","check_proofs":true},{"file":"experiment-results/two-source/portable/2223_481-compensation.smt2","sha256":"7c3bdff651b21f361744dbb55b8ef2026c89fdf7e1b3331f94e795f105a853bd","replies":["unsat"],"seconds":0.09772792800004027,"solver":"1.4.0-modified","check_proofs":true},{"file":"experiment-results/two-source/portable/2223_201-compensation.smt2","sha256":"4ef190402f02aa3d116be7b8e46c16fd9bf86c767ca750b2a6ffdfcfd570dd60","replies":["unsat"],"seconds":0.08242717199993876,"solver":"1.4.0-modified","check_proofs":true},{"file":"experiment-results/two-source/portable/2223_601-compensation.smt2","sha256":"cb75e2aec039ac91178ff6c5a627792cd79349ee33f07171a252682c52d0ff7e","replies":["unsat"],"seconds":0.08653134399992268,"solver":"1.4.0-modified","check_proofs":true},{"file":"experiment-results/two-source/portable/2223_401-compensation.smt2","sha256":"5bc1576286b6dbe159ab4b624ca88f8b7c21e42027083d5957f7c83145deca49","replies":["unsat"],"seconds":0.0910146269999359,"solver":"1.4.0-modified","check_proofs":true},{"file":"experiment-results/two-source/portable/2223_c01-compensation.smt2","sha256":"c36ada0c2b8ebd5cc69d70b47f2b8aa37634dc8489dcf3944f986072cd273712","replies":["unsat"],"seconds":0.09290782599998693,"solver":"1.4.0-modified","check_proofs":true},{"file":"experiment-results/two-source/portable/2223_801-compensation.smt2","sha256":"7769f8f1c625fbdd790168163ba7b1360981256bd5d94444c43545ddec52c905","replies":["unsat"],"seconds":0.13646192300006987,"solver":"1.4.0-modified","check_proofs":true},{"file":"experiment-results/two-source/portable/2223_200-compensation.smt2","sha256":"fa220180b65fb2214df50d76cbf1bd505ae0c17f2026999060a452ac6dcceff1","replies":["unsat"],"seconds":0.09531691999995928,"solver":"1.4.0-modified","check_proofs":true},{"file":"experiment-results/two-source/portable/2223_600-compensation.smt2","sha256":"05c0f60d19de25c293e4dfc16aad5d5e6fcd96b7f1a87ed6af1fe66152580fe9","replies":["unsat"],"seconds":0.09995080800001688,"solver":"1.4.0-modified","check_proofs":true},{"file":"experiment-results/two-source/portable/2223_000-pareto.smt2","sha256":"437c3c81e712b9ef86b371bd68ac5b0b543f4a22021125409d07bcafda0d71c2","replies":["unsat"],"seconds":0.14386534999994183,"solver":"1.4.0-modified","check_proofs":true},{"file":"experiment-results/two-source/portable/2223_003-pareto.smt2","sha256":"60408c2de3842a8bfe54f73cd87b9ebc45ecf30767086d1dcd1b4ca6233170a6","replies":["unsat"],"seconds":0.6772475369999711,"solver":"1.4.0-modified","check_proofs":true},{"file":"experiment-results/two-source/portable/2223_013-pareto.smt2","sha256":"3fe3cec2c0a893cc1375bebfcc7cf2c4377a14cd2e5c5db57e359ecf4ce08a47","replies":["unsat"],"seconds":0.6346198730000197,"solver":"1.4.0-modified","check_proofs":true},{"file":"experiment-results/two-source/portable/2223_011-pareto.smt2","sha256":"c9cb043fe731d8928cef5a442ec20196f896dc286b6dbc43b44d0db8fe2fbceb","replies":["unsat"],"seconds":0.7378052669999988,"solver":"1.4.0-modified","check_proofs":true}]
+[
+  {
+    "file": "portable/1125_2c1-compensation.smt2",
+    "sha256": "aec965ad102f84c084d131c4d6f5d1276851de2db64a65d8bf78e12e2cddeba9",
+    "replies": [
+      "unsat"
+    ],
+    "seconds": 0.3824787810001453,
+    "solver": "1.4.0-modified",
+    "check_proofs": true
+  },
+  {
+    "file": "portable/1125_6c1-compensation.smt2",
+    "sha256": "ba75703d68c7029325319481a3e5a4f21c6f2a6e7e799cee34f866a7ebd94fb2",
+    "replies": [
+      "unsat"
+    ],
+    "seconds": 0.38017469900000833,
+    "solver": "1.4.0-modified",
+    "check_proofs": true
+  },
+  {
+    "file": "portable/1125_241-compensation.smt2",
+    "sha256": "f7c3e00e5663a52435e50e168d0abedb26fb198ff2220bdf158538028ee94ae0",
+    "replies": [
+      "unsat"
+    ],
+    "seconds": 0.35719460500013156,
+    "solver": "1.4.0-modified",
+    "check_proofs": true
+  },
+  {
+    "file": "portable/1125_641-compensation.smt2",
+    "sha256": "4f0cb1fb114e7e1ae6d36128366f17922715bde17449ae5ca165b2aecaa8b734",
+    "replies": [
+      "unsat"
+    ],
+    "seconds": 0.3725688730000911,
+    "solver": "1.4.0-modified",
+    "check_proofs": true
+  },
+  {
+    "file": "portable/1125_6c0-compensation.smt2",
+    "sha256": "c01eec096753557f7c62802605bd79e2c46795213f301b578991d3ed30f4c6bb",
+    "replies": [
+      "unsat"
+    ],
+    "seconds": 0.3812571440000738,
+    "solver": "1.4.0-modified",
+    "check_proofs": true
+  },
+  {
+    "file": "portable/1224_2c1-compensation.smt2",
+    "sha256": "7ecc0a2670cbd57ea21f425a05319c5bbfff549b169a2e837801d6e65ef3b6d9",
+    "replies": [
+      "unsat"
+    ],
+    "seconds": 0.1164503259999492,
+    "solver": "1.4.0-modified",
+    "check_proofs": true
+  },
+  {
+    "file": "portable/1224_6c1-compensation.smt2",
+    "sha256": "c6334683b350afb03c98e544f0effb64fa657f145742a5f2274c3536aae85c38",
+    "replies": [
+      "unsat"
+    ],
+    "seconds": 0.10224065300008078,
+    "solver": "1.4.0-modified",
+    "check_proofs": true
+  },
+  {
+    "file": "portable/1224_241-compensation.smt2",
+    "sha256": "67bfaf3eea8b77917a3ced82c7652264e25b72d373b7e5b2d7344b96a43e6075",
+    "replies": [
+      "unsat"
+    ],
+    "seconds": 0.1260683569998946,
+    "solver": "1.4.0-modified",
+    "check_proofs": true
+  },
+  {
+    "file": "portable/1224_641-compensation.smt2",
+    "sha256": "1e0f8e1b4b18a3982605669e651a97451270afddb7c252f4e74754ccb3413eda",
+    "replies": [
+      "unsat"
+    ],
+    "seconds": 0.12814594600013152,
+    "solver": "1.4.0-modified",
+    "check_proofs": true
+  },
+  {
+    "file": "portable/1224_a58-compensation.smt2",
+    "sha256": "b4db86e46fafdf1b551b7111a66ed9b016b11be97c0b44aa0c883946f338b0a6",
+    "replies": [
+      "unsat"
+    ],
+    "seconds": 0.10259611400010726,
+    "solver": "1.4.0-modified",
+    "check_proofs": true
+  },
+  {
+    "file": "portable/1224_858-compensation.smt2",
+    "sha256": "0dfa90904a8fb3af45f4d26c634765c7f96d3417b2e0c5f15ffcc206fa91297a",
+    "replies": [
+      "unsat"
+    ],
+    "seconds": 0.10167885000009846,
+    "solver": "1.4.0-modified",
+    "check_proofs": true
+  },
+  {
+    "file": "portable/1224_a18-compensation.smt2",
+    "sha256": "7035773d93d463a6473625c680d1c1eb420e87ccc3f5926487e8206c1ec2078b",
+    "replies": [
+      "unsat"
+    ],
+    "seconds": 0.11994000700019569,
+    "solver": "1.4.0-modified",
+    "check_proofs": true
+  },
+  {
+    "file": "portable/1224_248-compensation.smt2",
+    "sha256": "94bb80106c2081f1ca38b66dad6bde4f340556d5875aba3ec2ef5a2d058300fa",
+    "replies": [
+      "unsat"
+    ],
+    "seconds": 0.14110864400004175,
+    "solver": "1.4.0-modified",
+    "check_proofs": true
+  },
+  {
+    "file": "portable/1224_648-compensation.smt2",
+    "sha256": "1b2713a160f8058f03f109fb403fcc7a8926ca0a77074382724de7bd285ab965",
+    "replies": [
+      "unsat"
+    ],
+    "seconds": 0.10047533599981762,
+    "solver": "1.4.0-modified",
+    "check_proofs": true
+  },
+  {
+    "file": "portable/1224_448-compensation.smt2",
+    "sha256": "a22a68878dbfc40515657ee66c30abecd86a0fe89c0b44744c882862eb9b3d3a",
+    "replies": [
+      "unsat"
+    ],
+    "seconds": 0.11144610800010923,
+    "solver": "1.4.0-modified",
+    "check_proofs": true
+  },
+  {
+    "file": "portable/1224_688-compensation.smt2",
+    "sha256": "4423756b11da2857e7c50b08eab0f367dccf569f368305c7f9fb3491f536a7c6",
+    "replies": [
+      "unsat"
+    ],
+    "seconds": 0.12134797100020478,
+    "solver": "1.4.0-modified",
+    "check_proofs": true
+  },
+  {
+    "file": "portable/1224_488-compensation.smt2",
+    "sha256": "f8e53f63b2ec9ea9a1f15fa66c6608e1a70bb994e67f4fcafe2715ddd6c3c639",
+    "replies": [
+      "unsat"
+    ],
+    "seconds": 0.11539561099993989,
+    "solver": "1.4.0-modified",
+    "check_proofs": true
+  },
+  {
+    "file": "portable/1224_a08-compensation.smt2",
+    "sha256": "c14c9ba27fe920603e08de0eec69c0469aede0d374b83be5ed4b0a034c55f5b6",
+    "replies": [
+      "unsat"
+    ],
+    "seconds": 0.11568949499996961,
+    "solver": "1.4.0-modified",
+    "check_proofs": true
+  },
+  {
+    "file": "portable/1233_21a-compensation.smt2",
+    "sha256": "d1d1a3919f60ad2dd49701c8b0fecaa7b995b0e7eb66eb37ab2024ce751a235e",
+    "replies": [
+      "unsat"
+    ],
+    "seconds": 0.05474967600002856,
+    "solver": "1.4.0-modified",
+    "check_proofs": true
+  },
+  {
+    "file": "portable/1233_a1a-compensation.smt2",
+    "sha256": "9a2bbcccc02df54f5cff8fcf111cc54721fd6f15657212d61279b7d129b37a1e",
+    "replies": [
+      "unsat"
+    ],
+    "seconds": 0.05043112499993185,
+    "solver": "1.4.0-modified",
+    "check_proofs": true
+  },
+  {
+    "file": "portable/1233_20a-compensation.smt2",
+    "sha256": "20ade9d8ef50aad95454d370a0868202f28ca7c79095c003cf31fdd3eb7c9a3e",
+    "replies": [
+      "unsat"
+    ],
+    "seconds": 0.04713967800012142,
+    "solver": "1.4.0-modified",
+    "check_proofs": true
+  },
+  {
+    "file": "portable/1233_a0a-compensation.smt2",
+    "sha256": "7e7ea34fe0471ff333848da837b5cdc423fe2ff2bca3c8013a26da28ef587592",
+    "replies": [
+      "unsat"
+    ],
+    "seconds": 0.045460928000011336,
+    "solver": "1.4.0-modified",
+    "check_proofs": true
+  },
+  {
+    "file": "portable/1233_a58-compensation.smt2",
+    "sha256": "6be798a35d8eadbff944b9afdf2dc933bccf5b602bc40fface316499e07eb540",
+    "replies": [
+      "unsat"
+    ],
+    "seconds": 0.061453895000113334,
+    "solver": "1.4.0-modified",
+    "check_proofs": true
+  },
+  {
+    "file": "portable/1233_858-compensation.smt2",
+    "sha256": "29990f456856a18dbd5574f06d45f364cb744741f8501f8ad6a43b2eab49941f",
+    "replies": [
+      "unsat"
+    ],
+    "seconds": 0.05863382900020042,
+    "solver": "1.4.0-modified",
+    "check_proofs": true
+  },
+  {
+    "file": "portable/1233_a18-compensation.smt2",
+    "sha256": "e6005d326d4e43528c679b69780229c255fd2550ca7c9b12207ac1d094eea171",
+    "replies": [
+      "unsat"
+    ],
+    "seconds": 0.048840314000017315,
+    "solver": "1.4.0-modified",
+    "check_proofs": true
+  },
+  {
+    "file": "portable/1233_348-compensation.smt2",
+    "sha256": "06d0f93a24ac1f58fe8007946991dcd2a096e4857d761ada787458c3b3b019e3",
+    "replies": [
+      "unsat"
+    ],
+    "seconds": 0.1081498470000497,
+    "solver": "1.4.0-modified",
+    "check_proofs": true
+  },
+  {
+    "file": "portable/1233_848-compensation.smt2",
+    "sha256": "74ecd2bdf31c41927000391f56c61eb1863cab61d467a96c19bc2940c99872ba",
+    "replies": [
+      "unsat"
+    ],
+    "seconds": 0.1235633510000298,
+    "solver": "1.4.0-modified",
+    "check_proofs": true
+  },
+  {
+    "file": "portable/1233_a50-compensation.smt2",
+    "sha256": "a0e7bdc2cc7fd6b5fcf7d9e167c35fe3d575ceadac0c877cc33b146b36a5c82f",
+    "replies": [
+      "unsat"
+    ],
+    "seconds": 0.0574043999999958,
+    "solver": "1.4.0-modified",
+    "check_proofs": true
+  },
+  {
+    "file": "portable/1233_850-compensation.smt2",
+    "sha256": "463246b36aaa968dd9280ff5032a8360bce66d719e57edbf6ca31d5814be8311",
+    "replies": [
+      "unsat"
+    ],
+    "seconds": 0.051192899999932706,
+    "solver": "1.4.0-modified",
+    "check_proofs": true
+  },
+  {
+    "file": "portable/2223_000-compensation.smt2",
+    "sha256": "805c3d77e0b4a6caa1dadfa69a429782cf19b946d6f1f715b50a13fb46e06dbb",
+    "replies": [
+      "unsat"
+    ],
+    "seconds": 0.06936976399993,
+    "solver": "1.4.0-modified",
+    "check_proofs": true
+  },
+  {
+    "file": "portable/2223_001-compensation.smt2",
+    "sha256": "2ad5d060f9b3995890bc7dcd4beefbcfb43fa3e2c1b16405ce50c85832c52e6f",
+    "replies": [
+      "unsat"
+    ],
+    "seconds": 0.09049939200008339,
+    "solver": "1.4.0-modified",
+    "check_proofs": true
+  },
+  {
+    "file": "portable/2223_413-compensation.smt2",
+    "sha256": "2709d078f74548918e24e370fa97b747765f973109db2c83f0479e3dc67b3aea",
+    "replies": [
+      "unsat"
+    ],
+    "seconds": 0.055551462000039464,
+    "solver": "1.4.0-modified",
+    "check_proofs": true
+  },
+  {
+    "file": "portable/2223_c13-compensation.smt2",
+    "sha256": "dc0fd818d3c3bb4bae54d5e686fa4961a8c5f2393a88b12bf0d8069ad2464c2b",
+    "replies": [
+      "unsat"
+    ],
+    "seconds": 0.05623725899999954,
+    "solver": "1.4.0-modified",
+    "check_proofs": true
+  },
+  {
+    "file": "portable/2223_813-compensation.smt2",
+    "sha256": "f79571284be8e0fc02df83151c81e74f2deb68158b1cf0e5400ab22ed815c4e4",
+    "replies": [
+      "unsat"
+    ],
+    "seconds": 0.09389210499989531,
+    "solver": "1.4.0-modified",
+    "check_proofs": true
+  },
+  {
+    "file": "portable/2223_403-compensation.smt2",
+    "sha256": "81ddea2f4c7253b91c7974fd029f46def9048d6855672e77713e751a0935e646",
+    "replies": [
+      "unsat"
+    ],
+    "seconds": 0.08169629700000769,
+    "solver": "1.4.0-modified",
+    "check_proofs": true
+  },
+  {
+    "file": "portable/2223_c03-compensation.smt2",
+    "sha256": "d15bce0e7469a2121c7bde310ebdf9828e6169c504b12a6275ae624faa3c7df0",
+    "replies": [
+      "unsat"
+    ],
+    "seconds": 0.08151206899992758,
+    "solver": "1.4.0-modified",
+    "check_proofs": true
+  },
+  {
+    "file": "portable/2223_411-compensation.smt2",
+    "sha256": "3e4fcb9c329664bbdc875931e920d26304570fc100dc0b4a5bae8697a2db71a8",
+    "replies": [
+      "unsat"
+    ],
+    "seconds": 0.0681480969999484,
+    "solver": "1.4.0-modified",
+    "check_proofs": true
+  },
+  {
+    "file": "portable/2223_c11-compensation.smt2",
+    "sha256": "946aed041571cb18edb6b8bbcaef12c2b8dcfcf32ae970cbec4b3236941d9fd6",
+    "replies": [
+      "unsat"
+    ],
+    "seconds": 0.08056689800014283,
+    "solver": "1.4.0-modified",
+    "check_proofs": true
+  },
+  {
+    "file": "portable/2223_811-compensation.smt2",
+    "sha256": "12600cea2d2023941d023be930b53ff0db2daf84062b9c0b09c022dd3a971834",
+    "replies": [
+      "unsat"
+    ],
+    "seconds": 0.10531459899993934,
+    "solver": "1.4.0-modified",
+    "check_proofs": true
+  },
+  {
+    "file": "portable/2223_081-compensation.smt2",
+    "sha256": "ccbf2392c69eb526a74a2b0738bffc51101abfdc911d47e208e4f0503eacb31c",
+    "replies": [
+      "unsat"
+    ],
+    "seconds": 0.09152615100015282,
+    "solver": "1.4.0-modified",
+    "check_proofs": true
+  },
+  {
+    "file": "portable/2223_281-compensation.smt2",
+    "sha256": "f0ab15acca6cc31dfcdf567faa80f4ff9a471220df0da44cab33bf120b632ec6",
+    "replies": [
+      "unsat"
+    ],
+    "seconds": 0.07024708399990232,
+    "solver": "1.4.0-modified",
+    "check_proofs": true
+  },
+  {
+    "file": "portable/2223_681-compensation.smt2",
+    "sha256": "f166688ec7119f6af8d2a2cbe7ab94c8391f863f6502d03dc436eb98f2e69cc7",
+    "replies": [
+      "unsat"
+    ],
+    "seconds": 0.052393029000086244,
+    "solver": "1.4.0-modified",
+    "check_proofs": true
+  },
+  {
+    "file": "portable/2223_481-compensation.smt2",
+    "sha256": "7c3bdff651b21f361744dbb55b8ef2026c89fdf7e1b3331f94e795f105a853bd",
+    "replies": [
+      "unsat"
+    ],
+    "seconds": 0.06729428399989956,
+    "solver": "1.4.0-modified",
+    "check_proofs": true
+  },
+  {
+    "file": "portable/2223_201-compensation.smt2",
+    "sha256": "4ef190402f02aa3d116be7b8e46c16fd9bf86c767ca750b2a6ffdfcfd570dd60",
+    "replies": [
+      "unsat"
+    ],
+    "seconds": 0.05980345799980569,
+    "solver": "1.4.0-modified",
+    "check_proofs": true
+  },
+  {
+    "file": "portable/2223_601-compensation.smt2",
+    "sha256": "cb75e2aec039ac91178ff6c5a627792cd79349ee33f07171a252682c52d0ff7e",
+    "replies": [
+      "unsat"
+    ],
+    "seconds": 0.07398733100012578,
+    "solver": "1.4.0-modified",
+    "check_proofs": true
+  },
+  {
+    "file": "portable/2223_401-compensation.smt2",
+    "sha256": "5bc1576286b6dbe159ab4b624ca88f8b7c21e42027083d5957f7c83145deca49",
+    "replies": [
+      "unsat"
+    ],
+    "seconds": 0.06499151499997424,
+    "solver": "1.4.0-modified",
+    "check_proofs": true
+  },
+  {
+    "file": "portable/2223_c01-compensation.smt2",
+    "sha256": "c36ada0c2b8ebd5cc69d70b47f2b8aa37634dc8489dcf3944f986072cd273712",
+    "replies": [
+      "unsat"
+    ],
+    "seconds": 0.06910702300001503,
+    "solver": "1.4.0-modified",
+    "check_proofs": true
+  },
+  {
+    "file": "portable/2223_801-compensation.smt2",
+    "sha256": "7769f8f1c625fbdd790168163ba7b1360981256bd5d94444c43545ddec52c905",
+    "replies": [
+      "unsat"
+    ],
+    "seconds": 0.07489481000015985,
+    "solver": "1.4.0-modified",
+    "check_proofs": true
+  },
+  {
+    "file": "portable/2223_200-compensation.smt2",
+    "sha256": "fa220180b65fb2214df50d76cbf1bd505ae0c17f2026999060a452ac6dcceff1",
+    "replies": [
+      "unsat"
+    ],
+    "seconds": 0.06882855599997129,
+    "solver": "1.4.0-modified",
+    "check_proofs": true
+  },
+  {
+    "file": "portable/2223_600-compensation.smt2",
+    "sha256": "05c0f60d19de25c293e4dfc16aad5d5e6fcd96b7f1a87ed6af1fe66152580fe9",
+    "replies": [
+      "unsat"
+    ],
+    "seconds": 0.057260832999872946,
+    "solver": "1.4.0-modified",
+    "check_proofs": true
+  },
+  {
+    "file": "portable/2223_013-pareto.smt2",
+    "sha256": "20d10f77e13b0480220e2960d4b8fdeb10b6abfee582da9a695cec3f2a490977",
+    "replies": [
+      "unsat"
+    ],
+    "seconds": 0.43924119500002234,
+    "solver": "1.4.0-modified",
+    "check_proofs": true
+  },
+  {
+    "file": "portable/2223_003-pareto.smt2",
+    "sha256": "c6a27569545cff8acb623040f96d7e942fce603ae6506bd8b2e3d585cf70006c",
+    "replies": [
+      "unsat"
+    ],
+    "seconds": 0.5061663359999784,
+    "solver": "1.4.0-modified",
+    "check_proofs": true
+  },
+  {
+    "file": "portable/2223_011-pareto.smt2",
+    "sha256": "ee4623923eb9b074fae1cfb751943029ea6ffe8d23b1a25a11c603abe4ab9105",
+    "replies": [
+      "unsat"
+    ],
+    "seconds": 0.4969811630001004,
+    "solver": "1.4.0-modified",
+    "check_proofs": true
+  }
+]

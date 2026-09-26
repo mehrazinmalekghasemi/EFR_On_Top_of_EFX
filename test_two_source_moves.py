@@ -33,9 +33,9 @@ class TwoSourceTests(unittest.TestCase):
     def test_reduction_replay_scope_and_counts(self):
         p=ROOT/'experiment-results/two-source'
         counts=json.loads((p/'reduction-summary.json').read_text());self.assertEqual(counts['remaining'],103)
-        records=json.loads((p/'cvc5-replay.json').read_text());self.assertEqual(len(records),54)
+        records=json.loads((p/'cvc5-replay.json').read_text());self.assertEqual(len(records),53)
         self.assertTrue(all(r['replies']==['unsat'] and r['check_proofs'] for r in records))
-        # Four-source region occurs twice, hence 53 distinct regions.
+        # The duplicate four-source replay was removed; every region appears once.
         self.assertEqual(len({Path(r['file']).name.split('-')[0] for r in records}),53)
 
 if __name__=='__main__':unittest.main()

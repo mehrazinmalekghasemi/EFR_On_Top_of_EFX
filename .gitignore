@@ -11,3 +11,8 @@ pilot/
 campaign-summary.json
 campaign-summary.md
 .DS_Store
+
+# Regenerated research outputs; canonical evidence is selected explicitly.
+experiment-results/*-menus/
+experiment-results/two-source/portable/
+experiment-results/two-source/*-portable.smt2

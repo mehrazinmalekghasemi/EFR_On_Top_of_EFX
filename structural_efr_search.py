@@ -98,7 +98,7 @@ def run(task):
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--seconds',type=float,default=15)
     p.add_argument('--query-seconds',type=float,default=10);p.add_argument('--workers',type=int,default=3)
-    p.add_argument('--legacy-pairs',action='store_true');p.add_argument('--pilot',action='store_true');p.add_argument('--case');p.add_argument('--seed-directory');p.add_argument('--out',default='experiment-results/structural-pilot')
+    p.add_argument('--legacy-pairs',action='store_true');p.add_argument('--pilot',action='store_true');p.add_argument('--case');p.add_argument('--seed-directory');p.add_argument('--out',default='run/structural-pilot')
     a=p.parse_args();cases,summary=catalog()
     if a.pilot:
         selected={}

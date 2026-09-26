@@ -28,7 +28,7 @@ def compensation_cuts(s,v,A):
     return count
 
 
-def run(case_id,seconds=60,dominance='pareto'):
+def run(case_id,seconds=60,dominance='pareto',outdir='run/two-source'):
     case=next(c for c in catalog()[0] if c['id']==case_id)
     s,v=build(case);A=case['initial'];own=[sv(v[i],A[i]) for i in range(4)]
     for row in v:s.add(*[x>0 for x in row])
@@ -51,11 +51,11 @@ def run(case_id,seconds=60,dominance='pareto'):
     result={'case':case,'status':status,'dominance':dominance,'seconds_budget':seconds,'compensation_cuts':compensation_count,'cuts':cuts,'values':values,'diagnostic':diagnostic,'scope':'Failure of two-bundle repair only; NOT an EFR or Mode C counterexample'}
     if values is not None:result['integer_values']=integer_rows(values)
     if status=='TWO_BUNDLE_OBSTRUCTION':result['unrestricted_oracle']=oracle(values,limit=1,deadline=time.time()+30)
-    directory=Path('experiment-results/two-source');directory.mkdir(parents=True,exist_ok=True)
+    directory=Path(outdir);directory.mkdir(parents=True,exist_ok=True)
     (directory/(case_id+'-'+dominance+'.json')).write_text(json.dumps(result,indent=2))
     if status=='UNSAT_REPLAY_PENDING':(directory/(case_id+'-'+dominance+'.smt2')).write_text(s.to_smt2())
     return {k:result[k] for k in ['status','dominance','integer_values'] if k in result}|{'cut_count':len(cuts)}
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--case',default='2223_000');p.add_argument('--seconds',type=float,default=60);p.add_argument('--dominance',choices=['pareto','lex'],default='pareto');a=p.parse_args()
-    print(json.dumps(run(a.case,a.seconds,a.dominance)),flush=True)
+    p=argparse.ArgumentParser();p.add_argument('--case',default='2223_000');p.add_argument('--seconds',type=float,default=60);p.add_argument('--dominance',choices=['pareto','lex'],default='pareto');p.add_argument('--out',default='run/two-source');a=p.parse_args()
+    print(json.dumps(run(a.case,a.seconds,a.dominance,a.out)),flush=True)
