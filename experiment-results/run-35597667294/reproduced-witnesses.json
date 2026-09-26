@@ -1,0 +1,2027 @@
+{
+  "provenance": "Local seeded results; GitHub summary and every per-case minimum distance matched. Full original report is in the coordinated-rebundling workflow artifact.",
+  "cases": [
+    {
+      "name": "four-large-H7",
+      "seed": 42,
+      "kind": "regression",
+      "values": [
+        [
+          7,
+          7,
+          7,
+          7,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          7,
+          7,
+          7,
+          7,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          7,
+          7,
+          7,
+          7,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          7,
+          7,
+          7,
+          7,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "initial": [
+        1,
+        2,
+        4,
+        1008
+      ],
+      "deleted": 3,
+      "result": {
+        "status": "FOUND",
+        "max_radius": 10,
+        "completed_radii": [
+          {
+            "radius": 0,
+            "partitions_checked": 1
+          },
+          {
+            "radius": 1,
+            "partitions_checked": 24
+          },
+          {
+            "radius": 2,
+            "partitions_checked": 286
+          },
+          {
+            "radius": 3,
+            "partitions_checked": 2182
+          },
+          {
+            "radius": 4,
+            "partitions_checked": 10881
+          }
+        ],
+        "partitions_checked": 26814,
+        "seconds": 0.31840251199992053,
+        "minimum_radius": 5,
+        "witness": {
+          "predecessor": [
+            33,
+            66,
+            132,
+            776
+          ],
+          "deleted": 4,
+          "recipient": 0,
+          "allocation": [
+            49,
+            66,
+            132,
+            776
+          ]
+        },
+        "movement": {
+          "distance": 5,
+          "target_agent_by_initial_block": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "changed_goods": [
+            {
+              "good": 3,
+              "from_slot": 4,
+              "to_slot": 3
+            },
+            {
+              "good": 4,
+              "from_slot": 3,
+              "to_slot": 4
+            },
+            {
+              "good": 5,
+              "from_slot": 3,
+              "to_slot": 0
+            },
+            {
+              "good": 6,
+              "from_slot": 3,
+              "to_slot": 1
+            },
+            {
+              "good": 7,
+              "from_slot": 3,
+              "to_slot": 2
+            }
+          ],
+          "omitted_slot": 4
+        },
+        "minimum_certified": true
+      }
+    },
+    {
+      "name": "four-large-H10",
+      "seed": 42,
+      "kind": "regression",
+      "values": [
+        [
+          10,
+          10,
+          10,
+          10,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          10,
+          10,
+          10,
+          10,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          10,
+          10,
+          10,
+          10,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          10,
+          10,
+          10,
+          10,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "initial": [
+        1,
+        2,
+        4,
+        1008
+      ],
+      "deleted": 3,
+      "result": {
+        "status": "FOUND",
+        "max_radius": 10,
+        "completed_radii": [
+          {
+            "radius": 0,
+            "partitions_checked": 1
+          },
+          {
+            "radius": 1,
+            "partitions_checked": 24
+          },
+          {
+            "radius": 2,
+            "partitions_checked": 286
+          },
+          {
+            "radius": 3,
+            "partitions_checked": 2182
+          },
+          {
+            "radius": 4,
+            "partitions_checked": 10881
+          }
+        ],
+        "partitions_checked": 26814,
+        "seconds": 0.015106328999991092,
+        "minimum_radius": 5,
+        "witness": {
+          "predecessor": [
+            33,
+            66,
+            132,
+            776
+          ],
+          "deleted": 4,
+          "recipient": 0,
+          "allocation": [
+            49,
+            66,
+            132,
+            776
+          ]
+        },
+        "movement": {
+          "distance": 5,
+          "target_agent_by_initial_block": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "changed_goods": [
+            {
+              "good": 3,
+              "from_slot": 4,
+              "to_slot": 3
+            },
+            {
+              "good": 4,
+              "from_slot": 3,
+              "to_slot": 4
+            },
+            {
+              "good": 5,
+              "from_slot": 3,
+              "to_slot": 0
+            },
+            {
+              "good": 6,
+              "from_slot": 3,
+              "to_slot": 1
+            },
+            {
+              "good": 7,
+              "from_slot": 3,
+              "to_slot": 2
+            }
+          ],
+          "omitted_slot": 4
+        },
+        "minimum_certified": true
+      }
+    },
+    {
+      "name": "four-large-H20",
+      "seed": 42,
+      "kind": "regression",
+      "values": [
+        [
+          20,
+          20,
+          20,
+          20,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          20,
+          20,
+          20,
+          20,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          20,
+          20,
+          20,
+          20,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          20,
+          20,
+          20,
+          20,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "initial": [
+        1,
+        2,
+        4,
+        1008
+      ],
+      "deleted": 3,
+      "result": {
+        "status": "FOUND",
+        "max_radius": 10,
+        "completed_radii": [
+          {
+            "radius": 0,
+            "partitions_checked": 1
+          },
+          {
+            "radius": 1,
+            "partitions_checked": 24
+          },
+          {
+            "radius": 2,
+            "partitions_checked": 286
+          },
+          {
+            "radius": 3,
+            "partitions_checked": 2182
+          },
+          {
+            "radius": 4,
+            "partitions_checked": 10881
+          }
+        ],
+        "partitions_checked": 26814,
+        "seconds": 0.015195783999956802,
+        "minimum_radius": 5,
+        "witness": {
+          "predecessor": [
+            33,
+            66,
+            132,
+            776
+          ],
+          "deleted": 4,
+          "recipient": 0,
+          "allocation": [
+            49,
+            66,
+            132,
+            776
+          ]
+        },
+        "movement": {
+          "distance": 5,
+          "target_agent_by_initial_block": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "changed_goods": [
+            {
+              "good": 3,
+              "from_slot": 4,
+              "to_slot": 3
+            },
+            {
+              "good": 4,
+              "from_slot": 3,
+              "to_slot": 4
+            },
+            {
+              "good": 5,
+              "from_slot": 3,
+              "to_slot": 0
+            },
+            {
+              "good": 6,
+              "from_slot": 3,
+              "to_slot": 1
+            },
+            {
+              "good": 7,
+              "from_slot": 3,
+              "to_slot": 2
+            }
+          ],
+          "omitted_slot": 4
+        },
+        "minimum_certified": true
+      }
+    },
+    {
+      "name": "four-large-H35",
+      "seed": 42,
+      "kind": "regression",
+      "values": [
+        [
+          35,
+          35,
+          35,
+          35,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          35,
+          35,
+          35,
+          35,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          35,
+          35,
+          35,
+          35,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          35,
+          35,
+          35,
+          35,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "initial": [
+        1,
+        2,
+        4,
+        1008
+      ],
+      "deleted": 3,
+      "result": {
+        "status": "FOUND",
+        "max_radius": 10,
+        "completed_radii": [
+          {
+            "radius": 0,
+            "partitions_checked": 1
+          },
+          {
+            "radius": 1,
+            "partitions_checked": 24
+          },
+          {
+            "radius": 2,
+            "partitions_checked": 286
+          },
+          {
+            "radius": 3,
+            "partitions_checked": 2182
+          },
+          {
+            "radius": 4,
+            "partitions_checked": 10881
+          }
+        ],
+        "partitions_checked": 26814,
+        "seconds": 0.014641658999948959,
+        "minimum_radius": 5,
+        "witness": {
+          "predecessor": [
+            33,
+            66,
+            132,
+            776
+          ],
+          "deleted": 4,
+          "recipient": 0,
+          "allocation": [
+            49,
+            66,
+            132,
+            776
+          ]
+        },
+        "movement": {
+          "distance": 5,
+          "target_agent_by_initial_block": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "changed_goods": [
+            {
+              "good": 3,
+              "from_slot": 4,
+              "to_slot": 3
+            },
+            {
+              "good": 4,
+              "from_slot": 3,
+              "to_slot": 4
+            },
+            {
+              "good": 5,
+              "from_slot": 3,
+              "to_slot": 0
+            },
+            {
+              "good": 6,
+              "from_slot": 3,
+              "to_slot": 1
+            },
+            {
+              "good": 7,
+              "from_slot": 3,
+              "to_slot": 2
+            }
+          ],
+          "omitted_slot": 4
+        },
+        "minimum_certified": true
+      }
+    },
+    {
+      "name": "family3-profile3-oracle-start",
+      "seed": 42,
+      "kind": "sample",
+      "values": [
+        [
+          1,
+          5,
+          20,
+          1,
+          10,
+          1,
+          1,
+          5,
+          20,
+          5
+        ],
+        [
+          1,
+          5,
+          20,
+          1,
+          10,
+          1,
+          1,
+          5,
+          20,
+          5
+        ],
+        [
+          1,
+          5,
+          20,
+          1,
+          10,
+          1,
+          1,
+          5,
+          20,
+          5
+        ],
+        [
+          1,
+          5,
+          20,
+          1,
+          10,
+          1,
+          1,
+          5,
+          20,
+          5
+        ]
+      ],
+      "initial": [
+        107,
+        16,
+        640,
+        256
+      ],
+      "deleted": 2,
+      "result": {
+        "status": "FOUND",
+        "max_radius": 10,
+        "completed_radii": [
+          {
+            "radius": 0,
+            "partitions_checked": 1
+          },
+          {
+            "radius": 1,
+            "partitions_checked": 26
+          },
+          {
+            "radius": 2,
+            "partitions_checked": 317
+          },
+          {
+            "radius": 3,
+            "partitions_checked": 2422
+          }
+        ],
+        "partitions_checked": 3366,
+        "seconds": 0.013861595000093985,
+        "minimum_radius": 4,
+        "witness": {
+          "predecessor": [
+            642,
+            4,
+            120,
+            256
+          ],
+          "deleted": 0,
+          "recipient": 0,
+          "allocation": [
+            643,
+            4,
+            120,
+            256
+          ]
+        },
+        "movement": {
+          "distance": 4,
+          "target_agent_by_initial_block": [
+            2,
+            1,
+            0,
+            3
+          ],
+          "changed_goods": [
+            {
+              "good": 0,
+              "from_slot": 0,
+              "to_slot": 4
+            },
+            {
+              "good": 1,
+              "from_slot": 0,
+              "to_slot": 2
+            },
+            {
+              "good": 2,
+              "from_slot": 4,
+              "to_slot": 1
+            },
+            {
+              "good": 4,
+              "from_slot": 1,
+              "to_slot": 0
+            }
+          ],
+          "omitted_slot": 4
+        },
+        "minimum_certified": true
+      }
+    },
+    {
+      "name": "family3-profile19-oracle-start",
+      "seed": 42,
+      "kind": "sample",
+      "values": [
+        [
+          1,
+          1,
+          20,
+          20,
+          1,
+          1,
+          20,
+          10,
+          1,
+          10
+        ],
+        [
+          1,
+          1,
+          20,
+          20,
+          1,
+          1,
+          20,
+          10,
+          1,
+          10
+        ],
+        [
+          1,
+          1,
+          20,
+          20,
+          1,
+          1,
+          20,
+          10,
+          1,
+          10
+        ],
+        [
+          1,
+          1,
+          20,
+          20,
+          1,
+          1,
+          20,
+          10,
+          1,
+          10
+        ]
+      ],
+      "initial": [
+        131,
+        4,
+        8,
+        816
+      ],
+      "deleted": 6,
+      "result": {
+        "status": "FOUND",
+        "max_radius": 10,
+        "completed_radii": [
+          {
+            "radius": 0,
+            "partitions_checked": 1
+          },
+          {
+            "radius": 1,
+            "partitions_checked": 26
+          },
+          {
+            "radius": 2,
+            "partitions_checked": 328
+          },
+          {
+            "radius": 3,
+            "partitions_checked": 2511
+          }
+        ],
+        "partitions_checked": 13433,
+        "seconds": 0.014207135999981801,
+        "minimum_radius": 4,
+        "witness": {
+          "predecessor": [
+            819,
+            4,
+            8,
+            64
+          ],
+          "deleted": 7,
+          "recipient": 1,
+          "allocation": [
+            819,
+            132,
+            8,
+            64
+          ]
+        },
+        "movement": {
+          "distance": 4,
+          "target_agent_by_initial_block": [
+            3,
+            1,
+            2,
+            0
+          ],
+          "changed_goods": [
+            {
+              "good": 0,
+              "from_slot": 0,
+              "to_slot": 3
+            },
+            {
+              "good": 1,
+              "from_slot": 0,
+              "to_slot": 3
+            },
+            {
+              "good": 6,
+              "from_slot": 4,
+              "to_slot": 0
+            },
+            {
+              "good": 7,
+              "from_slot": 0,
+              "to_slot": 4
+            }
+          ],
+          "omitted_slot": 4
+        },
+        "minimum_certified": true
+      }
+    },
+    {
+      "name": "family3-profile27-oracle-start",
+      "seed": 42,
+      "kind": "sample",
+      "values": [
+        [
+          5,
+          10,
+          5,
+          1,
+          1,
+          20,
+          1,
+          1,
+          5,
+          1
+        ],
+        [
+          5,
+          10,
+          5,
+          1,
+          1,
+          20,
+          1,
+          1,
+          5,
+          1
+        ],
+        [
+          5,
+          10,
+          5,
+          1,
+          1,
+          20,
+          1,
+          1,
+          5,
+          1
+        ],
+        [
+          5,
+          10,
+          5,
+          1,
+          1,
+          20,
+          1,
+          1,
+          5,
+          1
+        ]
+      ],
+      "initial": [
+        25,
+        2,
+        32,
+        960
+      ],
+      "deleted": 2,
+      "result": {
+        "status": "FOUND",
+        "max_radius": 10,
+        "completed_radii": [
+          {
+            "radius": 0,
+            "partitions_checked": 1
+          },
+          {
+            "radius": 1,
+            "partitions_checked": 26
+          },
+          {
+            "radius": 2,
+            "partitions_checked": 328
+          }
+        ],
+        "partitions_checked": 1926,
+        "seconds": 0.015577086999996936,
+        "minimum_radius": 3,
+        "witness": {
+          "predecessor": [
+            257,
+            2,
+            728,
+            32
+          ],
+          "deleted": 2,
+          "recipient": 2,
+          "allocation": [
+            257,
+            2,
+            732,
+            32
+          ]
+        },
+        "movement": {
+          "distance": 3,
+          "target_agent_by_initial_block": [
+            0,
+            1,
+            3,
+            2
+          ],
+          "changed_goods": [
+            {
+              "good": 3,
+              "from_slot": 0,
+              "to_slot": 3
+            },
+            {
+              "good": 4,
+              "from_slot": 0,
+              "to_slot": 3
+            },
+            {
+              "good": 8,
+              "from_slot": 3,
+              "to_slot": 0
+            }
+          ],
+          "omitted_slot": 4
+        },
+        "minimum_certified": true
+      }
+    },
+    {
+      "name": "family3-profile31-oracle-start",
+      "seed": 42,
+      "kind": "sample",
+      "values": [
+        [
+          10,
+          10,
+          1,
+          1,
+          1,
+          20,
+          20,
+          20,
+          1,
+          1
+        ],
+        [
+          10,
+          10,
+          1,
+          1,
+          1,
+          20,
+          20,
+          20,
+          1,
+          1
+        ],
+        [
+          10,
+          10,
+          1,
+          1,
+          1,
+          20,
+          20,
+          20,
+          1,
+          1
+        ],
+        [
+          10,
+          10,
+          1,
+          1,
+          1,
+          20,
+          20,
+          20,
+          1,
+          1
+        ]
+      ],
+      "initial": [
+        13,
+        786,
+        32,
+        128
+      ],
+      "deleted": 6,
+      "result": {
+        "status": "FOUND",
+        "max_radius": 10,
+        "completed_radii": [
+          {
+            "radius": 0,
+            "partitions_checked": 1
+          },
+          {
+            "radius": 1,
+            "partitions_checked": 26
+          },
+          {
+            "radius": 2,
+            "partitions_checked": 328
+          },
+          {
+            "radius": 3,
+            "partitions_checked": 2511
+          }
+        ],
+        "partitions_checked": 3670,
+        "seconds": 0.016902851999930135,
+        "minimum_radius": 4,
+        "witness": {
+          "predecessor": [
+            798,
+            32,
+            64,
+            128
+          ],
+          "deleted": 0,
+          "recipient": 1,
+          "allocation": [
+            798,
+            33,
+            64,
+            128
+          ]
+        },
+        "movement": {
+          "distance": 4,
+          "target_agent_by_initial_block": [
+            2,
+            0,
+            1,
+            3
+          ],
+          "changed_goods": [
+            {
+              "good": 0,
+              "from_slot": 0,
+              "to_slot": 4
+            },
+            {
+              "good": 2,
+              "from_slot": 0,
+              "to_slot": 1
+            },
+            {
+              "good": 3,
+              "from_slot": 0,
+              "to_slot": 1
+            },
+            {
+              "good": 6,
+              "from_slot": 4,
+              "to_slot": 0
+            }
+          ],
+          "omitted_slot": 4
+        },
+        "minimum_certified": true
+      }
+    },
+    {
+      "name": "family1-profile33-oracle-start",
+      "seed": 42,
+      "kind": "sample",
+      "values": [
+        [
+          17,
+          9,
+          2,
+          11,
+          21,
+          17,
+          15,
+          8,
+          7,
+          2
+        ],
+        [
+          15,
+          9,
+          3,
+          10,
+          20,
+          17,
+          13,
+          9,
+          8,
+          2
+        ],
+        [
+          16,
+          8,
+          4,
+          10,
+          21,
+          18,
+          15,
+          9,
+          8,
+          1
+        ],
+        [
+          15,
+          8,
+          4,
+          11,
+          20,
+          17,
+          14,
+          10,
+          8,
+          1
+        ]
+      ],
+      "initial": [
+        3,
+        36,
+        72,
+        896
+      ],
+      "deleted": 4,
+      "result": {
+        "status": "FOUND",
+        "max_radius": 10,
+        "completed_radii": [
+          {
+            "radius": 0,
+            "partitions_checked": 1
+          }
+        ],
+        "partitions_checked": 27,
+        "seconds": 0.014417801999911717,
+        "minimum_radius": 1,
+        "witness": {
+          "predecessor": [
+            32,
+            3,
+            900,
+            72
+          ],
+          "deleted": 4,
+          "recipient": 0,
+          "allocation": [
+            48,
+            3,
+            900,
+            72
+          ]
+        },
+        "movement": {
+          "distance": 1,
+          "target_agent_by_initial_block": [
+            1,
+            0,
+            3,
+            2
+          ],
+          "changed_goods": [
+            {
+              "good": 2,
+              "from_slot": 1,
+              "to_slot": 3
+            }
+          ],
+          "omitted_slot": 4
+        },
+        "minimum_certified": true
+      }
+    },
+    {
+      "name": "family1-profile33-partition-start",
+      "seed": 42,
+      "kind": "sample",
+      "values": [
+        [
+          17,
+          9,
+          2,
+          11,
+          21,
+          17,
+          15,
+          8,
+          7,
+          2
+        ],
+        [
+          15,
+          9,
+          3,
+          10,
+          20,
+          17,
+          13,
+          9,
+          8,
+          2
+        ],
+        [
+          16,
+          8,
+          4,
+          10,
+          21,
+          18,
+          15,
+          9,
+          8,
+          1
+        ],
+        [
+          15,
+          8,
+          4,
+          11,
+          20,
+          17,
+          14,
+          10,
+          8,
+          1
+        ]
+      ],
+      "initial": [
+        266,
+        192,
+        544,
+        5
+      ],
+      "deleted": 4,
+      "result": {
+        "status": "FOUND",
+        "max_radius": 10,
+        "completed_radii": [
+          {
+            "radius": 0,
+            "partitions_checked": 1
+          },
+          {
+            "radius": 1,
+            "partitions_checked": 27
+          },
+          {
+            "radius": 2,
+            "partitions_checked": 351
+          }
+        ],
+        "partitions_checked": 427,
+        "seconds": 0.01441565899995112,
+        "minimum_radius": 3,
+        "witness": {
+          "predecessor": [
+            266,
+            16,
+            548,
+            192
+          ],
+          "deleted": 0,
+          "recipient": 1,
+          "allocation": [
+            266,
+            17,
+            548,
+            192
+          ]
+        },
+        "movement": {
+          "distance": 3,
+          "target_agent_by_initial_block": [
+            0,
+            3,
+            2,
+            1
+          ],
+          "changed_goods": [
+            {
+              "good": 0,
+              "from_slot": 3,
+              "to_slot": 4
+            },
+            {
+              "good": 2,
+              "from_slot": 3,
+              "to_slot": 2
+            },
+            {
+              "good": 4,
+              "from_slot": 4,
+              "to_slot": 3
+            }
+          ],
+          "omitted_slot": 4
+        },
+        "minimum_certified": true
+      }
+    },
+    {
+      "name": "family3-profile3-oracle-start",
+      "seed": 1729,
+      "kind": "sample",
+      "values": [
+        [
+          10,
+          10,
+          5,
+          20,
+          5,
+          1,
+          1,
+          20,
+          5,
+          1
+        ],
+        [
+          10,
+          10,
+          5,
+          20,
+          5,
+          1,
+          1,
+          20,
+          5,
+          1
+        ],
+        [
+          10,
+          10,
+          5,
+          20,
+          5,
+          1,
+          1,
+          20,
+          5,
+          1
+        ],
+        [
+          10,
+          10,
+          5,
+          20,
+          5,
+          1,
+          1,
+          20,
+          5,
+          1
+        ]
+      ],
+      "initial": [
+        609,
+        276,
+        8,
+        128
+      ],
+      "deleted": 1,
+      "result": {
+        "status": "FOUND",
+        "max_radius": 10,
+        "completed_radii": [
+          {
+            "radius": 0,
+            "partitions_checked": 1
+          },
+          {
+            "radius": 1,
+            "partitions_checked": 26
+          },
+          {
+            "radius": 2,
+            "partitions_checked": 328
+          }
+        ],
+        "partitions_checked": 2476,
+        "seconds": 0.014375929000038923,
+        "minimum_radius": 3,
+        "witness": {
+          "predecessor": [
+            581,
+            274,
+            8,
+            128
+          ],
+          "deleted": 5,
+          "recipient": 0,
+          "allocation": [
+            613,
+            274,
+            8,
+            128
+          ]
+        },
+        "movement": {
+          "distance": 3,
+          "target_agent_by_initial_block": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "changed_goods": [
+            {
+              "good": 1,
+              "from_slot": 4,
+              "to_slot": 1
+            },
+            {
+              "good": 2,
+              "from_slot": 1,
+              "to_slot": 0
+            },
+            {
+              "good": 5,
+              "from_slot": 0,
+              "to_slot": 4
+            }
+          ],
+          "omitted_slot": 4
+        },
+        "minimum_certified": true
+      }
+    },
+    {
+      "name": "family3-profile19-oracle-start",
+      "seed": 1729,
+      "kind": "sample",
+      "values": [
+        [
+          1,
+          5,
+          1,
+          1,
+          5,
+          1,
+          10,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          5,
+          1,
+          1,
+          5,
+          1,
+          10,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          5,
+          1,
+          1,
+          5,
+          1,
+          10,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          5,
+          1,
+          1,
+          5,
+          1,
+          10,
+          1,
+          1,
+          1
+        ]
+      ],
+      "initial": [
+        13,
+        2,
+        928,
+        64
+      ],
+      "deleted": 4,
+      "result": {
+        "status": "FOUND",
+        "max_radius": 10,
+        "completed_radii": [
+          {
+            "radius": 0,
+            "partitions_checked": 1
+          },
+          {
+            "radius": 1,
+            "partitions_checked": 26
+          },
+          {
+            "radius": 2,
+            "partitions_checked": 328
+          }
+        ],
+        "partitions_checked": 426,
+        "seconds": 0.014815661000056934,
+        "minimum_radius": 3,
+        "witness": {
+          "predecessor": [
+            2,
+            20,
+            936,
+            64
+          ],
+          "deleted": 0,
+          "recipient": 0,
+          "allocation": [
+            3,
+            20,
+            936,
+            64
+          ]
+        },
+        "movement": {
+          "distance": 3,
+          "target_agent_by_initial_block": [
+            1,
+            0,
+            2,
+            3
+          ],
+          "changed_goods": [
+            {
+              "good": 0,
+              "from_slot": 0,
+              "to_slot": 4
+            },
+            {
+              "good": 3,
+              "from_slot": 0,
+              "to_slot": 2
+            },
+            {
+              "good": 4,
+              "from_slot": 4,
+              "to_slot": 0
+            }
+          ],
+          "omitted_slot": 4
+        },
+        "minimum_certified": true
+      }
+    },
+    {
+      "name": "family3-profile19-partition-start",
+      "seed": 1729,
+      "kind": "sample",
+      "values": [
+        [
+          1,
+          5,
+          1,
+          1,
+          5,
+          1,
+          10,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          5,
+          1,
+          1,
+          5,
+          1,
+          10,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          5,
+          1,
+          1,
+          5,
+          1,
+          10,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          5,
+          1,
+          1,
+          5,
+          1,
+          10,
+          1,
+          1,
+          1
+        ]
+      ],
+      "initial": [
+        64,
+        389,
+        552,
+        2
+      ],
+      "deleted": 4,
+      "result": {
+        "status": "FOUND",
+        "max_radius": 10,
+        "completed_radii": [
+          {
+            "radius": 0,
+            "partitions_checked": 1
+          },
+          {
+            "radius": 1,
+            "partitions_checked": 26
+          },
+          {
+            "radius": 2,
+            "partitions_checked": 328
+          }
+        ],
+        "partitions_checked": 703,
+        "seconds": 0.013621213999954307,
+        "minimum_radius": 3,
+        "witness": {
+          "predecessor": [
+            421,
+            2,
+            528,
+            64
+          ],
+          "deleted": 3,
+          "recipient": 0,
+          "allocation": [
+            429,
+            2,
+            528,
+            64
+          ]
+        },
+        "movement": {
+          "distance": 3,
+          "target_agent_by_initial_block": [
+            3,
+            0,
+            2,
+            1
+          ],
+          "changed_goods": [
+            {
+              "good": 3,
+              "from_slot": 2,
+              "to_slot": 4
+            },
+            {
+              "good": 4,
+              "from_slot": 4,
+              "to_slot": 2
+            },
+            {
+              "good": 5,
+              "from_slot": 2,
+              "to_slot": 1
+            }
+          ],
+          "omitted_slot": 4
+        },
+        "minimum_certified": true
+      }
+    },
+    {
+      "name": "heterogeneous-stress-31",
+      "seed": 2026,
+      "kind": "stress",
+      "values": [
+        [
+          17,
+          22,
+          17,
+          21,
+          2,
+          1,
+          1,
+          2,
+          1,
+          2
+        ],
+        [
+          14,
+          17,
+          15,
+          30,
+          2,
+          2,
+          1,
+          2,
+          1,
+          1
+        ],
+        [
+          23,
+          19,
+          23,
+          27,
+          2,
+          2,
+          2,
+          2,
+          1,
+          1
+        ],
+        [
+          26,
+          26,
+          25,
+          20,
+          2,
+          2,
+          2,
+          1,
+          2,
+          1
+        ]
+      ],
+      "initial": [
+        1,
+        4,
+        8,
+        1008
+      ],
+      "deleted": 1,
+      "result": {
+        "status": "FOUND",
+        "max_radius": 10,
+        "completed_radii": [
+          {
+            "radius": 0,
+            "partitions_checked": 1
+          },
+          {
+            "radius": 1,
+            "partitions_checked": 24
+          },
+          {
+            "radius": 2,
+            "partitions_checked": 286
+          },
+          {
+            "radius": 3,
+            "partitions_checked": 2182
+          },
+          {
+            "radius": 4,
+            "partitions_checked": 10881
+          }
+        ],
+        "partitions_checked": 27513,
+        "seconds": 0.018418515000007574,
+        "minimum_radius": 5,
+        "witness": {
+          "predecessor": [
+            194,
+            8,
+            33,
+            772
+          ],
+          "deleted": 4,
+          "recipient": 2,
+          "allocation": [
+            194,
+            8,
+            49,
+            772
+          ]
+        },
+        "movement": {
+          "distance": 5,
+          "target_agent_by_initial_block": [
+            2,
+            3,
+            1,
+            0
+          ],
+          "changed_goods": [
+            {
+              "good": 1,
+              "from_slot": 4,
+              "to_slot": 3
+            },
+            {
+              "good": 4,
+              "from_slot": 3,
+              "to_slot": 4
+            },
+            {
+              "good": 5,
+              "from_slot": 3,
+              "to_slot": 0
+            },
+            {
+              "good": 8,
+              "from_slot": 3,
+              "to_slot": 1
+            },
+            {
+              "good": 9,
+              "from_slot": 3,
+              "to_slot": 1
+            }
+          ],
+          "omitted_slot": 4
+        },
+        "minimum_certified": true
+      }
+    },
+    {
+      "name": "heterogeneous-stress-88",
+      "seed": 2026,
+      "kind": "stress",
+      "values": [
+        [
+          26,
+          21,
+          20,
+          26,
+          2,
+          2,
+          2,
+          1,
+          2,
+          2
+        ],
+        [
+          16,
+          21,
+          23,
+          19,
+          1,
+          2,
+          2,
+          2,
+          1,
+          2
+        ],
+        [
+          25,
+          24,
+          29,
+          18,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          28,
+          26,
+          21,
+          22,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "initial": [
+        1,
+        2,
+        8,
+        1008
+      ],
+      "deleted": 2,
+      "result": {
+        "status": "FOUND",
+        "max_radius": 10,
+        "completed_radii": [
+          {
+            "radius": 0,
+            "partitions_checked": 1
+          },
+          {
+            "radius": 1,
+            "partitions_checked": 24
+          },
+          {
+            "radius": 2,
+            "partitions_checked": 286
+          },
+          {
+            "radius": 3,
+            "partitions_checked": 2182
+          },
+          {
+            "radius": 4,
+            "partitions_checked": 10881
+          }
+        ],
+        "partitions_checked": 27238,
+        "seconds": 0.01611032999994677,
+        "minimum_radius": 5,
+        "witness": {
+          "predecessor": [
+            520,
+            98,
+            388,
+            1
+          ],
+          "deleted": 4,
+          "recipient": 3,
+          "allocation": [
+            520,
+            98,
+            388,
+            17
+          ]
+        },
+        "movement": {
+          "distance": 5,
+          "target_agent_by_initial_block": [
+            3,
+            1,
+            0,
+            2
+          ],
+          "changed_goods": [
+            {
+              "good": 2,
+              "from_slot": 4,
+              "to_slot": 3
+            },
+            {
+              "good": 4,
+              "from_slot": 3,
+              "to_slot": 4
+            },
+            {
+              "good": 5,
+              "from_slot": 3,
+              "to_slot": 1
+            },
+            {
+              "good": 6,
+              "from_slot": 3,
+              "to_slot": 1
+            },
+            {
+              "good": 9,
+              "from_slot": 3,
+              "to_slot": 2
+            }
+          ],
+          "omitted_slot": 4
+        },
+        "minimum_certified": true
+      }
+    }
+  ]
+}

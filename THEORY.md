@@ -1,5 +1,7 @@
 # Exact EFX9 → EFR10 search for four additive agents
 
+For the current research classification, see [RESEARCH_STATUS.md](RESEARCH_STATUS.md) and [CASE_ATLAS.md](CASE_ATLAS.md). This note documents the original oracle and full-domain search architecture.
+
 This package implements the proposed delete-a-good / find-EFX / compute-capacities / insert procedure, and a resumable symbolic search over the entire normalized valuation domain. It includes a fast exact point oracle, process parallelism, an independent region-cover verifier, benchmark results, and counterexamples to two overly strong variants of the approach.
 
 **A one-week run is supported. A completed whole-space proof within one week is not guaranteed.** No global existence result is claimed by this delivery. The supplied short region-search pilot did not close the domain. A timeout, an unfinished branch, or a failed restricted heuristic is never counted as a theorem.
@@ -176,9 +178,9 @@ A witness for `extension` encodes BOTH the predecessor's EFX inequalities and th
 - UNKNOWN: retain an open region. No coverage conclusion.
 - Exhaustive oracle failure: retain the exact valuation and distinguish the failed theorem from the direct-EFR diagnostic.
 
-The solver is incremental within a task. It never rebuilds all prior constraints between individual witness batches. Every batch is checkpointed. When a slice stalls, the coordinator may pin the next favorite of one agent and enqueue **all** possible remaining choices. Non-strict order constraints ensure the children cover the parent, including ties. Child tasks inherit the parent's witnesses and run independently. `--no-split` instead keeps refining a root's finite witness menu; the unlimited idealized CEGAR procedure has only finitely many possible witnesses, but that finite bound is too large to imply practicality.
+The solver is incremental within a task. It never rebuilds all prior constraints between individual witness batches. Every batch is checkpointed. After the configured number of visits (default two), the coordinator may pin the next favorite of one agent and enqueue **all** possible remaining choices. Non-strict order constraints ensure the children cover the parent, including ties. Child tasks inherit the parent's witnesses and run independently. `--no-split` instead keeps refining a root's finite witness menu; the unlimited idealized CEGAR procedure has only finitely many possible witnesses, but that finite bound is too large to imply practicality.
 
-Default budgets are 60 seconds per region task, 10 seconds per SMT call, 64 refinement rounds, and 8 point witnesses per round. They are configurable heuristics, not proven optimal values. Full rankings still may be hard: at maximum rank depth an open node remains open. Splitting is sound and creates parallel work, but is not guaranteed to reduce total CPU time.
+Initial budgets are 60 seconds per region task and 10 seconds per SMT call; repeat visits double both budgets up to 4x. Splitting starts after two visits by default. There are 64 refinement rounds and 8 point witnesses per round. They are configurable heuristics, not proven optimal values. Full rankings still may be hard: at maximum rank depth an open node is requeued with bounded larger budgets. Splitting is sound and creates parallel work, but is not guaranteed to reduce total CPU time.
 
 `verify.py` imports neither the search code nor the point oracle. It:
 
@@ -237,7 +239,7 @@ Some previous H1–H5 printouts were statistical proxies rather than precise con
 
 ## What the measurements do and do not establish
 
-`measured-benchmark.json` records 100 integer random profiles and 100 near-identical profiles, with both first-witness and exhaustive-ten-deletion modes, on one worker. `pilot-90-seconds.json` records an actual four-process, 90-second symbolic run. That pilot built witness menus and split regions but closed **zero of 220 roots**. It is evidence that the solver, not point enumeration, dominates this prototype at the tested settings. It is neither a lower bound nor evidence that the unrestricted conjecture is false.
+`experiment-results/benchmarks/measured-benchmark.json` records 100 integer random profiles and 100 near-identical profiles, with both first-witness and exhaustive-ten-deletion modes, on one worker. `experiment-results/benchmarks/pilot-90-seconds.json` records an actual four-process, 90-second symbolic run. That pilot built witness menus and split regions but closed **zero of 220 roots**. It is evidence that the solver, not point enumeration, dominates this prototype at the tested settings. It is neither a lower bound nor evidence that the unrestricted conjecture is false.
 
 Rational solver models can have larger denominators than these integer benchmarks. Arbitrary-precision fallback and growth in SMT menus can make later stages much slower. Warm point-oracle throughput cannot be converted into a proof-completion estimate.
 
@@ -276,3 +278,5 @@ The supplied PDF concerns monotone, non-additive valuations and defines EFR via 
 - rejection of a falsely marked covered region and a malformed/missing child cover.
 
 Files: `oracle.py`, `search.py`, `verify.py`, `benchmark.py`, `test_engine.py`, `requirements.txt`, `run_week.sh`, example matrices/results, and measured reports. No week-long campaign has been run as part of this delivery.
+
+See `EXTENSION_THEORY.md` for exact fixed-predecessor diagnostics, a stronger least-good counterexample, and the proved whole-bundle repair theorem.

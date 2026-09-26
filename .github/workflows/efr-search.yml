@@ -23,6 +23,16 @@ on:
         description: Minutes per shard, from 1 to 270 (15 for first test; 270 for long runs)
         type: number
         default: 15
+      split_after:
+        description: Visits before splitting a region (2 retries once with a larger budget)
+        type: choice
+        options: ['1', '2', '3']
+        default: '2'
+      smt_seconds:
+        description: Initial SMT seconds per query (retries increase this up to 4x)
+        type: choice
+        options: ['10', '30', '60', '120']
+        default: '10'
       resume_run:
         description: Previous completed workflow run ID; leave empty ONLY for a new search
         type: string
@@ -69,7 +79,7 @@ jobs:
       - name: Install and run correctness tests
         run: |
           python -m pip install -r requirements.txt
-          python -m unittest -v test_engine test_ci
+          python -m unittest -v test_engine test_ci test_improvements
       - name: Check that the previous run has finished
         if: inputs.resume_run != ''
         env:
@@ -115,6 +125,8 @@ jobs:
           GOAL: ${{ inputs.goal }}
           SHARDS: ${{ inputs.shards }}
           SHARD: ${{ matrix.shard }}
+          SPLIT_AFTER: ${{ inputs.split_after }}
+          SMT_SECONDS: ${{ inputs.smt_seconds }}
           MINUTES: ${{ inputs.minutes }}
           RESUME_RUN: ${{ inputs.resume_run }}
         run: |
@@ -125,7 +137,7 @@ jobs:
           fi
           python ci.py shard --mode "$MODE" --goal "$GOAL" \
             --shards "$SHARDS" --shard "$SHARD" --minutes "$MINUTES" \
-            --workers "$workers" "${resume_args[@]}"
+            --workers "$workers" --split-after "$SPLIT_AFTER" --smt-seconds "$SMT_SECONDS" "${resume_args[@]}"
       - name: Save checkpoint and shard report
         if: always() && hashFiles('payload/checkpoint.tar.gz') != ''
         uses: actions/upload-artifact@v7
