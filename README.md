@@ -16,6 +16,7 @@ sources and 8 with three sources**. A completed workflow is not a completed proo
 | [Research status and roadmap](RESEARCH_STATUS.md) | Consolidated findings, numbered theorem register, refuted claims, and theoretical next steps. |
 | [Case atlas](CASE_ATLAS.md) | All 18 size profiles and 1,344 canonical acyclic graph cases; every cell names its theorem/proposition or says **OPEN**. |
 | [Open cases](research/OPEN_CASES.md) | Exact IDs, envy edges, and source sets for the 102 unresolved cases. |
+| [Singleton blockers and donor top-ups](research/SINGLETON_BLOCKER_TOP_UP.md) | Exact augmentation theorem, at most six minimal top-ups per blocker, and a sharp safety obstruction. |
 | [Dominant-item obstruction](research/DOMINANT_ITEM_OBSTRUCTION.md) | Exact priority-dependent thresholds, at most 20 minimal compensation candidates, blocker rerouting, and budget counterexamples. |
 | [Full-star theorem and failure-case analysis](research/FULL_STAR_AND_FAILURE_CASES.md) | T11 closes `1233_248`; four two-source failure types have separate repair criteria. |
 | [Both-champion branch proof and residual compensation](research/DANGEROUS_ITEM_PROGRESS.md) | Complete both-champion branch proof; a larger three-agent repair and a counterexample to C1 alone. |

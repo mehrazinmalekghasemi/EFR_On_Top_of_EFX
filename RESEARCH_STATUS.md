@@ -1,12 +1,14 @@
 # EFX-nine to EFR-ten: research status and proof roadmap
 
-Latest local results (2026-09-28): [dominant-item analysis](research/DOMINANT_ITEM_OBSTRUCTION.md)
-proves an exact fixed-relay threshold reduction to at most 20 minimal covers
-(D12), and a blocker rerouting theorem (D13). Two exact examples refute
-sufficiency of the total compensation budget, in both priority branches;
-both have complete EFX Pareto escapes. No whole graph is newly closed.
-The next target is the residual low-valued-singleton blocker, and the full-
-recovery deficit when the donor retains the champion pair.
+Latest local results (2026-09-28): [singleton blockers and donor top-ups](research/SINGLETON_BLOCKER_TOP_UP.md)
+adds D14 (exact augmentation conditions, at most six minimal top-ups per blocker)
+and D15 (the blocker's surplus bounds top-up deletion values). Explicit examples
+repair cheap singleton blockers in both priority branches and an early champion
+blocker. Another exact example has 20 units available for a deficit of 9 but
+no safe top-up; it nevertheless has a verified Mode C witness. An additional
+blocker's gain may change which losses are allowed under the same fixed priority.
+The atlas remains unchanged. The preceding [D12–D13 analysis](research/DOMINANT_ITEM_OBSTRUCTION.md)
+provides the minimal covers and blocker subsets used here.
 
 Previous whole-case update (2026-09-27): [T11 and failure-case analysis](research/FULL_STAR_AND_FAILURE_CASES.md)
 closes the entire `1233_248` graph, including the sole-champion/later-priority

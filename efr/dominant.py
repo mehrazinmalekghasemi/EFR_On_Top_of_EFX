@@ -72,3 +72,57 @@ def dominant_relay(values, A, g, s, i, t, h, priority=(0, 1, 2, 3)):
         report['obstructions'].append(dict(compensation=C, blockers=blockers))
     report['move'] = None
     return report
+
+
+def augment_dominant_blockers(values, A, g, s, i, t, h, priority=(0, 1, 2, 3)):
+    """D14: top up displaced bundles after D12-D13 fails.
+
+    At most six minimal top-ups per recorded blocker. Reports only this move
+    class; no universal progress or nonexistence verdict is returned.
+    """
+    base = dominant_relay(values, A, g, s, i, t, h, priority)
+    if base['move'] is not None:
+        return dict(scope='D12-D14 local moves', move=base['move'], attempts=[])
+    priority = check_priority(priority)
+    rows, items, val, R, u = _context(values, A, g)
+    r = next(j for j in range(4) if j not in {s, i, t})
+    H = A[s] | (A[t] ^ (1 << h))
+    K = list(A); K[s] = A[i]; K[i] = (1 << g) | (1 << h)
+    attempts = []
+    seen = set()
+    for obstruction in base['obstructions']:
+        for blocker in obstruction['blockers']:
+            j, E = blocker['agent'], blocker['subset']
+            if (j, E) in seen: continue
+            seen.add((j, E))
+            B = list(K); B[j] = E
+            observers = [k for k in range(4) if k != t]
+            W = {k: val(k, B[k]) for k in observers}
+            gains = [k for k in observers if W[k] > u[k]]
+            late = any(priority.index(k) < priority.index(t) for k in gains)
+            floor = max(R(t, B[k]) for k in observers)
+            L = floor if late else max(floor, u[t])
+            delta = max(0, L-val(t, K[j]))
+            available = H & ~E
+            assert available.bit_count() <= 4
+            subsets = [sum(1 << x for x in xs) for n in range(available.bit_count()+1)
+                       for xs in combinations(items(available), n)]
+            covers = [F for F in subsets if val(t, F) >= delta and
+                      all(val(t, F ^ (1 << x)) < delta for x in items(F))]
+            assert len(covers) <= 6
+            failures = []
+            for F in covers:
+                Q = K[j] | F
+                bad = [k for k in observers if R(k, Q) > W[k]]
+                if not bad:
+                    B[t] = Q
+                    move = _certificate(rows, A, B, 'dominant_augmented_blocker',
+                                        priority=priority, blocker=j, envied_subset=E,
+                                        top_up=F, threshold=str(L), deficit=str(delta))
+                    return dict(scope='D12-D14 local moves', move=move, attempts=attempts)
+                failures.append(dict(top_up=F, unsafe_to=bad))
+            attempts.append(dict(blocker=j, envied_subset=E, threshold=str(L),
+                                 deficit=str(delta), available_value=str(val(t, available)),
+                                 minimal_top_ups=covers, failures=failures))
+    return dict(scope='D12-D14 local moves; failure is not global impossibility',
+                move=None, attempts=attempts, base_obstructions=base['obstructions'])

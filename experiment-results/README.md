@@ -91,3 +91,10 @@ full-recovery blocker reroutings, the strict full-recovery deficit, and direct
 compensation. Negative results concern one fixed relay and its specified
 reroutings, not all moves or EFR existence. See
 [the proof](../research/DOMINANT_ITEM_OBSTRUCTION.md).
+
+## Singleton-blocker top-ups (2026-09-28)
+
+`dangerous-items/singleton-top-up-witnesses.json` records cheap-singleton repairs
+for both priority branches, an early-champion repair, and a case with enough
+leftover value but no safe top-up. The latter includes an independently checked
+Mode C witness. Scope and proofs: [D14–D15](../research/SINGLETON_BLOCKER_TOP_UP.md).
