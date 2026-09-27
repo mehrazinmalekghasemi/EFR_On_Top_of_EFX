@@ -82,3 +82,12 @@ tests.test_dangerous_moves` to independently check the witnesses and relabelings
 construction. The existing `two-source/reduction-summary.json` remains the
 historical 103-case solver result. The current generated atlas adds the human
 exclusion `1233_248`, leaving 102 cases. Tests keep both scopes distinct.
+
+## Dominant-item local analysis (2026-09-28)
+
+`dangerous-items/dominant-item-witnesses.json` contains six exact examples:
+two budget failures (with complete EFX escapes), successful later-loss and
+full-recovery blocker reroutings, the strict full-recovery deficit, and direct
+compensation. Negative results concern one fixed relay and its specified
+reroutings, not all moves or EFR existence. See
+[the proof](../research/DOMINANT_ITEM_OBSTRUCTION.md).

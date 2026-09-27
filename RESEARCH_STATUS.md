@@ -1,13 +1,21 @@
 # EFX-nine to EFR-ten: research status and proof roadmap
 
-Latest update (2026-09-27): [T11 and failure-case analysis](research/FULL_STAR_AND_FAILURE_CASES.md)
+Latest local results (2026-09-28): [dominant-item analysis](research/DOMINANT_ITEM_OBSTRUCTION.md)
+proves an exact fixed-relay threshold reduction to at most 20 minimal covers
+(D12), and a blocker rerouting theorem (D13). Two exact examples refute
+sufficiency of the total compensation budget, in both priority branches;
+both have complete EFX Pareto escapes. No whole graph is newly closed.
+The next target is the residual low-valued-singleton blocker, and the full-
+recovery deficit when the donor retains the champion pair.
+
+Previous whole-case update (2026-09-27): [T11 and failure-case analysis](research/FULL_STAR_AND_FAILURE_CASES.md)
 closes the entire `1233_248` graph, including the sole-champion/later-priority
 branch, by Pareto improvements. The current count is 102 open graphs: 94 with
 two sources and 8 with three. Priority-decorated representatives total 2,280.
 The earlier source-compensation and dangerous-item notes are retained as the
 proof history; their 103-case counts are historical.
 
-**Consolidated status: 27 September 2026.** Four agents, ten indivisible goods,
+**Consolidated status: 28 September 2026.** Four agents, ten indivisible goods,
 nonnegative additive valuations, and EFX0 throughout. This is the current index
 of the project; older notes contain the detailed proofs and historical runs.
 No claim of novelty in the literature is made for the elementary lemmas.
