@@ -1,5 +1,11 @@
 # Dangerous items: a complete branch proof and a larger compensation move
 
+**Superseding result:** [T11](FULL_STAR_AND_FAILURE_CASES.md#t11) now closes the
+whole `1233_248` row, including the sole-champion/later-priority branch.
+The 103-case counts and open-branch statements below record the earlier stage;
+the current atlas has 102 open graphs.
+
+
 Date: 2026-09-27. Four agents, ten goods, nonnegative additive valuations;
 EFX means EFX0. This continues [SOURCE_COMPENSATION.md](SOURCE_COMPENSATION.md).
 

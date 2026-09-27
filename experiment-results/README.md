@@ -75,3 +75,10 @@ of the constructive proof and distinguish a C1 threshold obstruction from a
 lack of eligible relays. The universal mathematical result is the written
 proof, not the finite witness collection. Run `python -m unittest -v
 tests.test_dangerous_moves` to independently check the witnesses and relabelings.
+
+## Full-star closure (2026-09-27)
+
+`dangerous-items/sole-champion-witnesses.json` exercises the full T11
+construction. The existing `two-source/reduction-summary.json` remains the
+historical 103-case solver result. The current generated atlas adds the human
+exclusion `1233_248`, leaving 102 cases. Tests keep both scopes distinct.

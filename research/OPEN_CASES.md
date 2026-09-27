@@ -1,10 +1,10 @@
 # Open cases requiring examination
 
-These 103 templates remain open for the extremal EFR-existence route. No entry asserts failure of Mode C or EFR. See the [roadmap](../RESEARCH_STATUS.md#roadmap).
+These 102 templates remain open for the extremal EFR-existence route. No entry asserts failure of Mode C or EFR. See the [roadmap](../RESEARCH_STATUS.md#roadmap).
 
-Within `1233_248`, [D4](DANGEROUS_ITEM_PROGRESS.md#d4) closes the both-champion branch for every priority; the sole-champion/later-priority branch remains open. Whole-graph counts are unchanged.
+`1233_248` has been removed by [T11](FULL_STAR_AND_FAILURE_CASES.md#t11), a human proof covering all its branches and priorities.
 
-## First target: nine three-source cases
+## First target: eight three-source cases
 
 | ID | Bundle sizes | Envy edges | Status |
 | --- | --- | --- | --- |
@@ -14,7 +14,6 @@ Within `1233_248`, [D4](DANGEROUS_ITEM_PROGRESS.md#d4) closes the both-champion 
 | `1224_200` | [1, 2, 2, 4] | 3→0 | **OPEN** |
 | `1233_008` | [1, 2, 3, 3] | 1→0 | **OPEN** |
 | `1233_048` | [1, 2, 3, 3] | 1→0, 2→0 | **OPEN** |
-| `1233_248` | [1, 2, 3, 3] | 1→0, 2→0, 3→0 | **OPEN** |
 | `1233_040` | [1, 2, 3, 3] | 2→0 | **OPEN** |
 | `1233_240` | [1, 2, 3, 3] | 2→0, 3→0 | **OPEN** |
 
@@ -106,7 +105,6 @@ Within `1233_248`, [D4](DANGEROUS_ITEM_PROGRESS.md#d4) closes the both-champion 
 | `1233_6c8` | [1, 2, 3, 3] | 1→0, 2→0, 2→1, 3→0, 3→1 | 2, 3 | **OPEN** |
 | `1233_4c8` | [1, 2, 3, 3] | 1→0, 2→0, 2→1, 3→1 | 2, 3 | **OPEN** |
 | `1233_148` | [1, 2, 3, 3] | 1→0, 2→0, 2→3 | 1, 2 | **OPEN** |
-| `1233_248` | [1, 2, 3, 3] | 1→0, 2→0, 3→0 | 1, 2, 3 | **OPEN** |
 | `1233_448` | [1, 2, 3, 3] | 1→0, 2→0, 3→1 | 2, 3 | **OPEN** |
 | `1233_088` | [1, 2, 3, 3] | 1→0, 2→1 | 2, 3 | **OPEN** |
 | `1233_488` | [1, 2, 3, 3] | 1→0, 2→1, 3→1 | 2, 3 | **OPEN** |

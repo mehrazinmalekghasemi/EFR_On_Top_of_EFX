@@ -1,5 +1,11 @@
 # Three sources, compensation, and a fixed progress potential
 
+**Superseding result:** [T11](FULL_STAR_AND_FAILURE_CASES.md#t11) now closes the
+whole `1233_248` row, including the sole-champion/later-priority branch.
+The 103-case counts and open-branch statements below record the earlier stage;
+the current atlas has 102 open graphs.
+
+
 Follow-up: [DANGEROUS_ITEM_PROGRESS.md](DANGEROUS_ITEM_PROGRESS.md) now proves
 the entire both-champion branch (D4) and adds a residual compensation theorem
 (R1). The whole-graph atlas remains unchanged.

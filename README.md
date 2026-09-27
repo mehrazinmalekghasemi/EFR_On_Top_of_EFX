@@ -6,8 +6,8 @@ All EFX statements use EFX0, including deletion of zero-valued goods.
 
 **Current status:** no counterexample to unrestricted EFR existence or Mode C
 has been found, and neither universal statement has been proved here. The
-extremal-obstruction route has **103 open structural templates: 94 with two
-sources and 9 with three sources**. A completed workflow is not a completed proof.
+extremal-obstruction route has **102 open structural templates: 94 with two
+sources and 8 with three sources**. A completed workflow is not a completed proof.
 
 ## Read the research
 
@@ -15,7 +15,8 @@ sources and 9 with three sources**. A completed workflow is not a completed proo
 | --- | --- |
 | [Research status and roadmap](RESEARCH_STATUS.md) | Consolidated findings, numbered theorem register, refuted claims, and theoretical next steps. |
 | [Case atlas](CASE_ATLAS.md) | All 18 size profiles and 1,344 canonical acyclic graph cases; every cell names its theorem/proposition or says **OPEN**. |
-| [Open cases](research/OPEN_CASES.md) | Exact IDs, envy edges, and source sets for the 103 unresolved cases. |
+| [Open cases](research/OPEN_CASES.md) | Exact IDs, envy edges, and source sets for the 102 unresolved cases. |
+| [Full-star theorem and failure-case analysis](research/FULL_STAR_AND_FAILURE_CASES.md) | T11 closes `1233_248`; four two-source failure types have separate repair criteria. |
 | [Both-champion branch proof and residual compensation](research/DANGEROUS_ITEM_PROGRESS.md) | Complete both-champion branch proof; a larger three-agent repair and a counterexample to C1 alone. |
 | [Three-source and compensation progress](research/SOURCE_COMPENSATION.md) | New conditional proofs, optimal safe-pair compensation, and exact priority bookkeeping. |
 | [Latest coordinated-source proofs](TWO_SOURCE_PROGRESS.md) | Four-source progress, a nondegenerate two-agent trap, and a three-agent escape. |
@@ -25,7 +26,7 @@ sources and 9 with three sources**. A completed workflow is not a completed proo
 `T` labels denote human proofs; `CP` labels denote computer-checked propositions.
 The atlas excludes **terminal extremal obstructions**. It does not claim that
 every EFX starting allocation in a closed row directly accepts the omitted good.
-The 103 templates are not the older campaign's 220 valuation-ranking roots.
+The 102 templates are not the older campaign's 220 valuation-ranking roots.
 
 ## Reproduce the status tables
 

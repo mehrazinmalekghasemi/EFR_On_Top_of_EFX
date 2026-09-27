@@ -68,7 +68,7 @@ python -m efr.structural_efr_search --pilot --seconds 15 --out run/structural-pi
 ```
 
 `efr/structural_efr_search.py` retains the historical 156-template domain for
-reproducibility. The current 103 open IDs are in `research/case-status.json` and
+reproducibility. The current 102 open IDs are in `research/case-status.json` and
 `research/OPEN_CASES.md`; the atlas does not silently alter a running campaign.
 Priority-dependent cuts require the symmetry work stated in the roadmap.
 

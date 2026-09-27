@@ -1,22 +1,13 @@
 # EFX-nine to EFR-ten: research status and proof roadmap
 
-Latest update (2026-09-27): [Dangerous-item progress](research/DANGEROUS_ITEM_PROGRESS.md)
-proves the full both-triples-champion-the-pair branch of `1233_248`, for every
-priority, by Pareto moves involving up to four agents. It also proves a
-three-agent residual relay and refutes universal coverage by C1 alone.
-The sole-champion/later-priority branch remains open; whole-graph counts stay
-at 103. No exhaustive valuation campaign was run.
+Latest update (2026-09-27): [T11 and failure-case analysis](research/FULL_STAR_AND_FAILURE_CASES.md)
+closes the entire `1233_248` graph, including the sole-champion/later-priority
+branch, by Pareto improvements. The current count is 102 open graphs: 94 with
+two sources and 8 with three. Priority-decorated representatives total 2,280.
+The earlier source-compensation and dangerous-item notes are retained as the
+proof history; their 103-case counts are historical.
 
-
-Update (2026-09-27): [SOURCE_COMPENSATION.md](research/SOURCE_COMPENSATION.md)
-adds three-source structural lemmas, a proved conditional subcase of `1233_248`,
-and an optimal two-good compensation theorem for a three-agent relay. It also
-counts 2,292 priority-decorated representatives of the 103 open graphs.
-These conditional results do not change the atlas's whole-case open counts.
-Code now lives in `efr/`, tests in `tests/`, and shell wrappers in `scripts/`.
-
-
-**Consolidated status: 25 September 2026.** Four agents, ten indivisible goods,
+**Consolidated status: 27 September 2026.** Four agents, ten indivisible goods,
 nonnegative additive valuations, and EFX0 throughout. This is the current index
 of the project; older notes contain the detailed proofs and historical runs.
 No claim of novelty in the literature is made for the elementary lemmas.
@@ -30,9 +21,9 @@ give several positive results. Counterexamples show that a prescribed omitted
 good, a prescribed size profile, size-preserving exchanges, and two-agent
 monotone repair are each insufficient in general. None of these examples
 refutes unrestricted EFR existence or Mode C. The current necessary extremal
-case decomposition has 1,344 acyclic nonempty templates: 1,189 are excluded by
-human proofs, 52 more by computer-checked propositions, and 103 remain open.
-The open templates consist of 94 two-source and 9 three-source cases.
+case decomposition has 1,344 acyclic nonempty templates: 1,190 are excluded by
+human proofs, 52 more by computer-checked propositions, and 102 remain open.
+The open templates consist of 94 two-source and 8 three-source cases.
 
 ## 1. Definitions and the three different questions
 
@@ -198,6 +189,15 @@ may lose utility. This is a proved sufficient lemma, **not** a guarantee that
 the needed agents and compensation always exist.
 Proof: [TWO_SOURCE_PROGRESS, Section 4](TWO_SOURCE_PROGRESS.md#4-a-three-agent-compensated-path-lemma).
 
+<a id="t11"></a>
+### T11. Full all-envious-source (1,2,3,3) star
+
+If the three nonsingleton owners are sources and all envy the singleton, then
+there is an EFR insertion or a partial EFX Pareto improvement. The sole-champion
+branch reduces to mutual danger or split danger; both have constructive repairs
+independent of priority. Thus `1233_248` is excluded as a terminal obstruction.
+Proof: [full-star theorem](research/FULL_STAR_AND_FAILURE_CASES.md#t11).
+
 <a id="cp1"></a>
 ### CP1. Compensation exclusions
 
@@ -259,14 +259,14 @@ Each detailed row is labeled by its closing theorem/proposition or **OPEN**.
 | (1,1,2,5) | 284 | 266 | 5 | 13 |
 | (1,1,3,4) | 284 | 266 | 0 | 18 |
 | (1,2,2,4) | 284 | 245 | 13 | 26 |
-| (1,2,3,3) | 284 | 227 | 11 | 46 |
+| (1,2,3,3) | 284 | 228 | 11 | 45 |
 | (2,2,2,3) | 104 | 81 | 23 | 0 |
-| **Total** | **1344** | **1189** | **52** | **103** |
+| **Total** | **1344** | **1190** | **52** | **102** |
 
 The twelve empty-bundle profiles are closed separately by T1. Strict envy cycles
 are removed by T2 before this acyclic count. Counts quotient only by simultaneous
 agent relabelings preserving bundle sizes. They do not independently sort rows.
-The 103 open cases are 94 two-source and 9 three-source cases, each representing
+The 102 open cases are 94 two-source and 8 three-source cases, each representing
 an infinite valuation region. They do not correspond one-to-one to the older
 220 valuation-ranking roots of the Mode C campaign.
 
@@ -281,7 +281,7 @@ an infinite valuation region. They do not correspond one-to-one to the older
 | Seeded mutation search | 404 candidate evaluations; the smallest observed number of successful omitted goods was six. | Six is not a universal lower bound. |
 | Earlier full-region pilot | Zero of 220 roots closed in the recorded 90-second attempt. | Budget expiration is not a negative theorem. |
 | Structural pilots | Both nine-case pilots closed zero regions; the longer four-source attempt also remained open. | Superseded by theoretical compensation reductions for that case; no general runtime estimate. |
-| Coordinated-source certificates | 53 distinct historical-156 regions excluded, one also by T9; independent cvc5 replay. | 103 extremal cases remain open; semantic encoding not formally verified. |
+| Coordinated-source certificates | 53 distinct historical-156 regions excluded, one also by T9; independent cvc5 replay. | 103 remained after these checks; T11 reduces the live ledger to 102. Semantic encoding not formally verified. |
 
 Canonical evidence is indexed in [experiment-results/README.md](experiment-results/README.md).
 The earlier 88.4% template reduction and the current smaller case count are
@@ -301,15 +301,15 @@ ten allocated goods and finiteness gives termination. If G2 is the target,
 also prove that the endpoint has an EFX-nine deletion certificate; T4 alone
 does not give that implication. Keep G3 as a separate stronger conjecture.
 
-### Step B: settle the nine three-source templates first
+### Step B: settle the eight remaining three-source templates
 
 These are explicitly listed at the top of [OPEN_CASES.md](research/OPEN_CASES.md).
-Four have profile (1,2,2,4), and five have (1,2,3,3). Every envy edge in these
-nine graphs points into agent 0's singleton. This common topology is a concrete
+Four have profile (1,2,2,4), and four have (1,2,3,3). Every envy edge in these
+eight graphs points into agent 0's singleton. This common topology is a concrete
 target for a unified lemma: use the singleton as the end of a path, then
 compensate a second source without reusing g. Prove a capacity or compensation
-inequality that forces completion or strict progress. The graph shape alone
-does not yet establish it.
+inequality that forces completion or strict progress. T11 has now settled the all-envious-source (1,2,3,3) row; the other eight
+stars remain open.
 
 ### Step C: strengthen T10 for the 94 two-source templates
 
@@ -332,13 +332,14 @@ two champion edges cannot both consume the single omitted good.
 
 ### Step D: repair the symmetry before using lexicographic search cuts
 
-The existing 103-case reduction uses priority-independent Pareto improvements.
+The current 102-case reduction uses priority-independent Pareto improvements.
 Sorting bundle sizes and canonicalizing the graph may permute agent priority.
 T10 is priority-dependent. Either prove its use uniformly over priority orders,
 or carry the priority ordering as part of the case and quotient it together
 with the graph. A fixed-priority inequality cannot silently be added to the
-current canonical cells. There can be up to 24 priority decorations per graph
-before further automorphism reduction; this is an upper bound, not a new count.
+current canonical cells. The current exact decorated count is 2,280: 2,136 for two-source graphs and
+144 for three-source graphs. The generator `python -m efr.priority` carries
+priority through the graph automorphisms.
 
 ### Step E: make the remaining computer argument small and auditable
 
@@ -360,7 +361,7 @@ wall-time caps alone cannot predict a three-to-four-day completion.
 - Berger, Cohen, Feldman, Fiat: [(Almost Full) EFX Exists for Four Agents (and Beyond)](https://arxiv.org/abs/2102.10654). Full-version Theorem 5.1 / AAAI Theorem 4.1 supplies the progress dependency. We do not claim this theorem as our contribution.
 - Alkassar, Fouz, Mehlhorn: [Complete EFX Allocations Exist for Four Additive Agents and Up to Nine Goods](https://arxiv.org/abs/2608.08590). External EFX-nine existence result; its full certificate corpus was not rerun here.
 - [CASE_ATLAS.md](CASE_ATLAS.md): theorem/open matrix and every individual structural case.
-- [research/OPEN_CASES.md](research/OPEN_CASES.md): the 103 unresolved case IDs and exact envy graphs.
+- [research/OPEN_CASES.md](research/OPEN_CASES.md): the 102 unresolved case IDs and exact envy graphs.
 - [TWO_SOURCE_PROGRESS.md](TWO_SOURCE_PROGRESS.md): newest full proofs and locality obstruction.
 - [RUNNING.md](RUNNING.md): operational instructions; these are not completion-time promises.
 - [experiment-results/README.md](experiment-results/README.md): retained evidence and cleanup policy.

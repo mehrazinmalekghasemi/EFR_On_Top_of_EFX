@@ -13,7 +13,7 @@ ROOT=Path(__file__).resolve().parents[1]
 LINKS={
     'T1': 'RESEARCH_STATUS.md#t1', 'T5':'RESEARCH_STATUS.md#t5',
     'T6':'RESEARCH_STATUS.md#t6', 'T7':'RESEARCH_STATUS.md#t7',
-    'T9':'RESEARCH_STATUS.md#t9', 'CP1':'RESEARCH_STATUS.md#cp1',
+    'T9':'RESEARCH_STATUS.md#t9', 'T11':'RESEARCH_STATUS.md#t11', 'CP1':'RESEARCH_STATUS.md#cp1',
     'CP2':'RESEARCH_STATUS.md#cp2',
 }
 
@@ -42,6 +42,7 @@ def classify():
             elif any(not any(profile[i]!=2 and not reach[k][i] for i in range(4))
                      for k in sources if profile[k]==2):status='T7'
             elif len(sources)==4:status='T9'
+            elif case_id=='1233_248':status='T11'
             elif case_id in compensation:status='CP1'
             elif case_id in finite_menus:status='CP2'
             else:status='OPEN'
@@ -49,9 +50,9 @@ def classify():
                          'sources':list(sources),'status':status,
                          'evidence':LINKS.get(status)})
     prior={c['id'] for c in catalog()[0]}
-    assert {r['id'] for r in rows if r['status'] in {'T9','CP1','CP2','OPEN'}}==prior
+    assert {r['id'] for r in rows if r['status'] in {'T9','T11','CP1','CP2','OPEN'}}==prior
     expected=set(json.loads((directory/'reduction-summary.json').read_text())['remaining_ids'])
-    assert {r['id'] for r in rows if r['status']=='OPEN'}==expected
+    assert {r['id'] for r in rows if r['status']=='OPEN'}==expected-{'1233_248'}  # New human theorem; keep historical solver ledger intact.
     return rows
 
 
@@ -79,7 +80,7 @@ def render():
         if 0 in p:status=label('T1');n=0
         else:
             part=[r for r in rows if r['profile']==list(p)];c=Counter(r['status'] for r in part);n=c['OPEN']
-            status='; '.join(f'{label(k)} × {c[k]}' for k in ['T5','T6','T7','T9','CP1','CP2','OPEN'] if c[k])
+            status='; '.join(f'{label(k)} × {c[k]}' for k in ['T5','T6','T7','T9','T11','CP1','CP2','OPEN'] if c[k])
             profile=f'[{profile}](research/cases/{key}.md)'
         top.append(f'| ({profile}) | {status} | {n} |')
     top+=['','Strict envy cycles are removed by [T2](RESEARCH_STATUS.md#t2), before the acyclic catalog below.','',
@@ -91,7 +92,7 @@ def render():
         cells=[]
         for n in range(1,5):
             c=Counter(r['status'] for r in part if len(r['sources'])==n)
-            cells.append('; '.join(f'{label(k)} × {c[k]}' for k in ['T5','T6','T7','T9','CP1','CP2','OPEN'] if c[k]) or 'No template')
+            cells.append('; '.join(f'{label(k)} × {c[k]}' for k in ['T5','T6','T7','T9','T11','CP1','CP2','OPEN'] if c[k]) or 'No template')
         top.append('| ['+','.join(map(str,p))+f'](research/cases/{key}.md) | '+' | '.join(cells)+' |')
         lines=[f'# Individual cases: ({",".join(map(str,p))})','',
                '[Atlas](../../CASE_ATLAS.md) · [Theorem register](../../RESEARCH_STATUS.md#theorem-register)','',
@@ -104,22 +105,19 @@ def render():
     top+=['','## Count audit','',f'- Acyclic nonempty templates: {len(rows)}.',
           f'- Human-proof exclusions: {sum(v for k,v in counts.items() if k.startswith("T"))}.',
           f'- Additional computer-checked exclusions: {counts["CP1"]+counts["CP2"]}.',
-          f'- OPEN: {counts["OPEN"]} (94 two-source, 9 three-source).','',
+          f'- OPEN: {counts["OPEN"]} (94 two-source, 8 three-source).','',
           'The 50 compensation solver closures include the four-source case, which is assigned T9 here because it also has a human proof. Hence CP1 labels 49 rows; CP2 labels 3. No row is counted twice.','',
           'The earlier 156-case catalog is retained as a historical baseline. The original 220 valuation-ranking roots are a different decomposition and are not classified by this table.','',
           '[All open cases](research/OPEN_CASES.md) · [Machine-readable ledger](research/case-status.json) · [Theoretical next steps](RESEARCH_STATUS.md#roadmap)']
-    top+=['','## Proved subregions inside open graph rows','',
-          '| Graph | Subregion | Answer |','| --- | --- | --- |',
-          '| `1233_248` | Both triples champion the pair, any priority | [D4](research/DANGEROUS_ITEM_PROGRESS.md#d4) |',
-          '| `1233_248` | Sole champion precedes the other triple | [S3](research/SOURCE_COMPENSATION.md#s3-a-proved-subcase-of-the-all-envious-source-configuration) |',
-          '| `1233_248` | Sole champion follows the other triple | **OPEN** |','',
-          'These branch proofs do not yet close a whole graph row. [R1](research/DANGEROUS_ITEM_PROGRESS.md#r1) additionally settles eligible two-singleton relays under its value and priority conditions.']
+    top+=['','## Latest human-proof exclusion','',
+          '`1233_248` is closed in full by [T11](research/FULL_STAR_AND_FAILURE_CASES.md#t11), including both-champion and sole-champion branches for every fixed priority. This removes one whole graph row, not merely a sampled valuation.','',
+          'The 94 two-source cases remain open; the same note gives separate proved implications for the four compensation failure types.']
     files['CASE_ATLAS.md']='\n'.join(top)+'\n'
     open_rows=[r for r in rows if r['status']=='OPEN']
     lines=['# Open cases requiring examination','',
-           'These 103 templates remain open for the extremal EFR-existence route. No entry asserts failure of Mode C or EFR. See the [roadmap](../RESEARCH_STATUS.md#roadmap).','',
-           'Within `1233_248`, [D4](DANGEROUS_ITEM_PROGRESS.md#d4) closes the both-champion branch for every priority; the sole-champion/later-priority branch remains open. Whole-graph counts are unchanged.','',
-           '## First target: nine three-source cases','',
+           'These 102 templates remain open for the extremal EFR-existence route. No entry asserts failure of Mode C or EFR. See the [roadmap](../RESEARCH_STATUS.md#roadmap).','',
+           '`1233_248` has been removed by [T11](FULL_STAR_AND_FAILURE_CASES.md#t11), a human proof covering all its branches and priorities.','',
+           '## First target: eight three-source cases','',
            '| ID | Bundle sizes | Envy edges | Status |','| --- | --- | --- | --- |']
     for r in open_rows:
         if len(r['sources'])==3:lines.append(f'| `{r["id"]}` | {r["profile"]} | '+', '.join(f'{a}→{b}' for a,b in r['edges'])+' | **OPEN** |')

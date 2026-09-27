@@ -28,7 +28,7 @@ Agents are 0,1,2,3. An edge i → j means i envies j. Only simultaneous relabeli
 | ([1,1,2,5](research/cases/1125.md)) | [T5](RESEARCH_STATUS.md#t5) × 163; [T6](RESEARCH_STATUS.md#t6) × 103; [CP1](RESEARCH_STATUS.md#cp1) × 5; **OPEN** × 13 | 13 |
 | ([1,1,3,4](research/cases/1134.md)) | [T5](RESEARCH_STATUS.md#t5) × 163; [T6](RESEARCH_STATUS.md#t6) × 103; **OPEN** × 18 | 18 |
 | ([1,2,2,4](research/cases/1224.md)) | [T5](RESEARCH_STATUS.md#t5) × 163; [T6](RESEARCH_STATUS.md#t6) × 64; [T7](RESEARCH_STATUS.md#t7) × 18; [CP1](RESEARCH_STATUS.md#cp1) × 13; **OPEN** × 26 | 26 |
-| ([1,2,3,3](research/cases/1233.md)) | [T5](RESEARCH_STATUS.md#t5) × 163; [T6](RESEARCH_STATUS.md#t6) × 64; [CP1](RESEARCH_STATUS.md#cp1) × 11; **OPEN** × 46 | 46 |
+| ([1,2,3,3](research/cases/1233.md)) | [T5](RESEARCH_STATUS.md#t5) × 163; [T6](RESEARCH_STATUS.md#t6) × 64; [T11](RESEARCH_STATUS.md#t11) × 1; [CP1](RESEARCH_STATUS.md#cp1) × 11; **OPEN** × 45 | 45 |
 | ([2,2,2,3](research/cases/2223.md)) | [T5](RESEARCH_STATUS.md#t5) × 58; [T7](RESEARCH_STATUS.md#t7) × 22; [T9](RESEARCH_STATUS.md#t9) × 1; [CP1](RESEARCH_STATUS.md#cp1) × 20; [CP2](RESEARCH_STATUS.md#cp2) × 3 | 0 |
 
 Strict envy cycles are removed by [T2](RESEARCH_STATUS.md#t2), before the acyclic catalog below.
@@ -43,15 +43,15 @@ Mixed cells list every theorem/proposition used and the number still OPEN. The i
 | [1,1,2,5](research/cases/1125.md) | [T5](RESEARCH_STATUS.md#t5) × 163 | [T6](RESEARCH_STATUS.md#t6) × 85; [CP1](RESEARCH_STATUS.md#cp1) × 5; **OPEN** × 13 | [T6](RESEARCH_STATUS.md#t6) × 17 | [T6](RESEARCH_STATUS.md#t6) × 1 |
 | [1,1,3,4](research/cases/1134.md) | [T5](RESEARCH_STATUS.md#t5) × 163 | [T6](RESEARCH_STATUS.md#t6) × 85; **OPEN** × 18 | [T6](RESEARCH_STATUS.md#t6) × 17 | [T6](RESEARCH_STATUS.md#t6) × 1 |
 | [1,2,2,4](research/cases/1224.md) | [T5](RESEARCH_STATUS.md#t5) × 163 | [T6](RESEARCH_STATUS.md#t6) × 51; [T7](RESEARCH_STATUS.md#t7) × 18; [CP1](RESEARCH_STATUS.md#cp1) × 12; **OPEN** × 22 | [T6](RESEARCH_STATUS.md#t6) × 12; [CP1](RESEARCH_STATUS.md#cp1) × 1; **OPEN** × 4 | [T6](RESEARCH_STATUS.md#t6) × 1 |
-| [1,2,3,3](research/cases/1233.md) | [T5](RESEARCH_STATUS.md#t5) × 163 | [T6](RESEARCH_STATUS.md#t6) × 51; [CP1](RESEARCH_STATUS.md#cp1) × 11; **OPEN** × 41 | [T6](RESEARCH_STATUS.md#t6) × 12; **OPEN** × 5 | [T6](RESEARCH_STATUS.md#t6) × 1 |
+| [1,2,3,3](research/cases/1233.md) | [T5](RESEARCH_STATUS.md#t5) × 163 | [T6](RESEARCH_STATUS.md#t6) × 51; [CP1](RESEARCH_STATUS.md#cp1) × 11; **OPEN** × 41 | [T6](RESEARCH_STATUS.md#t6) × 12; [T11](RESEARCH_STATUS.md#t11) × 1; **OPEN** × 4 | [T6](RESEARCH_STATUS.md#t6) × 1 |
 | [2,2,2,3](research/cases/2223.md) | [T5](RESEARCH_STATUS.md#t5) × 58 | [T7](RESEARCH_STATUS.md#t7) × 19; [CP1](RESEARCH_STATUS.md#cp1) × 15; [CP2](RESEARCH_STATUS.md#cp2) × 3 | [T7](RESEARCH_STATUS.md#t7) × 3; [CP1](RESEARCH_STATUS.md#cp1) × 5 | [T9](RESEARCH_STATUS.md#t9) × 1 |
 
 ## Count audit
 
 - Acyclic nonempty templates: 1344.
-- Human-proof exclusions: 1189.
+- Human-proof exclusions: 1190.
 - Additional computer-checked exclusions: 52.
-- OPEN: 103 (94 two-source, 9 three-source).
+- OPEN: 102 (94 two-source, 8 three-source).
 
 The 50 compensation solver closures include the four-source case, which is assigned T9 here because it also has a human proof. Hence CP1 labels 49 rows; CP2 labels 3. No row is counted twice.
 
@@ -59,12 +59,8 @@ The earlier 156-case catalog is retained as a historical baseline. The original 
 
 [All open cases](research/OPEN_CASES.md) · [Machine-readable ledger](research/case-status.json) · [Theoretical next steps](RESEARCH_STATUS.md#roadmap)
 
-## Proved subregions inside open graph rows
+## Latest human-proof exclusion
 
-| Graph | Subregion | Answer |
-| --- | --- | --- |
-| `1233_248` | Both triples champion the pair, any priority | [D4](research/DANGEROUS_ITEM_PROGRESS.md#d4) |
-| `1233_248` | Sole champion precedes the other triple | [S3](research/SOURCE_COMPENSATION.md#s3-a-proved-subcase-of-the-all-envious-source-configuration) |
-| `1233_248` | Sole champion follows the other triple | **OPEN** |
+`1233_248` is closed in full by [T11](research/FULL_STAR_AND_FAILURE_CASES.md#t11), including both-champion and sole-champion branches for every fixed priority. This removes one whole graph row, not merely a sampled valuation.
 
-These branch proofs do not yet close a whole graph row. [R1](research/DANGEROUS_ITEM_PROGRESS.md#r1) additionally settles eligible two-singleton relays under its value and priority conditions.
+The 94 two-source cases remain open; the same note gives separate proved implications for the four compensation failure types.
