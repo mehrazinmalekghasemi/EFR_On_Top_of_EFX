@@ -58,3 +58,13 @@ The 50 compensation solver closures include the four-source case, which is assig
 The earlier 156-case catalog is retained as a historical baseline. The original 220 valuation-ranking roots are a different decomposition and are not classified by this table.
 
 [All open cases](research/OPEN_CASES.md) · [Machine-readable ledger](research/case-status.json) · [Theoretical next steps](RESEARCH_STATUS.md#roadmap)
+
+## Proved subregions inside open graph rows
+
+| Graph | Subregion | Answer |
+| --- | --- | --- |
+| `1233_248` | Both triples champion the pair, any priority | [D4](research/DANGEROUS_ITEM_PROGRESS.md#d4) |
+| `1233_248` | Sole champion precedes the other triple | [S3](research/SOURCE_COMPENSATION.md#s3-a-proved-subcase-of-the-all-envious-source-configuration) |
+| `1233_248` | Sole champion follows the other triple | **OPEN** |
+
+These branch proofs do not yet close a whole graph row. [R1](research/DANGEROUS_ITEM_PROGRESS.md#r1) additionally settles eligible two-singleton relays under its value and priority conditions.

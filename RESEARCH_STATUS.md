@@ -1,5 +1,13 @@
 # EFX-nine to EFR-ten: research status and proof roadmap
 
+Latest update (2026-09-27): [Dangerous-item progress](research/DANGEROUS_ITEM_PROGRESS.md)
+proves the full both-triples-champion-the-pair branch of `1233_248`, for every
+priority, by Pareto moves involving up to four agents. It also proves a
+three-agent residual relay and refutes universal coverage by C1 alone.
+The sole-champion/later-priority branch remains open; whole-graph counts stay
+at 103. No exhaustive valuation campaign was run.
+
+
 Update (2026-09-27): [SOURCE_COMPENSATION.md](research/SOURCE_COMPENSATION.md)
 adds three-source structural lemmas, a proved conditional subcase of `1233_248`,
 and an optimal two-good compensation theorem for a three-agent relay. It also

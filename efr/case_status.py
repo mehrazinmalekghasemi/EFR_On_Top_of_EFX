@@ -108,10 +108,17 @@ def render():
           'The 50 compensation solver closures include the four-source case, which is assigned T9 here because it also has a human proof. Hence CP1 labels 49 rows; CP2 labels 3. No row is counted twice.','',
           'The earlier 156-case catalog is retained as a historical baseline. The original 220 valuation-ranking roots are a different decomposition and are not classified by this table.','',
           '[All open cases](research/OPEN_CASES.md) · [Machine-readable ledger](research/case-status.json) · [Theoretical next steps](RESEARCH_STATUS.md#roadmap)']
+    top+=['','## Proved subregions inside open graph rows','',
+          '| Graph | Subregion | Answer |','| --- | --- | --- |',
+          '| `1233_248` | Both triples champion the pair, any priority | [D4](research/DANGEROUS_ITEM_PROGRESS.md#d4) |',
+          '| `1233_248` | Sole champion precedes the other triple | [S3](research/SOURCE_COMPENSATION.md#s3-a-proved-subcase-of-the-all-envious-source-configuration) |',
+          '| `1233_248` | Sole champion follows the other triple | **OPEN** |','',
+          'These branch proofs do not yet close a whole graph row. [R1](research/DANGEROUS_ITEM_PROGRESS.md#r1) additionally settles eligible two-singleton relays under its value and priority conditions.']
     files['CASE_ATLAS.md']='\n'.join(top)+'\n'
     open_rows=[r for r in rows if r['status']=='OPEN']
     lines=['# Open cases requiring examination','',
            'These 103 templates remain open for the extremal EFR-existence route. No entry asserts failure of Mode C or EFR. See the [roadmap](../RESEARCH_STATUS.md#roadmap).','',
+           'Within `1233_248`, [D4](DANGEROUS_ITEM_PROGRESS.md#d4) closes the both-champion branch for every priority; the sole-champion/later-priority branch remains open. Whole-graph counts are unchanged.','',
            '## First target: nine three-source cases','',
            '| ID | Bundle sizes | Envy edges | Status |','| --- | --- | --- | --- |']
     for r in open_rows:

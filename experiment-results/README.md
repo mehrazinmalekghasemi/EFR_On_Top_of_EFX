@@ -66,3 +66,12 @@ all 53 canonical regions replayed UNSAT with cvc5 proof checking enabled; and
 the independent 8,532-assignment obstruction verification and positive escape
 witnesses were reproduced. Only verification was rerun, not a new valuation
 search.
+
+## Dangerous-item branch proofs (2026-09-27)
+
+`dangerous-items/witnesses.json` retains small exact regression witnesses for
+[D4 and R1](../research/DANGEROUS_ITEM_PROGRESS.md). They exercise all branches
+of the constructive proof and distinguish a C1 threshold obstruction from a
+lack of eligible relays. The universal mathematical result is the written
+proof, not the finite witness collection. Run `python -m unittest -v
+tests.test_dangerous_moves` to independently check the witnesses and relabelings.

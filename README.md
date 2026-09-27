@@ -16,6 +16,7 @@ sources and 9 with three sources**. A completed workflow is not a completed proo
 | [Research status and roadmap](RESEARCH_STATUS.md) | Consolidated findings, numbered theorem register, refuted claims, and theoretical next steps. |
 | [Case atlas](CASE_ATLAS.md) | All 18 size profiles and 1,344 canonical acyclic graph cases; every cell names its theorem/proposition or says **OPEN**. |
 | [Open cases](research/OPEN_CASES.md) | Exact IDs, envy edges, and source sets for the 103 unresolved cases. |
+| [Both-champion branch proof and residual compensation](research/DANGEROUS_ITEM_PROGRESS.md) | Complete both-champion branch proof; a larger three-agent repair and a counterexample to C1 alone. |
 | [Three-source and compensation progress](research/SOURCE_COMPENSATION.md) | New conditional proofs, optimal safe-pair compensation, and exact priority bookkeeping. |
 | [Latest coordinated-source proofs](TWO_SOURCE_PROGRESS.md) | Four-source progress, a nondegenerate two-agent trap, and a three-agent escape. |
 | [Evidence index](experiment-results/README.md) | Retained witnesses, certificate inputs, benchmarks, and cleanup policy. |

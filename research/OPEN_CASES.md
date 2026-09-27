@@ -2,6 +2,8 @@
 
 These 103 templates remain open for the extremal EFR-existence route. No entry asserts failure of Mode C or EFR. See the [roadmap](../RESEARCH_STATUS.md#roadmap).
 
+Within `1233_248`, [D4](DANGEROUS_ITEM_PROGRESS.md#d4) closes the both-champion branch for every priority; the sole-champion/later-priority branch remains open. Whole-graph counts are unchanged.
+
 ## First target: nine three-source cases
 
 | ID | Bundle sizes | Envy edges | Status |

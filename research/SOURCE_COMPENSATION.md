@@ -1,5 +1,9 @@
 # Three sources, compensation, and a fixed progress potential
 
+Follow-up: [DANGEROUS_ITEM_PROGRESS.md](DANGEROUS_ITEM_PROGRESS.md) now proves
+the entire both-champion branch (D4) and adds a residual compensation theorem
+(R1). The whole-graph atlas remains unchanged.
+
 Date: 2026-09-27. Scope: four agents, ten goods, nonnegative additive values,
 EFX0. This note adds human proofs of conditional progress statements. **It does
 not close a whole case in the 103-case atlas**, prove universal three-agent
@@ -165,9 +169,8 @@ restoration. QED.
 
 This proof actually uses at most two changing agents in its final branch.
 It does not contradict the known two-agent obstruction, which is in a
-different configuration. The unresolved branches include both triples
-championing the pair, and a sole champion that follows the other triple in
-priority. We do not relabel q to make it earlier.
+different configuration. The both-champion branch is now settled by D4 in the follow-up note.
+A sole champion that follows the other triple in priority remains unresolved. We do not relabel q to make it earlier.
 
 ## 3. A stronger three-agent compensation theorem
 
