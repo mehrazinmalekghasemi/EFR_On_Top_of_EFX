@@ -21,7 +21,7 @@ This measures changes to the partition, not the total number of goods whose
 agent owner changes. Whole-bundle ownership changes may change many agents'
 received goods at zero partition-edit cost.
 
-`rebundle.py` enumerates all 10*11051 unlabeled nine-good partitions/deletions,
+`efr/rebundle.py` enumerates all 10*11051 unlabeled nine-good partitions/deletions,
 sorts candidates into distance layers, and tests EFX ownership and insertion
 using the exact matching kernel. The first successful distance is minimal,
 because every smaller distance was exhaustively checked. Integer/rational

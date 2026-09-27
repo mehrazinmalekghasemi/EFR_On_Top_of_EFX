@@ -1,5 +1,13 @@
 # EFX-nine to EFR-ten: research status and proof roadmap
 
+Update (2026-09-27): [SOURCE_COMPENSATION.md](research/SOURCE_COMPENSATION.md)
+adds three-source structural lemmas, a proved conditional subcase of `1233_248`,
+and an optimal two-good compensation theorem for a three-agent relay. It also
+counts 2,292 priority-decorated representatives of the 103 open graphs.
+These conditional results do not change the atlas's whole-case open counts.
+Code now lives in `efr/`, tests in `tests/`, and shell wrappers in `scripts/`.
+
+
 **Consolidated status: 25 September 2026.** Four agents, ten indivisible goods,
 nonnegative additive valuations, and EFX0 throughout. This is the current index
 of the project; older notes contain the detailed proofs and historical runs.

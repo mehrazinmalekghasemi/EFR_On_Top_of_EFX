@@ -264,13 +264,13 @@ potential progress is required only for nonterminal iterations.
 
 ## Reproducibility and next task
 
-- `restoration_moves.py`: exact refinement, reachable safe champion moves, and
+- `efr/restoration_moves.py`: exact refinement, reachable safe champion moves, and
   lexicographically improving one-good transfers. It does NOT implement BCFF's
   full restoration case analysis.
-- `search_restoration_obstruction.py`: bounded positive integer SMT search for
+- `efr/search_restoration_obstruction.py`: bounded positive integer SMT search for
   an obstruction to the limited source-path and ownership rules. No EFR
   nonexistence claim is made by this script.
-- `test_restoration_moves.py`: four tests verify the multiple-source obstruction,
+- `tests/test_restoration_moves.py`: four tests verify the multiple-source obstruction,
   its escape, the no-common-minimum variants, the nondegenerate refinement, and the release of six goods from
   our earlier large-source example. All four passed.
 - `experiment-results/restoration/verified-two-source-obstruction.json`: the

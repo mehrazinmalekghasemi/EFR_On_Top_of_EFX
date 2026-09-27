@@ -44,7 +44,7 @@ steps need not be EFX. It identifies a concrete need for coordinated rebundling.
 
 ## Exact experiment
 
-`exchange_search.py` explores a finite graph of unlabeled partitions. For each
+`efr/exchange_search.py` explores a finite graph of unlabeled partitions. For each
 partition it explicitly enumerates all EFX agent assignments. A swap edge exists
 only if some labeled EFX assignment remains EFX when the omitted good replaces
 one allocated good, before any subsequent ownership change. No welfare-monotonic
@@ -59,7 +59,7 @@ An unrestricted oracle separately attempts to find an extension on trapped
 valuation profiles. Sorting unlabeled partitions never changes labeled witness
 ownership.
 
-`exchange_experiment.py` runs boundary/obstruction regressions and seeded profiles
+`efr/exchange_experiment.py` runs boundary/obstruction regressions and seeded profiles
 from four families: independent integer values, near-identical values, sparse
 values, and identical values. Each profile starts from an EFX allocation for a
 randomly deleted good, plus a second EFX partition sampled from up to 128 random

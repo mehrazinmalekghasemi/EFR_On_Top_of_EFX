@@ -46,9 +46,9 @@ or final verified counterexample was removed.
 From the repository root:
 
 ```bash
-python case_status.py --check
-python verify_two_source.py
-python verify_two_source.py --replay
+python -m efr.case_status --check
+python -m efr.verify_two_source
+python -m efr.verify_two_source --replay
 ```
 
 The optional replay requires `cvc5==1.4.0`. It regenerates portable formulas

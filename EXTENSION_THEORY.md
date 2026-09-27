@@ -57,7 +57,7 @@ with -3, agent 2 blocks target 3 with -3, and agent 3 blocks target 0 with
 The obstruction is a strict envy cycle 0 -> 1 -> 2 -> 3 -> 0.
 Positive row normalization preserves every claim.
 
-Run: `python capacity.py examples/least-good-fixed-predecessor.json`.
+Run: `python -m efr.capacity examples/least-good-fixed-predecessor.json`.
 The program rotates that cycle and returns an exactly checked feasible insertion.
 
 ## 4. A sufficient condition using an unenvied bundle
@@ -102,7 +102,7 @@ The resulting acyclic envy graph has a vertex k of indegree zero. If its bundle
 is empty, insertion is safe. Otherwise, because g is universally least,
 v_i(g) <= v_i(A_k)/|A_k| for every i != k. Apply the preceding lemma. QED.
 
-A run may stop earlier if any target already has capacity. `capacity.py` does so,
+A run may stop earlier if any target already has capacity. `efr/capacity.py` does so,
 uses exact rational comparisons, and returns the rotations and margins. Without
 the least-good assumption it is only a sufficient repair heuristic; failure is
 not a counterexample to unrestricted Mode C.

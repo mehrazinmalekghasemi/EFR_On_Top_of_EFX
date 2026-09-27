@@ -5,7 +5,8 @@ These commands specify computation budgets, not completion guarantees.
 
 ## Install and test
 
-Use Python 3.12 with the pinned requirements. Numba may compile on first use.
+Run commands from the repository root. Code is in `efr/`, tests in `tests/`,
+and the optional week wrapper in `scripts/run_week.sh`. Use Python 3.12 with the pinned requirements. Numba may compile on first use.
 
 ```bash
 python -m venv .venv
@@ -17,8 +18,8 @@ python -m unittest discover -v
 The case atlas uses only the standard library:
 
 ```bash
-python case_status.py
-python case_status.py --check
+python -m efr.case_status
+python -m efr.case_status --check
 ```
 
 ## Exact point oracle
@@ -27,10 +28,10 @@ Input is four rows of ten nonnegative values. Exact rational strings are
 accepted. `extension` is Mode C; `efr` allows any complete EFR allocation.
 
 ```bash
-python oracle.py examples/sample.json --out allocation.json
-python oracle.py examples/sample.json --all --out full-profile.json
-python oracle.py examples/sample.json --goal efr --out efr.json
-python capacity.py examples/least-good-fixed-predecessor.json
+python -m efr.oracle examples/sample.json --out allocation.json
+python -m efr.oracle examples/sample.json --all --out full-profile.json
+python -m efr.oracle examples/sample.json --goal efr --out efr.json
+python -m efr.capacity examples/least-good-fixed-predecessor.json
 ```
 
 A returned witness is an exact positive certificate. `ABSENT` is meaningful
@@ -41,9 +42,9 @@ limit, not a negative verdict. Bundle masks and exact oracle details are in
 ## Canonical two-source verification
 
 ```bash
-python verify_two_source.py
+python -m efr.verify_two_source
 python -m pip install cvc5==1.4.0
-python verify_two_source.py --replay
+python -m efr.verify_two_source --replay
 ```
 
 The first command reads the canonical verified obstruction, independently
@@ -62,11 +63,11 @@ These can find examples or partial covers. They are not necessary to reproduce
 the case atlas, and no long run is started automatically.
 
 ```bash
-python two_source_probe.py --case 1134_041 --dominance lex --seconds 45
-python structural_efr_search.py --pilot --seconds 15 --out run/structural-pilot
+python -m efr.two_source_probe --case 1134_041 --dominance lex --seconds 45
+python -m efr.structural_efr_search --pilot --seconds 15 --out run/structural-pilot
 ```
 
-`structural_efr_search.py` retains the historical 156-template domain for
+`efr/structural_efr_search.py` retains the historical 156-template domain for
 reproducibility. The current 103 open IDs are in `research/case-status.json` and
 `research/OPEN_CASES.md`; the atlas does not silently alter a running campaign.
 Priority-dependent cuts require the symmetry work stated in the roadmap.
@@ -74,8 +75,8 @@ Priority-dependent cuts require the symmetry work stated in the roadmap.
 The existing full-domain coordinator is separate:
 
 ```bash
-python search.py --goal extension --workers 3 --hours 1 --out run/extension
-python verify.py run/extension --workers 3 --hours 1 --timeout 120
+python -m efr.search --goal extension --workers 3 --hours 1 --out run/extension
+python -m efr.verify run/extension --workers 3 --hours 1 --timeout 120
 ```
 
 Reusing a compatible output directory resumes its checkpoint. Do not reuse a
@@ -104,3 +105,21 @@ evidence is retained separately.
 `INCOMPLETE_NO_THEOREM` means that coverage or verification is unfinished.
 `ALL_SHARDS_VERIFIED` is the declared full-cover result under the selected goal
 and verifier assumptions. A green workflow alone establishes neither.
+
+The package reorganization changes the workflow code fingerprint. Existing campaign
+archives must be resumed on their original compatible commit; the identity check
+is intentionally not bypassed. Exchange and rebundling workflows are now manual-only.
+
+## Fixed-priority local compensation
+
+`efr.compensation.compensated_relay` checks one proposed safe champion bundle;
+`pair_relays` checks only the proved pair specialization. Both accept an explicit
+agent priority. A returned certificate is an EFX improvement; no result does not
+mean no repair exists. See [the proof](research/SOURCE_COMPENSATION.md).
+
+```bash
+python -m efr.priority --out research/priority-cases.json
+python -m unittest -v tests.test_compensation
+```
+
+The priority generator enumerates finite graph symmetries, not valuations.

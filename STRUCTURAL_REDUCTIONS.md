@@ -38,7 +38,7 @@ profile (1,1,1,6) is eliminated completely, leaving five size profiles.
 For an additional check independent of bundle sizes, the 543 labeled DAGs on
 four vertices split by source count as 316,198,28,1. Their unlabeled counts are
 16,11,3,1. The exact enumeration and size-preserving group action are implemented
-in `structural_reductions.py`. We do not independently relabel a graph and its
+in `efr/structural_reductions.py`. We do not independently relabel a graph and its
 bundle sizes.
 
 ## Why it suffices to study extremal states
@@ -184,7 +184,7 @@ The full matrix and verified witness are in the saved example JSON.
 
 ## A sound reduced search, with an explicit scope boundary
 
-`structural_efr_search.py` is a separate prototype. The existing unrestricted
+`efr/structural_efr_search.py` is a separate prototype. The existing unrestricted
 Mode C oracle and campaign are not pruned or relabeled as having proven EFR.
 
 For each remaining template the new search constrains a canonical starting A
@@ -243,10 +243,10 @@ saved for review and further development.
 
 Commands from the repository directory:
 
-    python structural_reductions.py
-    python -m unittest test_structural_reductions
-    python structural_efr_search.py --pilot --seconds 15
-    python structural_efr_search.py --pilot --seconds 15 --legacy-pairs
+    python -m efr.structural_reductions
+    python -m unittest tests.test_structural_reductions
+    python -m efr.structural_efr_search --pilot --seconds 15
+    python -m efr.structural_efr_search --pilot --seconds 15 --legacy-pairs
 
 The optional --seed-directory imports only complete EFR allocation menus, never
 previous proof statuses. --case selects an individual structural template. A

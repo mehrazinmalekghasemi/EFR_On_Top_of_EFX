@@ -16,6 +16,7 @@ sources and 9 with three sources**. A completed workflow is not a completed proo
 | [Research status and roadmap](RESEARCH_STATUS.md) | Consolidated findings, numbered theorem register, refuted claims, and theoretical next steps. |
 | [Case atlas](CASE_ATLAS.md) | All 18 size profiles and 1,344 canonical acyclic graph cases; every cell names its theorem/proposition or says **OPEN**. |
 | [Open cases](research/OPEN_CASES.md) | Exact IDs, envy edges, and source sets for the 103 unresolved cases. |
+| [Three-source and compensation progress](research/SOURCE_COMPENSATION.md) | New conditional proofs, optimal safe-pair compensation, and exact priority bookkeeping. |
 | [Latest coordinated-source proofs](TWO_SOURCE_PROGRESS.md) | Four-source progress, a nondegenerate two-agent trap, and a three-agent escape. |
 | [Evidence index](experiment-results/README.md) | Retained witnesses, certificate inputs, benchmarks, and cleanup policy. |
 | [Running and verification](RUNNING.md) | Installation, point oracles, certificate replay, and existing workflows. |
@@ -31,8 +32,8 @@ The atlas is generated from exact graph enumeration and retained evidence; this
 does not launch a search or require solver packages:
 
 ```bash
-python case_status.py
-python case_status.py --check
+python -m efr.case_status
+python -m efr.case_status --check
 ```
 
 For algorithms and targeted correctness checks:
@@ -40,7 +41,7 @@ For algorithms and targeted correctness checks:
 ```bash
 python -m pip install -r requirements.txt
 python -m unittest discover -v
-python oracle.py examples/sample.json --out allocation.json
+python -m efr.oracle examples/sample.json --out allocation.json
 ```
 
 The optional cross-solver replay requires `cvc5==1.4.0`; see [RUNNING.md](RUNNING.md).
@@ -56,7 +57,18 @@ No complete three-to-four-day search runtime has been established.
 - [MODE_C_ADVERSARY_FINDINGS.md](MODE_C_ADVERSARY_FINDINGS.md): finite exploratory searches, not coverage certificates.
 - [THEORY.md](THEORY.md): normalization, matching-based exact oracle, and continuous-region search architecture.
 
-The core oracle/search files, research move implementations, regression tests,
-and manually dispatched workflows remain at their existing paths. Older run
+## Repository layout
+
+| Folder | Contents |
+| --- | --- |
+| `efr/` | Importable algorithms, proof diagnostics, case generation, and command-line modules. |
+| `tests/` | Regression tests and evidence consistency checks. |
+| `scripts/` | Optional shell launch wrappers. |
+| `research/` | Case tables and machine-readable case ledger. |
+| `experiment-results/` | Retained witnesses and certificate inputs. |
+| `examples/` | Small input instances. |
+
+Run commands from the repository root using `python -m efr.<module>`.
+Research experiments are manually dispatched; reorganizing code does not launch them. Older run
 summaries are explicitly historical; the research status and case atlas are
 the current navigation point.

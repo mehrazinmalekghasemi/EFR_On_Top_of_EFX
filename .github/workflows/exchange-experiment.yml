@@ -1,12 +1,5 @@
 name: EFX ownership and exchange experiment
 on:
-  push:
-    branches: [improve-search-and-capacity-theory]
-    paths:
-      - exchange_search.py
-      - exchange_experiment.py
-      - test_exchange.py
-      - .github/workflows/exchange-experiment.yml
   workflow_dispatch:
 permissions:
   contents: read
@@ -33,11 +26,11 @@ jobs:
           cache: pip
       - run: python -m pip install -r requirements.txt
       - name: Exact correctness and regression tests
-        run: python -m unittest -v test_engine test_ci test_improvements test_exchange
+        run: python -m unittest -v tests.test_engine tests.test_ci tests.test_improvements tests.test_exchange
       - name: Examine ownership changes and repeated exchanges
         env:
           EXPERIMENT_SEED: ${{ matrix.seed }}
-        run: python exchange_experiment.py --seed "$EXPERIMENT_SEED" --profiles 40 --seconds 180 --out results/exchange.json
+        run: python -m efr.exchange_experiment --seed "$EXPERIMENT_SEED" --profiles 40 --seconds 180 --out results/exchange.json
       - name: Save matrices, witnesses, and closed-component certificates
         if: always()
         uses: actions/upload-artifact@v7

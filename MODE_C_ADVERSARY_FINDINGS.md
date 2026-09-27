@@ -25,7 +25,7 @@ all 11051 unlabeled partitions per deletion, including every ownership matching.
 
 ## New local experiments
 
-`mode_c_adversary.py` searches normalized real valuations by exact QF_LRA
+`efr/mode_c_adversary.py` searches normalized real valuations by exact QF_LRA
 counterexample-guided refinement. Each successful witness adds a clause excluding
 its entire feasible valuation region. Domains exclude a common least-valued good;
 that is a proved positive case conditional on EFX-nine existence. Only row zero
@@ -46,7 +46,7 @@ plain exact EFX/EFR checker. UNKNOWN is neither coverage nor a counterexample.
 The raw local logs store each candidate matrix and its witness. The committed
 summary records the domain outcomes and final candidate matrices.
 
-`mode_c_mutation.py` additionally performs four seeded mutation searches, with
+`efr/mode_c_mutation.py` additionally performs four seeded mutation searches, with
 404 candidate evaluations in total, all excluding a common least good. Each
 candidate is checked exhaustively for every omitted good, minimizing first the
 number of successful deletions and then the number of successful constructions.
@@ -97,7 +97,7 @@ QED.
 
 The proof is a simple capacity-based specialization of the champion/rotating-
 path approach, not a claim that the general champion technique is new.
-`singleton_escape.py` implements the rule with exact validation.
+`efr/singleton_escape.py` implements the rule with exact validation.
 
 **Corollary.** In an acyclic envy graph with a unique source holding a singleton,
 either insertion into that singleton succeeds or the lemma gives a strict
@@ -130,7 +130,7 @@ envy graph is the path 0 -> 1 -> 2 -> 3. Applying the lemma on 0 -> 1 yields
 ({1,2},{9},{3,4,5},{6,7,8}), omitting 0. Own utilities rise from (6,6,6,6)
 to (10,20,6,6). Inserting good 0 into agent 0's pair then yields a valid full
 EFR allocation. The regression and the known large-source trap are tested in
-`test_singleton_escape.py`; both tests passed.
+`tests/test_singleton_escape.py`; both tests passed.
 
 ## What still needs proving
 
@@ -167,9 +167,9 @@ broader direction. A universal progress lemma is NOT proved here.
 
 Reproduce locally from the repository directory:
 
-    python mode_c_adversary.py --seconds 120
-    python mode_c_mutation.py
-    python -m unittest test_singleton_escape
+    python -m efr.mode_c_adversary --seconds 120
+    python -m efr.mode_c_mutation
+    python -m unittest tests.test_singleton_escape
 
 Symbolic candidate counts depend on solver/runtime timing; the mutation search
 uses the fixed seed 20260922 and deterministic exact comparisons.
