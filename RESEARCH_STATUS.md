@@ -1,6 +1,15 @@
 # EFX-nine to EFR-ten: research status and proof roadmap
 
-Latest local results (2026-09-28): [singleton blockers and donor top-ups](research/SINGLETON_BLOCKER_TOP_UP.md)
+Latest structural split (2026-09-28): [two-source versus three-source strategies](research/TWO_VS_THREE_SOURCES.md)
+adds D16 (joint surplus and compensation), D17 (the guarded triple exchange
+kernel does not need the pair owner to envy the singleton), and D18 (four-good
+source replacements reduce to forbidden-pair intersections). The previous
+unsafe-top-up example now has a complete EFX Pareto escape. Empty intersections
+have disjoint-pair or triangle certificates. These are local reductions; no
+whole graph is newly closed. Of the 94 two-source rows, only 31 have the two
+singleton targets assumed by the current surplus implementation.
+
+Preceding local results (2026-09-28): [singleton blockers and donor top-ups](research/SINGLETON_BLOCKER_TOP_UP.md)
 adds D14 (exact augmentation conditions, at most six minimal top-ups per blocker)
 and D15 (the blocker's surplus bounds top-up deletion values). Explicit examples
 repair cheap singleton blockers in both priority branches and an early champion

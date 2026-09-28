@@ -42,7 +42,7 @@ def both_champions_progress(values,A,g,p,q,r):
     z=[rows[j][g] for j in range(4)]
     require(all(z[j]<=u[j] for j in range(4)),'Pool bound required')
     require(all(val(j,A[k])<=u[j] for j in range(4) for k in (p,q,r)),'Three source bundles required')
-    require(all(val(k,A[o])>u[k] for k in (p,q,r)),'All sources must envy the singleton')
+    require(all(val(k,A[o])>u[k] for k in (q,r)),'Both triple owners must envy the singleton')
     require(all(z[k]+rows[k][h]<=u[k] for k in (p,q,r) for h in items(A[k])), 'No self-pair improvement required')
     require(all(z[o]+rows[o][h]<=u[o] for k in (p,q,r) for h in items(A[k])), 'Singleton reachability cuts required')
     champions={k:[h for h in items(A[p]) if z[k]+rows[k][h]>u[k]] for k in (q,r)}
@@ -127,6 +127,7 @@ def residual_singleton_relay(values,A,g,s,i,t,h,priority=(0,1,2,3)):
 def full_star_progress(values,A,g,p,q,r):
     """T11: complete all-envious-source (1,2,3,3) extremal branch.
 
+    Also valid with a non-envying pair owner under the explicit guards (D17).
     Requires the same elementary reductions as the earlier both-champion
     theorem. Handles one or two pair champions without a priority assumption.
     Returns Pareto-improving EFX; fixed-priority restoration is not run.
@@ -140,7 +141,7 @@ def full_star_progress(values,A,g,p,q,r):
     require([A[j].bit_count() for j in (o,p,q,r)]==[1,2,3,3],'Wrong size profile')
     require(all(z[j]<=u[j] for j in range(4)),'Pool bound required')
     require(all(val(j,A[k])<=u[j] for j in range(4) for k in (p,q,r)),'Source bounds required')
-    require(all(val(k,A[o])>u[k] for k in (p,q,r)),'All sources must envy singleton')
+    require(all(val(k,A[o])>u[k] for k in (q,r)),'Both triple owners must envy singleton')
     require(all(z[k]+rows[k][h]<=u[k] for k in (p,q,r) for h in items(A[k])),'Self-pair cuts required')
     require(all(z[o]+rows[o][h]<=u[o] for k in (p,q,r) for h in items(A[k])),'Singleton reachability cuts required')
     champions={k:[h for h in items(A[p]) if z[k]+rows[k][h]>u[k]] for k in (q,r)}
