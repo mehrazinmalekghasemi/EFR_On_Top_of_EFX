@@ -1,5 +1,15 @@
 # EFX-nine to EFR-ten: research status and proof roadmap
 
+Latest focused results (2026-09-28): [three-source targets and return](research/THREE_SOURCE_TARGETS_AND_RETURN.md)
+proves D21 (singleton pair champion repairs mutual triple danger outside the
+D17 guard), D22 (a sole forbidden-pair observer reachable from the quad source
+admits a champion transfer), and D23 (reverse dangerous-item transfer with
+budgeted compensation, including a proof that singleton blockers are repairable).
+For the two-singleton triple-source branch, the new residual condition is that
+all 16 donor subsets fail the compensation value/budget criterion. No complete
+graph template is closed; all three results give Pareto progress under their
+explicit hypotheses and preserve every fixed priority.
+
 Latest two-singleton results (2026-09-28): [after joint-split failure](research/AFTER_JOINT_SPLIT_FAILURE.md)
 proves D19: a pair source reaching both singleton owners has an EFR insertion
 or Pareto escape if the other source's pool value is at most half its utility.
