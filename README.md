@@ -16,6 +16,7 @@ sources and 8 with three sources**. A completed workflow is not a completed proo
 | [Research status and roadmap](RESEARCH_STATUS.md) | Consolidated findings, numbered theorem register, refuted claims, and theoretical next steps. |
 | [Case atlas](CASE_ATLAS.md) | All 18 size profiles and 1,344 canonical acyclic graph cases; every cell names its theorem/proposition or says **OPEN**. |
 | [Open cases](research/OPEN_CASES.md) | Exact IDs, envy edges, and source sets for the 102 unresolved cases. |
+| [After every joint split fails](research/AFTER_JOINT_SPLIT_FAILURE.md) | Reachability rules out a dominant branch in six pair-source templates; eleven triple-source templates reduce to one dangerous item. |
 | [Two-source versus three-source strategies](research/TWO_VS_THREE_SOURCES.md) | Joint surplus repair; guarded triple exchanges; forbidden-pair certificates for four-good sources. |
 | [Singleton blockers and donor top-ups](research/SINGLETON_BLOCKER_TOP_UP.md) | Exact augmentation theorem, at most six minimal top-ups per blocker, and a sharp safety obstruction. |
 | [Dominant-item obstruction](research/DOMINANT_ITEM_OBSTRUCTION.md) | Exact priority-dependent thresholds, at most 20 minimal compensation candidates, blocker rerouting, and budget counterexamples. |

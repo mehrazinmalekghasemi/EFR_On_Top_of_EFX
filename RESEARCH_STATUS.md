@@ -1,5 +1,15 @@
 # EFX-nine to EFR-ten: research status and proof roadmap
 
+Latest two-singleton results (2026-09-28): [after joint-split failure](research/AFTER_JOINT_SPLIT_FAILURE.md)
+proves D19: a pair source reaching both singleton owners has an EFR insertion
+or Pareto escape if the other source's pool value is at most half its utility.
+This excludes the dominant-donor terminal branch in six open (1,1,2,5) graphs.
+D20 reduces eleven reachable (1,1,3,4) graphs under the dominant-donor cuts to
+at most one dangerous removal item and an explicit source-utility obstruction.
+A different singleton assignment retains the dominant item and repairs joint-
+split failure examples, which also admit elementary source replacements.
+These are conditional valuation-region reductions, not whole-graph closures.
+
 Latest structural split (2026-09-28): [two-source versus three-source strategies](research/TWO_VS_THREE_SOURCES.md)
 adds D16 (joint surplus and compensation), D17 (the guarded triple exchange
 kernel does not need the pair owner to envy the singleton), and D18 (four-good
