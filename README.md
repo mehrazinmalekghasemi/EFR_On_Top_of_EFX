@@ -16,6 +16,7 @@ sources and 8 with three sources**. A completed workflow is not a completed proo
 | [Research status and roadmap](RESEARCH_STATUS.md) | Consolidated findings, numbered theorem register, refuted claims, and theoretical next steps. |
 | [Case atlas](CASE_ATLAS.md) | All 18 size profiles and 1,344 canonical acyclic graph cases; every cell names its theorem/proposition or says **OPEN**. |
 | [Open cases](research/OPEN_CASES.md) | Exact IDs, envy edges, and source sets for the 102 unresolved cases. |
+| [Eight-good plus two-good bridge](research/EIGHT_PLUS_TWO_BRIDGE.md) | Exact joint-insertion criteria, a local 1125 obstruction, and verified rebundling bridges on 16 instances; all four families remain open. |
 | [Trying to close one template](research/TRYING_TO_CLOSE_1125_041.md) | Four exact probes of `1125_041`, failed repair menus, weak path transfers, and a combined exchange lemma. |
 | [Three-source targets, then the 31 cases](research/THREE_SOURCE_TARGETS_AND_RETURN.md) | Singleton-champion mutual repair, reachable triangle transfer, and reverse dangerous-item compensation. |
 | [After every joint split fails](research/AFTER_JOINT_SPLIT_FAILURE.md) | Reachability rules out a dominant branch in six pair-source templates; eleven triple-source templates reduce to one dangerous item. |

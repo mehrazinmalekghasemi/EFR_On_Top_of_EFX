@@ -1,0 +1,92 @@
+{
+  "status": "sat",
+  "seconds": 0.16508285999998407,
+  "initial": [
+    1,
+    2,
+    12,
+    496
+  ],
+  "omitted": 9,
+  "scope": "Normalized template 1125_041; excludes only direct insertion and all local drop-one EFX8 bridges",
+  "values": [
+    [
+      "100",
+      "12407/40",
+      "799/10",
+      "201/10",
+      "503/9",
+      "397/36",
+      "397/36",
+      "397/36",
+      "397/36",
+      "399/8"
+    ],
+    [
+      "100",
+      "100",
+      "151/6",
+      "449/6",
+      "399/4",
+      "1/12",
+      "0",
+      "1/12",
+      "1/12",
+      "201/4"
+    ],
+    [
+      "1601/4",
+      "533/8",
+      "302/9",
+      "598/9",
+      "1199/36",
+      "0",
+      "1199/36",
+      "1199/36",
+      "1/12",
+      "100"
+    ],
+    [
+      "100",
+      "100",
+      "50",
+      "50",
+      "0",
+      "111/56",
+      "799/56",
+      "67/2",
+      "201/4",
+      "1/8"
+    ]
+  ],
+  "unrestricted_bridge": {
+    "status": "FOUND",
+    "scope": "One fixed valuation instance; all omitted pairs",
+    "pairs_scanned": 1,
+    "efx_predecessors": 205,
+    "seconds": 0.10491516199999751,
+    "complete": false,
+    "witness": {
+      "missing": [
+        0,
+        1
+      ],
+      "recipients": [
+        2,
+        0
+      ],
+      "predecessor": [
+        4,
+        368,
+        512,
+        136
+      ],
+      "allocation": [
+        6,
+        368,
+        513,
+        136
+      ]
+    }
+  }
+}

@@ -413,3 +413,7 @@ wall-time caps alone cannot predict a three-to-four-day completion.
 - [TWO_SOURCE_PROGRESS.md](TWO_SOURCE_PROGRESS.md): newest full proofs and locality obstruction.
 - [RUNNING.md](RUNNING.md): operational instructions; these are not completion-time promises.
 - [experiment-results/README.md](experiment-results/README.md): retained evidence and cleanup policy.
+
+## Eight-good bridge update (2026-09-29)
+
+[Eight-good plus two-good bridge](research/EIGHT_PLUS_TWO_BRIDGE.md) proves exact simultaneous insertion and deletion-slack criteria. Two-good joint insertion can succeed when every single first insertion into the same predecessor fails. The omitted pair cannot be chosen arbitrarily. Exact retained evidence now includes a `1125_041` instance defeating all local drop-one EFX-eight bridges, with a successful rebundled bridge using another omitted pair. All 16 examined instances have a verified bridge; no whole family or atlas cell is closed. The 102-open count is unchanged. Six focused tests independently check rational witnesses, local failures, exhaustive fixed-pair rejection, and timeout/overflow behavior. No universal search or multi-day workflow was launched.

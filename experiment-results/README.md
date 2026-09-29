@@ -106,3 +106,9 @@ instances refuting specified repair menus, with independently verified EFX
 Pareto escapes. These are not EFR counterexamples. The bounded reproducer is
 `scripts/research/probe_1125_041.py`; the proofs and scope are in
 [the template note](../research/TRYING_TO_CLOSE_1125_041.md).
+
+## Eight-good bridge evidence
+
+- [eight-plus-two/results.json](eight-plus-two/results.json): fifteen retained instances across all four residual families, exact local checks and successful free bridges; also the fixed-omitted-pair counterexample.
+- [eight-plus-two/no-local-1125.json](eight-plus-two/no-local-1125.json): exact rational `1125_041` obstruction to every local drop-one bridge, and its successful rebundled bridge.
+- Interpretation and reproduction: [Eight-good plus two-good bridge](../research/EIGHT_PLUS_TWO_BRIDGE.md). These are instance certificates, not universal family certificates.
