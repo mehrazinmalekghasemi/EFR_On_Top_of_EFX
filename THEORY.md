@@ -1,5 +1,7 @@
 # Exact EFX9 → EFR10 search for four additive agents
 
+For the current research classification, see [RESEARCH_STATUS.md](RESEARCH_STATUS.md) and [CASE_ATLAS.md](CASE_ATLAS.md). This note documents the original oracle and full-domain search architecture.
+
 This package implements the proposed delete-a-good / find-EFX / compute-capacities / insert procedure, and a resumable symbolic search over the entire normalized valuation domain. It includes a fast exact point oracle, process parallelism, an independent region-cover verifier, benchmark results, and counterexamples to two overly strong variants of the approach.
 
 **A one-week run is supported. A completed whole-space proof within one week is not guaranteed.** No global existence result is claimed by this delivery. The supplied short region-search pilot did not close the domain. A timeout, an unfinished branch, or a failed restricted heuristic is never counted as a theorem.
@@ -14,13 +16,13 @@ cd efr-github
 python3 -m venv .venv
 source .venv/bin/activate
 python3 -m pip install -r requirements.txt
-python3 -m unittest -v test_engine
+python3 -m unittest -v tests.test_engine
 ```
 
 For a particular ten-good instance, supply four JSON rows of ten nonnegative numbers. Integers, exact decimals, and rational strings such as `"3/7"` are accepted. Agents and goods are numbered from zero. Rows need not already be normalized.
 
 ```bash
-python3 oracle.py examples/sample.json --out allocation.json
+python3 -m efr.oracle examples/sample.json --out allocation.json
 ```
 
 The result includes the deleted good, the complete EFX predecessor, recipient, final EFR allocation, and exact scaled capacity margins. Bundles are bitmasks: mask 13 denotes goods {0,2,3}. To list goods in a bundle, use `[g for g in range(10) if mask & (1 << g)]`.
@@ -28,7 +30,7 @@ The result includes the deleted good, the complete EFX predecessor, recipient, f
 For complete EFX and insertion counts for all deleted goods:
 
 ```bash
-python3 oracle.py examples/sample.json --all --out full-profile.json
+python3 -m efr.oracle examples/sample.json --all --out full-profile.json
 ```
 
 This stores a bounded number of witnesses while counting all successful labeled predecessors/recipients. `complete: true` is required to interpret counts as exhaustive. Every negative `ABSENT` verdict is exhaustive within the declared restrictions. Deadline interruption is `UNKNOWN`.
@@ -36,15 +38,15 @@ This stores a bounded number of witnesses while counting all successful labeled 
 For a nine-good matrix alone, obtain an EFX0 allocation with:
 
 ```bash
-python3 oracle.py matrix9.json --goal efx9 --out efx9.json
+python3 -m efr.oracle matrix9.json --goal efx9 --out efx9.json
 ```
 
 Calibrate the point oracle and run a one-hour symbolic pilot on your machine:
 
 ```bash
-python3 benchmark.py --count 100 --workers 1 --out benchmark-serial.json
-python3 benchmark.py --count 1000 --workers 8 --out benchmark-parallel.json
-python3 search.py --goal extension --workers 32 --hours 1 --out pilot
+python3 -m efr.benchmark --count 100 --workers 1 --out benchmark-serial.json
+python3 -m efr.benchmark --count 1000 --workers 8 --out benchmark-parallel.json
+python3 -m efr.search --goal extension --workers 32 --hours 1 --out pilot
 ```
 
 The parallel benchmark includes worker launch costs; small workloads may therefore be slower. It measures independent valuation profiles, not proof throughput.
@@ -52,14 +54,14 @@ The parallel benchmark includes worker launch costs; small workloads may therefo
 A six-day search with one day reserved for independent replay:
 
 ```bash
-python3 search.py --goal extension --workers 32 --hours 144 --out week-run
-python3 verify.py week-run --workers 32 --hours 24 --timeout 120
+python3 -m efr.search --goal extension --workers 32 --hours 144 --out week-run
+python3 -m efr.verify week-run --workers 32 --hours 24 --timeout 120
 ```
 
 `--hours` is a cooperative wall-time budget; formula construction and process shutdown can add overhead. For a strict outer one-week limit on Linux with GNU coreutils:
 
 ```bash
-./run_week.sh 32 week-run
+./scripts/run_week.sh 32 week-run
 ```
 
 The wrapper uses GNU `timeout` with a ten-second kill grace inside a 604800-second envelope. It can stop with `INCOMPLETE_NO_THEOREM`; enforcing the deadline does not force the mathematics to finish. Exit code 124 means the outer timeout fired. Verifier exit code 2 means no verified complete cover. Atomic checkpoints preserve the most recently completed witness batch.
@@ -176,11 +178,11 @@ A witness for `extension` encodes BOTH the predecessor's EFX inequalities and th
 - UNKNOWN: retain an open region. No coverage conclusion.
 - Exhaustive oracle failure: retain the exact valuation and distinguish the failed theorem from the direct-EFR diagnostic.
 
-The solver is incremental within a task. It never rebuilds all prior constraints between individual witness batches. Every batch is checkpointed. When a slice stalls, the coordinator may pin the next favorite of one agent and enqueue **all** possible remaining choices. Non-strict order constraints ensure the children cover the parent, including ties. Child tasks inherit the parent's witnesses and run independently. `--no-split` instead keeps refining a root's finite witness menu; the unlimited idealized CEGAR procedure has only finitely many possible witnesses, but that finite bound is too large to imply practicality.
+The solver is incremental within a task. It never rebuilds all prior constraints between individual witness batches. Every batch is checkpointed. After the configured number of visits (default two), the coordinator may pin the next favorite of one agent and enqueue **all** possible remaining choices. Non-strict order constraints ensure the children cover the parent, including ties. Child tasks inherit the parent's witnesses and run independently. `--no-split` instead keeps refining a root's finite witness menu; the unlimited idealized CEGAR procedure has only finitely many possible witnesses, but that finite bound is too large to imply practicality.
 
-Default budgets are 60 seconds per region task, 10 seconds per SMT call, 64 refinement rounds, and 8 point witnesses per round. They are configurable heuristics, not proven optimal values. Full rankings still may be hard: at maximum rank depth an open node remains open. Splitting is sound and creates parallel work, but is not guaranteed to reduce total CPU time.
+Initial budgets are 60 seconds per region task and 10 seconds per SMT call; repeat visits double both budgets up to 4x. Splitting starts after two visits by default. There are 64 refinement rounds and 8 point witnesses per round. They are configurable heuristics, not proven optimal values. Full rankings still may be hard: at maximum rank depth an open node is requeued with bounded larger budgets. Splitting is sound and creates parallel work, but is not guaranteed to reduce total CPU time.
 
-`verify.py` imports neither the search code nor the point oracle. It:
+`efr/verify.py` imports neither the search code nor the point oracle. It:
 
 1. Enumerates all required roots itself.
 2. Validates each region's prefixes, parent, split choice, and entire child set.
@@ -194,11 +196,11 @@ Only `VERIFIED_GLOBAL_COVER` is a completed whole-domain result. `SEARCH_COVERED
 For several machines, use distinct output directories and deterministic root shards:
 
 ```bash
-python3 search.py --goal extension --workers 32 --shards 4 --shard 0 --hours 144 --out machine0
-python3 verify.py machine0 --shards 4 --shard 0 --workers 32 --hours 24
+python3 -m efr.search --goal extension --workers 32 --shards 4 --shard 0 --hours 144 --out machine0
+python3 -m efr.verify machine0 --shards 4 --shard 0 --workers 32 --hours 24
 ```
 
-Run shards 1, 2, and 3 on the other machines. A shard verdict proves only its named subset. The standalone engine does not merge trees automatically. In this GitHub edition, ci.py aggregates fresh independent shard-verification reports only when every shard is present, all expected root counts match, and the code fingerprint and goal agree. A standalone global replay instead needs a collected tree containing all roots and their descendants, with the same config. Do not overwrite completed root trees with another shard's unused placeholder roots.
+Run shards 1, 2, and 3 on the other machines. A shard verdict proves only its named subset. The standalone engine does not merge trees automatically. In this GitHub edition, efr/ci.py aggregates fresh independent shard-verification reports only when every shard is present, all expected root counts match, and the code fingerprint and goal agree. A standalone global replay instead needs a collected tree containing all roots and their descendants, with the same config. Do not overwrite completed root trees with another shard's unused placeholder roots.
 
 ## Two rigorous counterexamples relevant to the conjectures
 
@@ -212,7 +214,7 @@ Give all four agents identical values 1 for each of nine base goods and 2 for th
 Both fail EFR. This refutes even “choose the best EFX predecessor for this fixed g.” It does not refute Mode C over **all** choices of g; unrestricted Mode C succeeds on this instance. Divide every row by 11 for unit-total normalization, or the base by 9 and set t=2/9 for a P9 parameterization.
 
 ```bash
-python3 oracle.py examples/fixed-deletion-obstruction.json --deleted 9 --all
+python3 -m efr.oracle examples/fixed-deletion-obstruction.json --deleted 9 --all
 ```
 
 The exact scan finds 30,240 labeled EFX predecessors and zero successful insertions for that deletion.
@@ -227,8 +229,8 @@ Give all agents identical values (100,1,1,1,1,1,1,1,1,1).
 So **no** deleted good supports that restricted predecessor pattern. Unrestricted Mode C succeeds. For example, delete a unit good, use predecessor sizes (1,2,3,3), and insert it into the size-two bundle, yielding sizes (1,3,3,3). This also shows that restricting final allocations to (2,2,3,3) is not universally valid: the huge good must remain a singleton in every EFR allocation of this instance.
 
 ```bash
-python3 oracle.py examples/balanced-predecessor-obstruction.json --pattern 2,2,2,3 --all
-python3 oracle.py examples/balanced-predecessor-obstruction.json --all
+python3 -m efr.oracle examples/balanced-predecessor-obstruction.json --pattern 2,2,2,3 --all
+python3 -m efr.oracle examples/balanced-predecessor-obstruction.json --all
 ```
 
 The old H5 observation remains a useful search-order heuristic, not an unconditional pruning lemma. The oracle also supports `--max-recipient-size 2` to investigate the small-recipient hypothesis; absence under this restriction is not an unrestricted failure. Full profiles report exact counts by recipient size. No theorem for this restriction is claimed.
@@ -237,7 +239,7 @@ Some previous H1–H5 printouts were statistical proxies rather than precise con
 
 ## What the measurements do and do not establish
 
-`measured-benchmark.json` records 100 integer random profiles and 100 near-identical profiles, with both first-witness and exhaustive-ten-deletion modes, on one worker. `pilot-90-seconds.json` records an actual four-process, 90-second symbolic run. That pilot built witness menus and split regions but closed **zero of 220 roots**. It is evidence that the solver, not point enumeration, dominates this prototype at the tested settings. It is neither a lower bound nor evidence that the unrestricted conjecture is false.
+`experiment-results/benchmarks/measured-benchmark.json` records 100 integer random profiles and 100 near-identical profiles, with both first-witness and exhaustive-ten-deletion modes, on one worker. `experiment-results/benchmarks/pilot-90-seconds.json` records an actual four-process, 90-second symbolic run. That pilot built witness menus and split regions but closed **zero of 220 roots**. It is evidence that the solver, not point enumeration, dominates this prototype at the tested settings. It is neither a lower bound nor evidence that the unrestricted conjecture is false.
 
 Rational solver models can have larger denominators than these integer benchmarks. Arbitrary-precision fallback and growth in SMT menus can make later stages much slower. Warm point-oracle throughput cannot be converted into a proof-completion estimate.
 
@@ -264,7 +266,7 @@ The supplied PDF concerns monotone, non-additive valuations and defines EFR via 
 
 ## Validation included
 
-`test_engine.py` checks:
+`tests/test_engine.py` checks:
 
 - partition census including empty bundles and correspondence to all labeled allocations;
 - all 65,536 matching graphs against an independent Hall-condition implementation;
@@ -275,4 +277,6 @@ The supplied PDF concerns monotone, non-additive valuations and defines EFR via 
 - symbolic equivalence of the capacity formulation to independently reconstructed full final EFR under EFX;
 - rejection of a falsely marked covered region and a malformed/missing child cover.
 
-Files: `oracle.py`, `search.py`, `verify.py`, `benchmark.py`, `test_engine.py`, `requirements.txt`, `run_week.sh`, example matrices/results, and measured reports. No week-long campaign has been run as part of this delivery.
+Files: `efr/oracle.py`, `efr/search.py`, `efr/verify.py`, `efr/benchmark.py`, `tests/test_engine.py`, `requirements.txt`, `scripts/run_week.sh`, example matrices/results, and measured reports. No week-long campaign has been run as part of this delivery.
+
+See `EXTENSION_THEORY.md` for exact fixed-predecessor diagnostics, a stronger least-good counterexample, and the proved whole-bundle repair theorem.

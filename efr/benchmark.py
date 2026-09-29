@@ -7,7 +7,7 @@ from pathlib import Path
 from statistics import median
 import numpy as np
 import z3
-from oracle import oracle
+from efr.oracle import oracle
 
 def trial(job):
     index,V,full=job

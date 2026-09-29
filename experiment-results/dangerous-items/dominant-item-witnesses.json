@@ -1,0 +1,741 @@
+[
+  {
+    "name": "late_budget_failure",
+    "values": [
+      [
+        10,
+        0,
+        0,
+        0,
+        0,
+        4,
+        0,
+        0,
+        0,
+        7
+      ],
+      [
+        0,
+        3,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        2
+      ],
+      [
+        5,
+        5,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        0,
+        2,
+        2,
+        2,
+        18,
+        4,
+        4,
+        4,
+        3
+      ]
+    ],
+    "initial": [
+      1,
+      2,
+      28,
+      480
+    ],
+    "omitted": 9,
+    "priority": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "result": {
+      "scope": "Fixed dominant relay and blocker reroutings only",
+      "threshold": "18",
+      "branch": "later_loss",
+      "available_value": "18",
+      "minimal_covers": [
+        476
+      ],
+      "obstructions": [
+        {
+          "compensation": 476,
+          "blockers": [
+            {
+              "agent": 1,
+              "subset": 92,
+              "displaced_value": "0"
+            },
+            {
+              "agent": 1,
+              "subset": 156,
+              "displaced_value": "0"
+            },
+            {
+              "agent": 1,
+              "subset": 284,
+              "displaced_value": "0"
+            },
+            {
+              "agent": 1,
+              "subset": 204,
+              "displaced_value": "0"
+            },
+            {
+              "agent": 1,
+              "subset": 332,
+              "displaced_value": "0"
+            },
+            {
+              "agent": 1,
+              "subset": 396,
+              "displaced_value": "0"
+            },
+            {
+              "agent": 1,
+              "subset": 212,
+              "displaced_value": "0"
+            },
+            {
+              "agent": 1,
+              "subset": 340,
+              "displaced_value": "0"
+            },
+            {
+              "agent": 1,
+              "subset": 404,
+              "displaced_value": "0"
+            },
+            {
+              "agent": 1,
+              "subset": 452,
+              "displaced_value": "0"
+            },
+            {
+              "agent": 1,
+              "subset": 216,
+              "displaced_value": "0"
+            },
+            {
+              "agent": 1,
+              "subset": 344,
+              "displaced_value": "0"
+            },
+            {
+              "agent": 1,
+              "subset": 408,
+              "displaced_value": "0"
+            },
+            {
+              "agent": 1,
+              "subset": 456,
+              "displaced_value": "0"
+            },
+            {
+              "agent": 1,
+              "subset": 464,
+              "displaced_value": "0"
+            }
+          ]
+        }
+      ],
+      "move": null
+    },
+    "complete_efx_escape": [
+      513,
+      28,
+      2,
+      480
+    ]
+  },
+  {
+    "name": "early_budget_failure",
+    "values": [
+      [
+        10,
+        0,
+        0,
+        0,
+        0,
+        4,
+        0,
+        0,
+        0,
+        7
+      ],
+      [
+        0,
+        3,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        2
+      ],
+      [
+        5,
+        5,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        0,
+        6,
+        6,
+        6,
+        18,
+        4,
+        4,
+        4,
+        3
+      ]
+    ],
+    "initial": [
+      1,
+      2,
+      28,
+      480
+    ],
+    "omitted": 9,
+    "priority": [
+      3,
+      0,
+      1,
+      2
+    ],
+    "result": {
+      "scope": "Fixed dominant relay and blocker reroutings only",
+      "threshold": "30",
+      "branch": "full_recovery",
+      "available_value": "30",
+      "minimal_covers": [
+        476
+      ],
+      "obstructions": [
+        {
+          "compensation": 476,
+          "blockers": [
+            {
+              "agent": 1,
+              "subset": 92,
+              "displaced_value": "0"
+            },
+            {
+              "agent": 1,
+              "subset": 156,
+              "displaced_value": "0"
+            },
+            {
+              "agent": 1,
+              "subset": 284,
+              "displaced_value": "0"
+            },
+            {
+              "agent": 1,
+              "subset": 204,
+              "displaced_value": "0"
+            },
+            {
+              "agent": 1,
+              "subset": 332,
+              "displaced_value": "0"
+            },
+            {
+              "agent": 1,
+              "subset": 396,
+              "displaced_value": "0"
+            },
+            {
+              "agent": 1,
+              "subset": 212,
+              "displaced_value": "0"
+            },
+            {
+              "agent": 1,
+              "subset": 340,
+              "displaced_value": "0"
+            },
+            {
+              "agent": 1,
+              "subset": 404,
+              "displaced_value": "0"
+            },
+            {
+              "agent": 1,
+              "subset": 452,
+              "displaced_value": "0"
+            },
+            {
+              "agent": 1,
+              "subset": 216,
+              "displaced_value": "0"
+            },
+            {
+              "agent": 1,
+              "subset": 344,
+              "displaced_value": "0"
+            },
+            {
+              "agent": 1,
+              "subset": 408,
+              "displaced_value": "0"
+            },
+            {
+              "agent": 1,
+              "subset": 456,
+              "displaced_value": "0"
+            },
+            {
+              "agent": 1,
+              "subset": 464,
+              "displaced_value": "0"
+            }
+          ]
+        }
+      ],
+      "move": null
+    },
+    "complete_efx_escape": [
+      513,
+      28,
+      2,
+      480
+    ]
+  },
+  {
+    "name": "late_champion_reroute",
+    "values": [
+      [
+        10,
+        0,
+        3,
+        3,
+        3,
+        4,
+        2,
+        2,
+        2,
+        7
+      ],
+      [
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        5,
+        5,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        0,
+        2,
+        2,
+        2,
+        18,
+        4,
+        4,
+        4,
+        3
+      ]
+    ],
+    "initial": [
+      1,
+      2,
+      28,
+      480
+    ],
+    "omitted": 9,
+    "priority": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "result": {
+      "scope": "Fixed dominant relay and blocker reroutings only",
+      "threshold": "18",
+      "branch": "later_loss",
+      "available_value": "18",
+      "minimal_covers": [
+        476
+      ],
+      "obstructions": [],
+      "move": {
+        "kind": "dominant_blocker_rerouting",
+        "allocation": [
+          220,
+          2,
+          1,
+          544
+        ],
+        "old_utilities": [
+          "10",
+          "3",
+          "3",
+          "30"
+        ],
+        "new_utilities": [
+          "13",
+          "3",
+          "5",
+          "21"
+        ],
+        "blocker": 0,
+        "compensation": 476,
+        "envied_subset": 220
+      }
+    }
+  },
+  {
+    "name": "early_champion_reroute",
+    "values": [
+      [
+        10,
+        0,
+        3,
+        3,
+        3,
+        4,
+        2,
+        2,
+        2,
+        7
+      ],
+      [
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        5,
+        5,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        0,
+        6,
+        6,
+        6,
+        18,
+        4,
+        4,
+        4,
+        12
+      ]
+    ],
+    "initial": [
+      1,
+      2,
+      28,
+      480
+    ],
+    "omitted": 9,
+    "priority": [
+      3,
+      0,
+      1,
+      2
+    ],
+    "result": {
+      "scope": "Fixed dominant relay and blocker reroutings only",
+      "threshold": "30",
+      "branch": "full_recovery",
+      "available_value": "30",
+      "minimal_covers": [
+        476
+      ],
+      "obstructions": [],
+      "move": {
+        "kind": "dominant_blocker_rerouting",
+        "allocation": [
+          220,
+          2,
+          1,
+          544
+        ],
+        "old_utilities": [
+          "10",
+          "3",
+          "3",
+          "30"
+        ],
+        "new_utilities": [
+          "13",
+          "3",
+          "5",
+          "30"
+        ],
+        "blocker": 0,
+        "compensation": 476,
+        "envied_subset": 220
+      }
+    }
+  },
+  {
+    "name": "early_champion_deficit",
+    "values": [
+      [
+        10,
+        0,
+        3,
+        3,
+        3,
+        4,
+        2,
+        2,
+        2,
+        7
+      ],
+      [
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        5,
+        5,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        0,
+        6,
+        6,
+        6,
+        18,
+        4,
+        4,
+        4,
+        3
+      ]
+    ],
+    "initial": [
+      1,
+      2,
+      28,
+      480
+    ],
+    "omitted": 9,
+    "priority": [
+      3,
+      0,
+      1,
+      2
+    ],
+    "result": {
+      "scope": "Fixed dominant relay and blocker reroutings only",
+      "threshold": "30",
+      "branch": "full_recovery",
+      "available_value": "30",
+      "minimal_covers": [
+        476
+      ],
+      "obstructions": [
+        {
+          "compensation": 476,
+          "blockers": [
+            {
+              "agent": 0,
+              "subset": 220,
+              "displaced_value": "21"
+            },
+            {
+              "agent": 0,
+              "subset": 348,
+              "displaced_value": "21"
+            },
+            {
+              "agent": 0,
+              "subset": 412,
+              "displaced_value": "21"
+            },
+            {
+              "agent": 0,
+              "subset": 460,
+              "displaced_value": "21"
+            },
+            {
+              "agent": 0,
+              "subset": 468,
+              "displaced_value": "21"
+            },
+            {
+              "agent": 0,
+              "subset": 472,
+              "displaced_value": "21"
+            }
+          ]
+        }
+      ],
+      "move": null
+    }
+  },
+  {
+    "name": "direct_compensation",
+    "values": [
+      [
+        10,
+        0,
+        0,
+        0,
+        0,
+        4,
+        0,
+        0,
+        0,
+        7
+      ],
+      [
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        5,
+        5,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        0,
+        2,
+        2,
+        2,
+        18,
+        4,
+        4,
+        4,
+        3
+      ]
+    ],
+    "initial": [
+      1,
+      2,
+      28,
+      480
+    ],
+    "omitted": 9,
+    "priority": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "result": {
+      "scope": "Fixed dominant relay and blocker reroutings only",
+      "threshold": "18",
+      "branch": "later_loss",
+      "available_value": "18",
+      "minimal_covers": [
+        476
+      ],
+      "obstructions": [],
+      "move": {
+        "kind": "dominant_minimal_cover",
+        "allocation": [
+          544,
+          2,
+          1,
+          476
+        ],
+        "old_utilities": [
+          "10",
+          "3",
+          "3",
+          "30"
+        ],
+        "new_utilities": [
+          "11",
+          "3",
+          "5",
+          "18"
+        ],
+        "compensation": 476
+      }
+    }
+  }
+]

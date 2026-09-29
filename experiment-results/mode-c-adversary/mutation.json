@@ -1,0 +1,1191 @@
+{
+  "no_common_least_good": true,
+  "seed": 20260922,
+  "evaluations": 404,
+  "seconds": 4.6615283489227295,
+  "successful_deletion_histogram": {
+    "7": 81,
+    "8": 27,
+    "9": 30,
+    "6": 50,
+    "10": 216
+  },
+  "best_cases": [
+    {
+      "seed_index": 0,
+      "score": [
+        6,
+        2835
+      ],
+      "values": [
+        [
+          26,
+          18,
+          4,
+          27,
+          0,
+          0,
+          2,
+          0,
+          0,
+          1
+        ],
+        [
+          16,
+          21,
+          22,
+          25,
+          0,
+          0,
+          0,
+          2,
+          0,
+          10
+        ],
+        [
+          25,
+          19,
+          18,
+          19,
+          0,
+          2,
+          3,
+          8,
+          0,
+          0
+        ],
+        [
+          28,
+          21,
+          18,
+          21,
+          1,
+          0,
+          5,
+          1,
+          1,
+          2
+        ]
+      ],
+      "oracle": {
+        "status": "FOUND",
+        "goal": "extension",
+        "restrictions": {
+          "predecessor_pattern": null,
+          "max_recipient_size": 10
+        },
+        "witnesses": [
+          {
+            "deleted": 4,
+            "recipient": 3,
+            "predecessor": [
+              328,
+              516,
+              130,
+              33
+            ],
+            "allocation": [
+              328,
+              516,
+              130,
+              49
+            ],
+            "scaled_margins": [
+              "35",
+              "64",
+              "27",
+              null
+            ]
+          }
+        ],
+        "profiles": [
+          {
+            "deleted": 4,
+            "efx_count": 131,
+            "extension_count": 524,
+            "recipient_size_counts": [
+              0,
+              116,
+              217,
+              139,
+              48,
+              4,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "partitions_scanned": 11051,
+            "complete": true
+          },
+          {
+            "deleted": 8,
+            "efx_count": 131,
+            "extension_count": 524,
+            "recipient_size_counts": [
+              0,
+              116,
+              217,
+              139,
+              48,
+              4,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "partitions_scanned": 11051,
+            "complete": true
+          },
+          {
+            "deleted": 5,
+            "efx_count": 136,
+            "extension_count": 544,
+            "recipient_size_counts": [
+              0,
+              120,
+              227,
+              142,
+              51,
+              4,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "partitions_scanned": 11051,
+            "complete": true
+          },
+          {
+            "deleted": 6,
+            "efx_count": 147,
+            "extension_count": 585,
+            "recipient_size_counts": [
+              0,
+              133,
+              242,
+              154,
+              50,
+              6,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "partitions_scanned": 11051,
+            "complete": true
+          },
+          {
+            "deleted": 7,
+            "efx_count": 134,
+            "extension_count": 495,
+            "recipient_size_counts": [
+              0,
+              172,
+              144,
+              131,
+              44,
+              4,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "partitions_scanned": 11051,
+            "complete": true
+          },
+          {
+            "deleted": 9,
+            "efx_count": 51,
+            "extension_count": 163,
+            "recipient_size_counts": [
+              0,
+              92,
+              35,
+              21,
+              14,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "partitions_scanned": 11051,
+            "complete": true
+          },
+          {
+            "deleted": 2,
+            "efx_count": 24,
+            "extension_count": 0,
+            "recipient_size_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "partitions_scanned": 11051,
+            "complete": true
+          },
+          {
+            "deleted": 1,
+            "efx_count": 24,
+            "extension_count": 0,
+            "recipient_size_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "partitions_scanned": 11051,
+            "complete": true
+          },
+          {
+            "deleted": 0,
+            "efx_count": 24,
+            "extension_count": 0,
+            "recipient_size_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "partitions_scanned": 11051,
+            "complete": true
+          },
+          {
+            "deleted": 3,
+            "efx_count": 24,
+            "extension_count": 0,
+            "recipient_size_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "partitions_scanned": 11051,
+            "complete": true
+          }
+        ],
+        "complete": true,
+        "arithmetic": "int64",
+        "seconds": 0.007811601999947015
+      }
+    },
+    {
+      "seed_index": 1,
+      "score": [
+        7,
+        1750
+      ],
+      "values": [
+        [
+          89,
+          55,
+          67,
+          51,
+          31,
+          23,
+          14,
+          4,
+          0,
+          5
+        ],
+        [
+          82,
+          68,
+          55,
+          28,
+          24,
+          11,
+          0,
+          3,
+          7,
+          3
+        ],
+        [
+          102,
+          82,
+          51,
+          27,
+          18,
+          24,
+          5,
+          6,
+          0,
+          2
+        ],
+        [
+          104,
+          89,
+          56,
+          43,
+          30,
+          24,
+          10,
+          1,
+          2,
+          5
+        ]
+      ],
+      "oracle": {
+        "status": "FOUND",
+        "goal": "extension",
+        "restrictions": {
+          "predecessor_pattern": null,
+          "max_recipient_size": 10
+        },
+        "witnesses": [
+          {
+            "deleted": 9,
+            "recipient": 2,
+            "predecessor": [
+              88,
+              292,
+              1,
+              130
+            ],
+            "allocation": [
+              88,
+              292,
+              513,
+              130
+            ],
+            "scaled_margins": [
+              "98",
+              "61",
+              null,
+              "71"
+            ]
+          }
+        ],
+        "profiles": [
+          {
+            "deleted": 9,
+            "efx_count": 87,
+            "extension_count": 322,
+            "recipient_size_counts": [
+              0,
+              140,
+              54,
+              57,
+              43,
+              28,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "partitions_scanned": 11051,
+            "complete": true
+          },
+          {
+            "deleted": 7,
+            "efx_count": 89,
+            "extension_count": 335,
+            "recipient_size_counts": [
+              0,
+              144,
+              58,
+              60,
+              49,
+              24,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "partitions_scanned": 11051,
+            "complete": true
+          },
+          {
+            "deleted": 8,
+            "efx_count": 98,
+            "extension_count": 374,
+            "recipient_size_counts": [
+              0,
+              160,
+              64,
+              70,
+              52,
+              28,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "partitions_scanned": 11051,
+            "complete": true
+          },
+          {
+            "deleted": 6,
+            "efx_count": 57,
+            "extension_count": 217,
+            "recipient_size_counts": [
+              0,
+              98,
+              42,
+              26,
+              27,
+              24,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "partitions_scanned": 11051,
+            "complete": true
+          },
+          {
+            "deleted": 5,
+            "efx_count": 88,
+            "extension_count": 254,
+            "recipient_size_counts": [
+              0,
+              130,
+              18,
+              62,
+              33,
+              11,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "partitions_scanned": 11051,
+            "complete": true
+          },
+          {
+            "deleted": 4,
+            "efx_count": 71,
+            "extension_count": 191,
+            "recipient_size_counts": [
+              0,
+              121,
+              10,
+              36,
+              13,
+              11,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "partitions_scanned": 11051,
+            "complete": true
+          },
+          {
+            "deleted": 3,
+            "efx_count": 56,
+            "extension_count": 57,
+            "recipient_size_counts": [
+              0,
+              49,
+              4,
+              0,
+              3,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "partitions_scanned": 11051,
+            "complete": true
+          },
+          {
+            "deleted": 2,
+            "efx_count": 99,
+            "extension_count": 0,
+            "recipient_size_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "partitions_scanned": 11051,
+            "complete": true
+          },
+          {
+            "deleted": 1,
+            "efx_count": 92,
+            "extension_count": 0,
+            "recipient_size_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "partitions_scanned": 11051,
+            "complete": true
+          },
+          {
+            "deleted": 0,
+            "efx_count": 77,
+            "extension_count": 0,
+            "recipient_size_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "partitions_scanned": 11051,
+            "complete": true
+          }
+        ],
+        "complete": true,
+        "arithmetic": "int64",
+        "seconds": 0.00795616000004884
+      }
+    },
+    {
+      "seed_index": 2,
+      "score": [
+        10,
+        1494
+      ],
+      "values": [
+        [
+          0,
+          30,
+          3,
+          2,
+          10,
+          6,
+          10,
+          0,
+          32,
+          2
+        ],
+        [
+          0,
+          29,
+          0,
+          11,
+          0,
+          10,
+          8,
+          11,
+          40,
+          6
+        ],
+        [
+          0,
+          41,
+          0,
+          1,
+          10,
+          15,
+          0,
+          10,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          3,
+          0,
+          10,
+          10,
+          3,
+          14,
+          16,
+          1
+        ]
+      ],
+      "oracle": {
+        "status": "FOUND",
+        "goal": "extension",
+        "restrictions": {
+          "predecessor_pattern": null,
+          "max_recipient_size": 10
+        },
+        "witnesses": [
+          {
+            "deleted": 0,
+            "recipient": 2,
+            "predecessor": [
+              256,
+              104,
+              6,
+              656
+            ],
+            "allocation": [
+              256,
+              104,
+              7,
+              656
+            ],
+            "scaled_margins": [
+              "30",
+              "29",
+              null,
+              "67"
+            ]
+          }
+        ],
+        "profiles": [
+          {
+            "deleted": 0,
+            "efx_count": 57,
+            "extension_count": 226,
+            "recipient_size_counts": [
+              0,
+              101,
+              26,
+              48,
+              41,
+              10,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "partitions_scanned": 11051,
+            "complete": true
+          },
+          {
+            "deleted": 2,
+            "efx_count": 57,
+            "extension_count": 211,
+            "recipient_size_counts": [
+              0,
+              92,
+              28,
+              39,
+              35,
+              17,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "partitions_scanned": 11051,
+            "complete": true
+          },
+          {
+            "deleted": 9,
+            "efx_count": 58,
+            "extension_count": 210,
+            "recipient_size_counts": [
+              0,
+              86,
+              32,
+              42,
+              35,
+              15,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "partitions_scanned": 11051,
+            "complete": true
+          },
+          {
+            "deleted": 3,
+            "efx_count": 48,
+            "extension_count": 146,
+            "recipient_size_counts": [
+              0,
+              62,
+              17,
+              28,
+              26,
+              13,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "partitions_scanned": 11051,
+            "complete": true
+          },
+          {
+            "deleted": 6,
+            "efx_count": 48,
+            "extension_count": 109,
+            "recipient_size_counts": [
+              0,
+              38,
+              13,
+              21,
+              19,
+              18,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "partitions_scanned": 11051,
+            "complete": true
+          },
+          {
+            "deleted": 4,
+            "efx_count": 101,
+            "extension_count": 220,
+            "recipient_size_counts": [
+              0,
+              95,
+              30,
+              62,
+              28,
+              5,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "partitions_scanned": 11051,
+            "complete": true
+          },
+          {
+            "deleted": 5,
+            "efx_count": 89,
+            "extension_count": 154,
+            "recipient_size_counts": [
+              0,
+              81,
+              12,
+              35,
+              21,
+              5,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "partitions_scanned": 11051,
+            "complete": true
+          },
+          {
+            "deleted": 7,
+            "efx_count": 111,
+            "extension_count": 158,
+            "recipient_size_counts": [
+              0,
+              90,
+              11,
+              29,
+              24,
+              4,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "partitions_scanned": 11051,
+            "complete": true
+          },
+          {
+            "deleted": 8,
+            "efx_count": 347,
+            "extension_count": 37,
+            "recipient_size_counts": [
+              0,
+              29,
+              7,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "partitions_scanned": 11051,
+            "complete": true
+          },
+          {
+            "deleted": 1,
+            "efx_count": 296,
+            "extension_count": 23,
+            "recipient_size_counts": [
+              0,
+              21,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "partitions_scanned": 11051,
+            "complete": true
+          }
+        ],
+        "complete": true,
+        "arithmetic": "int64",
+        "seconds": 0.008549004999849785
+      }
+    },
+    {
+      "seed_index": 3,
+      "score": [
+        10,
+        5645
+      ],
+      "values": [
+        [
+          5,
+          33,
+          6,
+          0,
+          13,
+          0,
+          0,
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          15,
+          11,
+          17,
+          15,
+          14,
+          0,
+          7,
+          0,
+          5
+        ],
+        [
+          8,
+          14,
+          7,
+          0,
+          10,
+          9,
+          0,
+          0,
+          9,
+          20
+        ],
+        [
+          8,
+          18,
+          17,
+          19,
+          3,
+          0,
+          10,
+          3,
+          2,
+          34
+        ]
+      ],
+      "oracle": {
+        "status": "FOUND",
+        "goal": "extension",
+        "restrictions": {
+          "predecessor_pattern": null,
+          "max_recipient_size": 10
+        },
+        "witnesses": [
+          {
+            "deleted": 7,
+            "recipient": 0,
+            "predecessor": [
+              3,
+              112,
+              768,
+              12
+            ],
+            "allocation": [
+              131,
+              112,
+              768,
+              12
+            ],
+            "scaled_margins": [
+              null,
+              "43",
+              "43",
+              "50"
+            ]
+          }
+        ],
+        "profiles": [
+          {
+            "deleted": 7,
+            "efx_count": 233,
+            "extension_count": 871,
+            "recipient_size_counts": [
+              0,
+              181,
+              357,
+              274,
+              59,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "partitions_scanned": 11051,
+            "complete": true
+          },
+          {
+            "deleted": 6,
+            "efx_count": 239,
+            "extension_count": 910,
+            "recipient_size_counts": [
+              0,
+              182,
+              397,
+              276,
+              54,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "partitions_scanned": 11051,
+            "complete": true
+          },
+          {
+            "deleted": 0,
+            "efx_count": 179,
+            "extension_count": 565,
+            "recipient_size_counts": [
+              0,
+              168,
+              192,
+              157,
+              47,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "partitions_scanned": 11051,
+            "complete": true
+          },
+          {
+            "deleted": 8,
+            "efx_count": 215,
+            "extension_count": 693,
+            "recipient_size_counts": [
+              0,
+              180,
+              270,
+              201,
+              42,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "partitions_scanned": 11051,
+            "complete": true
+          },
+          {
+            "deleted": 2,
+            "efx_count": 201,
+            "extension_count": 567,
+            "recipient_size_counts": [
+              0,
+              183,
+              183,
+              151,
+              49,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "partitions_scanned": 11051,
+            "complete": true
+          },
+          {
+            "deleted": 5,
+            "efx_count": 197,
+            "extension_count": 523,
+            "recipient_size_counts": [
+              0,
+              172,
+              178,
+              145,
+              28,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "partitions_scanned": 11051,
+            "complete": true
+          },
+          {
+            "deleted": 3,
+            "efx_count": 210,
+            "extension_count": 491,
+            "recipient_size_counts": [
+              0,
+              168,
+              169,
+              133,
+              21,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "partitions_scanned": 11051,
+            "complete": true
+          },
+          {
+            "deleted": 4,
+            "efx_count": 191,
+            "extension_count": 496,
+            "recipient_size_counts": [
+              0,
+              166,
+              171,
+              135,
+              24,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "partitions_scanned": 11051,
+            "complete": true
+          },
+          {
+            "deleted": 9,
+            "efx_count": 466,
+            "extension_count": 404,
+            "recipient_size_counts": [
+              0,
+              107,
+              265,
+              32,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "partitions_scanned": 11051,
+            "complete": true
+          },
+          {
+            "deleted": 1,
+            "efx_count": 227,
+            "extension_count": 125,
+            "recipient_size_counts": [
+              0,
+              86,
+              36,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "partitions_scanned": 11051,
+            "complete": true
+          }
+        ],
+        "complete": true,
+        "arithmetic": "int64",
+        "seconds": 0.008141921000060393
+      }
+    }
+  ]
+}

@@ -1,0 +1,1577 @@
+{
+  "provenance": "Locally reproduced seeds; outcome counts match downloaded GitHub job logs. Original raw reports remain in run artifacts.",
+  "cases": [
+    {
+      "seed": 42,
+      "name": "four-large-H7",
+      "kind": "regression",
+      "values": [
+        [
+          7,
+          7,
+          7,
+          7,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          7,
+          7,
+          7,
+          7,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          7,
+          7,
+          7,
+          7,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          7,
+          7,
+          7,
+          7,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "initial": [
+        1,
+        2,
+        4,
+        1008
+      ],
+      "deleted": 3,
+      "result": {
+        "status": "TRAPPED",
+        "direct": false,
+        "states_discovered": 4,
+        "states_expanded": 4,
+        "valid_neighbor_checks": 12,
+        "exchange_depth": null,
+        "witness": null,
+        "path": [],
+        "reason": "Every reachable partition and all EFX ownerships exhausted",
+        "seconds": 0.002581231000021944,
+        "closed_component": [
+          [
+            1,
+            2,
+            4,
+            1008
+          ],
+          [
+            2,
+            4,
+            8,
+            1008
+          ],
+          [
+            1,
+            4,
+            8,
+            1008
+          ],
+          [
+            1,
+            2,
+            8,
+            1008
+          ]
+        ]
+      },
+      "closure_verified": true,
+      "unrestricted_status": "FOUND",
+      "unrestricted_witnesses": [
+        {
+          "deleted": 4,
+          "recipient": 0,
+          "predecessor": [
+            33,
+            66,
+            132,
+            776
+          ],
+          "allocation": [
+            49,
+            66,
+            132,
+            776
+          ],
+          "scaled_margins": [
+            null,
+            "6",
+            "6",
+            "9"
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 42,
+      "name": "four-large-H10",
+      "kind": "regression",
+      "values": [
+        [
+          10,
+          10,
+          10,
+          10,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          10,
+          10,
+          10,
+          10,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          10,
+          10,
+          10,
+          10,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          10,
+          10,
+          10,
+          10,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "initial": [
+        1,
+        2,
+        4,
+        1008
+      ],
+      "deleted": 3,
+      "result": {
+        "status": "TRAPPED",
+        "direct": false,
+        "states_discovered": 4,
+        "states_expanded": 4,
+        "valid_neighbor_checks": 12,
+        "exchange_depth": null,
+        "witness": null,
+        "path": [],
+        "reason": "Every reachable partition and all EFX ownerships exhausted",
+        "seconds": 0.0016835249999758162,
+        "closed_component": [
+          [
+            1,
+            2,
+            4,
+            1008
+          ],
+          [
+            2,
+            4,
+            8,
+            1008
+          ],
+          [
+            1,
+            4,
+            8,
+            1008
+          ],
+          [
+            1,
+            2,
+            8,
+            1008
+          ]
+        ]
+      },
+      "closure_verified": true,
+      "unrestricted_status": "FOUND",
+      "unrestricted_witnesses": [
+        {
+          "deleted": 4,
+          "recipient": 0,
+          "predecessor": [
+            33,
+            66,
+            132,
+            776
+          ],
+          "allocation": [
+            49,
+            66,
+            132,
+            776
+          ],
+          "scaled_margins": [
+            null,
+            "9",
+            "9",
+            "12"
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 42,
+      "name": "four-large-H20",
+      "kind": "regression",
+      "values": [
+        [
+          20,
+          20,
+          20,
+          20,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          20,
+          20,
+          20,
+          20,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          20,
+          20,
+          20,
+          20,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          20,
+          20,
+          20,
+          20,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "initial": [
+        1,
+        2,
+        4,
+        1008
+      ],
+      "deleted": 3,
+      "result": {
+        "status": "TRAPPED",
+        "direct": false,
+        "states_discovered": 4,
+        "states_expanded": 4,
+        "valid_neighbor_checks": 12,
+        "exchange_depth": null,
+        "witness": null,
+        "path": [],
+        "reason": "Every reachable partition and all EFX ownerships exhausted",
+        "seconds": 0.0013089829999444191,
+        "closed_component": [
+          [
+            1,
+            2,
+            4,
+            1008
+          ],
+          [
+            2,
+            4,
+            8,
+            1008
+          ],
+          [
+            1,
+            4,
+            8,
+            1008
+          ],
+          [
+            1,
+            2,
+            8,
+            1008
+          ]
+        ]
+      },
+      "closure_verified": true,
+      "unrestricted_status": "FOUND",
+      "unrestricted_witnesses": [
+        {
+          "deleted": 4,
+          "recipient": 0,
+          "predecessor": [
+            33,
+            66,
+            132,
+            776
+          ],
+          "allocation": [
+            49,
+            66,
+            132,
+            776
+          ],
+          "scaled_margins": [
+            null,
+            "19",
+            "19",
+            "22"
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 42,
+      "name": "four-large-H35",
+      "kind": "regression",
+      "values": [
+        [
+          35,
+          35,
+          35,
+          35,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          35,
+          35,
+          35,
+          35,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          35,
+          35,
+          35,
+          35,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          35,
+          35,
+          35,
+          35,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "initial": [
+        1,
+        2,
+        4,
+        1008
+      ],
+      "deleted": 3,
+      "result": {
+        "status": "TRAPPED",
+        "direct": false,
+        "states_discovered": 4,
+        "states_expanded": 4,
+        "valid_neighbor_checks": 12,
+        "exchange_depth": null,
+        "witness": null,
+        "path": [],
+        "reason": "Every reachable partition and all EFX ownerships exhausted",
+        "seconds": 0.0011011609999513894,
+        "closed_component": [
+          [
+            1,
+            2,
+            4,
+            1008
+          ],
+          [
+            2,
+            4,
+            8,
+            1008
+          ],
+          [
+            1,
+            4,
+            8,
+            1008
+          ],
+          [
+            1,
+            2,
+            8,
+            1008
+          ]
+        ]
+      },
+      "closure_verified": true,
+      "unrestricted_status": "FOUND",
+      "unrestricted_witnesses": [
+        {
+          "deleted": 4,
+          "recipient": 0,
+          "predecessor": [
+            33,
+            66,
+            132,
+            776
+          ],
+          "allocation": [
+            49,
+            66,
+            132,
+            776
+          ],
+          "scaled_margins": [
+            null,
+            "34",
+            "34",
+            "37"
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 42,
+      "name": "family3-profile3-oracle-start",
+      "kind": "sample",
+      "values": [
+        [
+          1,
+          5,
+          20,
+          1,
+          10,
+          1,
+          1,
+          5,
+          20,
+          5
+        ],
+        [
+          1,
+          5,
+          20,
+          1,
+          10,
+          1,
+          1,
+          5,
+          20,
+          5
+        ],
+        [
+          1,
+          5,
+          20,
+          1,
+          10,
+          1,
+          1,
+          5,
+          20,
+          5
+        ],
+        [
+          1,
+          5,
+          20,
+          1,
+          10,
+          1,
+          1,
+          5,
+          20,
+          5
+        ]
+      ],
+      "initial": [
+        107,
+        16,
+        640,
+        256
+      ],
+      "deleted": 2,
+      "result": {
+        "status": "TRAPPED",
+        "direct": false,
+        "states_discovered": 3,
+        "states_expanded": 3,
+        "valid_neighbor_checks": 6,
+        "exchange_depth": null,
+        "witness": null,
+        "path": [],
+        "reason": "Every reachable partition and all EFX ownerships exhausted",
+        "seconds": 0.0011027230000308919,
+        "closed_component": [
+          [
+            16,
+            107,
+            256,
+            640
+          ],
+          [
+            4,
+            107,
+            256,
+            640
+          ],
+          [
+            4,
+            16,
+            107,
+            640
+          ]
+        ]
+      },
+      "closure_verified": true,
+      "unrestricted_status": "FOUND",
+      "unrestricted_witnesses": [
+        {
+          "deleted": 0,
+          "recipient": 0,
+          "predecessor": [
+            642,
+            4,
+            120,
+            256
+          ],
+          "allocation": [
+            643,
+            4,
+            120,
+            256
+          ],
+          "scaled_margins": [
+            null,
+            "32",
+            "4",
+            "32"
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 42,
+      "name": "family3-profile19-oracle-start",
+      "kind": "sample",
+      "values": [
+        [
+          1,
+          1,
+          20,
+          20,
+          1,
+          1,
+          20,
+          10,
+          1,
+          10
+        ],
+        [
+          1,
+          1,
+          20,
+          20,
+          1,
+          1,
+          20,
+          10,
+          1,
+          10
+        ],
+        [
+          1,
+          1,
+          20,
+          20,
+          1,
+          1,
+          20,
+          10,
+          1,
+          10
+        ],
+        [
+          1,
+          1,
+          20,
+          20,
+          1,
+          1,
+          20,
+          10,
+          1,
+          10
+        ]
+      ],
+      "initial": [
+        131,
+        4,
+        8,
+        816
+      ],
+      "deleted": 6,
+      "result": {
+        "status": "TRAPPED",
+        "direct": false,
+        "states_discovered": 3,
+        "states_expanded": 3,
+        "valid_neighbor_checks": 6,
+        "exchange_depth": null,
+        "witness": null,
+        "path": [],
+        "reason": "Every reachable partition and all EFX ownerships exhausted",
+        "seconds": 0.000898247000009178,
+        "closed_component": [
+          [
+            4,
+            8,
+            131,
+            816
+          ],
+          [
+            8,
+            64,
+            131,
+            816
+          ],
+          [
+            4,
+            64,
+            131,
+            816
+          ]
+        ]
+      },
+      "closure_verified": true,
+      "unrestricted_status": "FOUND",
+      "unrestricted_witnesses": [
+        {
+          "deleted": 0,
+          "recipient": 0,
+          "predecessor": [
+            6,
+            24,
+            96,
+            896
+          ],
+          "allocation": [
+            7,
+            24,
+            96,
+            896
+          ],
+          "scaled_margins": [
+            null,
+            "19",
+            "19",
+            "19"
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 42,
+      "name": "family3-profile27-oracle-start",
+      "kind": "sample",
+      "values": [
+        [
+          5,
+          10,
+          5,
+          1,
+          1,
+          20,
+          1,
+          1,
+          5,
+          1
+        ],
+        [
+          5,
+          10,
+          5,
+          1,
+          1,
+          20,
+          1,
+          1,
+          5,
+          1
+        ],
+        [
+          5,
+          10,
+          5,
+          1,
+          1,
+          20,
+          1,
+          1,
+          5,
+          1
+        ],
+        [
+          5,
+          10,
+          5,
+          1,
+          1,
+          20,
+          1,
+          1,
+          5,
+          1
+        ]
+      ],
+      "initial": [
+        25,
+        2,
+        32,
+        960
+      ],
+      "deleted": 2,
+      "result": {
+        "status": "TRAPPED",
+        "direct": false,
+        "states_discovered": 6,
+        "states_expanded": 6,
+        "valid_neighbor_checks": 12,
+        "exchange_depth": null,
+        "witness": null,
+        "path": [],
+        "reason": "Every reachable partition and all EFX ownerships exhausted",
+        "seconds": 0.0015026029999489765,
+        "closed_component": [
+          [
+            2,
+            25,
+            32,
+            960
+          ],
+          [
+            2,
+            28,
+            32,
+            960
+          ],
+          [
+            2,
+            25,
+            32,
+            708
+          ],
+          [
+            2,
+            28,
+            32,
+            705
+          ],
+          [
+            2,
+            32,
+            280,
+            708
+          ],
+          [
+            2,
+            32,
+            280,
+            705
+          ]
+        ]
+      },
+      "closure_verified": true,
+      "unrestricted_status": "FOUND",
+      "unrestricted_witnesses": [
+        {
+          "deleted": 3,
+          "recipient": 0,
+          "predecessor": [
+            5,
+            2,
+            976,
+            32
+          ],
+          "allocation": [
+            13,
+            2,
+            976,
+            32
+          ],
+          "scaled_margins": [
+            null,
+            "8",
+            "5",
+            "38"
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 42,
+      "name": "family3-profile31-oracle-start",
+      "kind": "sample",
+      "values": [
+        [
+          10,
+          10,
+          1,
+          1,
+          1,
+          20,
+          20,
+          20,
+          1,
+          1
+        ],
+        [
+          10,
+          10,
+          1,
+          1,
+          1,
+          20,
+          20,
+          20,
+          1,
+          1
+        ],
+        [
+          10,
+          10,
+          1,
+          1,
+          1,
+          20,
+          20,
+          20,
+          1,
+          1
+        ],
+        [
+          10,
+          10,
+          1,
+          1,
+          1,
+          20,
+          20,
+          20,
+          1,
+          1
+        ]
+      ],
+      "initial": [
+        13,
+        786,
+        32,
+        128
+      ],
+      "deleted": 6,
+      "result": {
+        "status": "TRAPPED",
+        "direct": false,
+        "states_discovered": 3,
+        "states_expanded": 3,
+        "valid_neighbor_checks": 6,
+        "exchange_depth": null,
+        "witness": null,
+        "path": [],
+        "reason": "Every reachable partition and all EFX ownerships exhausted",
+        "seconds": 0.0019045860000233006,
+        "closed_component": [
+          [
+            13,
+            32,
+            128,
+            786
+          ],
+          [
+            13,
+            64,
+            128,
+            786
+          ],
+          [
+            13,
+            32,
+            64,
+            786
+          ]
+        ]
+      },
+      "closure_verified": true,
+      "unrestricted_status": "FOUND",
+      "unrestricted_witnesses": [
+        {
+          "deleted": 2,
+          "recipient": 0,
+          "predecessor": [
+            11,
+            48,
+            320,
+            640
+          ],
+          "allocation": [
+            15,
+            48,
+            320,
+            640
+          ],
+          "scaled_margins": [
+            null,
+            "18",
+            "18",
+            "18"
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 42,
+      "name": "family1-profile33-oracle-start",
+      "kind": "sample",
+      "values": [
+        [
+          17,
+          9,
+          2,
+          11,
+          21,
+          17,
+          15,
+          8,
+          7,
+          2
+        ],
+        [
+          15,
+          9,
+          3,
+          10,
+          20,
+          17,
+          13,
+          9,
+          8,
+          2
+        ],
+        [
+          16,
+          8,
+          4,
+          10,
+          21,
+          18,
+          15,
+          9,
+          8,
+          1
+        ],
+        [
+          15,
+          8,
+          4,
+          11,
+          20,
+          17,
+          14,
+          10,
+          8,
+          1
+        ]
+      ],
+      "initial": [
+        3,
+        36,
+        72,
+        896
+      ],
+      "deleted": 4,
+      "result": {
+        "status": "TRAPPED",
+        "direct": false,
+        "states_discovered": 1,
+        "states_expanded": 1,
+        "valid_neighbor_checks": 0,
+        "exchange_depth": null,
+        "witness": null,
+        "path": [],
+        "reason": "Every reachable partition and all EFX ownerships exhausted",
+        "seconds": 0.0004155229999014409,
+        "closed_component": [
+          [
+            3,
+            36,
+            72,
+            896
+          ]
+        ]
+      },
+      "closure_verified": true,
+      "unrestricted_status": "FOUND",
+      "unrestricted_witnesses": [
+        {
+          "deleted": 9,
+          "recipient": 0,
+          "predecessor": [
+            3,
+            20,
+            40,
+            448
+          ],
+          "allocation": [
+            515,
+            20,
+            40,
+            448
+          ],
+          "scaled_margins": [
+            null,
+            "17",
+            "34",
+            "48"
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 42,
+      "name": "family1-profile33-partition-start",
+      "kind": "sample",
+      "values": [
+        [
+          17,
+          9,
+          2,
+          11,
+          21,
+          17,
+          15,
+          8,
+          7,
+          2
+        ],
+        [
+          15,
+          9,
+          3,
+          10,
+          20,
+          17,
+          13,
+          9,
+          8,
+          2
+        ],
+        [
+          16,
+          8,
+          4,
+          10,
+          21,
+          18,
+          15,
+          9,
+          8,
+          1
+        ],
+        [
+          15,
+          8,
+          4,
+          11,
+          20,
+          17,
+          14,
+          10,
+          8,
+          1
+        ]
+      ],
+      "initial": [
+        266,
+        192,
+        544,
+        5
+      ],
+      "deleted": 4,
+      "result": {
+        "status": "TRAPPED",
+        "direct": false,
+        "states_discovered": 1,
+        "states_expanded": 1,
+        "valid_neighbor_checks": 0,
+        "exchange_depth": null,
+        "witness": null,
+        "path": [],
+        "reason": "Every reachable partition and all EFX ownerships exhausted",
+        "seconds": 0.0003534600000421051,
+        "closed_component": [
+          [
+            5,
+            192,
+            266,
+            544
+          ]
+        ]
+      },
+      "closure_verified": true,
+      "unrestricted_status": "FOUND",
+      "unrestricted_witnesses": [
+        {
+          "deleted": 9,
+          "recipient": 0,
+          "predecessor": [
+            3,
+            20,
+            40,
+            448
+          ],
+          "allocation": [
+            515,
+            20,
+            40,
+            448
+          ],
+          "scaled_margins": [
+            null,
+            "17",
+            "34",
+            "48"
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 1729,
+      "name": "family3-profile3-oracle-start",
+      "kind": "sample",
+      "values": [
+        [
+          10,
+          10,
+          5,
+          20,
+          5,
+          1,
+          1,
+          20,
+          5,
+          1
+        ],
+        [
+          10,
+          10,
+          5,
+          20,
+          5,
+          1,
+          1,
+          20,
+          5,
+          1
+        ],
+        [
+          10,
+          10,
+          5,
+          20,
+          5,
+          1,
+          1,
+          20,
+          5,
+          1
+        ],
+        [
+          10,
+          10,
+          5,
+          20,
+          5,
+          1,
+          1,
+          20,
+          5,
+          1
+        ]
+      ],
+      "initial": [
+        609,
+        276,
+        8,
+        128
+      ],
+      "deleted": 1,
+      "result": {
+        "status": "TRAPPED",
+        "direct": false,
+        "states_discovered": 2,
+        "states_expanded": 2,
+        "valid_neighbor_checks": 2,
+        "exchange_depth": null,
+        "witness": null,
+        "path": [],
+        "reason": "Every reachable partition and all EFX ownerships exhausted",
+        "seconds": 0.0006593589999965843,
+        "closed_component": [
+          [
+            8,
+            128,
+            276,
+            609
+          ],
+          [
+            8,
+            128,
+            276,
+            610
+          ]
+        ]
+      },
+      "closure_verified": true,
+      "unrestricted_status": "FOUND",
+      "unrestricted_witnesses": [
+        {
+          "deleted": 5,
+          "recipient": 0,
+          "predecessor": [
+            21,
+            834,
+            8,
+            128
+          ],
+          "allocation": [
+            53,
+            834,
+            8,
+            128
+          ],
+          "scaled_margins": [
+            null,
+            "5",
+            "17",
+            "17"
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 1729,
+      "name": "family3-profile19-oracle-start",
+      "kind": "sample",
+      "values": [
+        [
+          1,
+          5,
+          1,
+          1,
+          5,
+          1,
+          10,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          5,
+          1,
+          1,
+          5,
+          1,
+          10,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          5,
+          1,
+          1,
+          5,
+          1,
+          10,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          5,
+          1,
+          1,
+          5,
+          1,
+          10,
+          1,
+          1,
+          1
+        ]
+      ],
+      "initial": [
+        13,
+        2,
+        928,
+        64
+      ],
+      "deleted": 4,
+      "result": {
+        "status": "TRAPPED",
+        "direct": false,
+        "states_discovered": 3,
+        "states_expanded": 3,
+        "valid_neighbor_checks": 6,
+        "exchange_depth": null,
+        "witness": null,
+        "path": [],
+        "reason": "Every reachable partition and all EFX ownerships exhausted",
+        "seconds": 0.0009300149999944551,
+        "closed_component": [
+          [
+            2,
+            13,
+            64,
+            928
+          ],
+          [
+            13,
+            16,
+            64,
+            928
+          ],
+          [
+            2,
+            13,
+            16,
+            928
+          ]
+        ]
+      },
+      "closure_verified": true,
+      "unrestricted_status": "FOUND",
+      "unrestricted_witnesses": [
+        {
+          "deleted": 0,
+          "recipient": 0,
+          "predecessor": [
+            2,
+            20,
+            936,
+            64
+          ],
+          "allocation": [
+            3,
+            20,
+            936,
+            64
+          ],
+          "scaled_margins": [
+            null,
+            "6",
+            "4",
+            "14"
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 1729,
+      "name": "family3-profile19-partition-start",
+      "kind": "sample",
+      "values": [
+        [
+          1,
+          5,
+          1,
+          1,
+          5,
+          1,
+          10,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          5,
+          1,
+          1,
+          5,
+          1,
+          10,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          5,
+          1,
+          1,
+          5,
+          1,
+          10,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          5,
+          1,
+          1,
+          5,
+          1,
+          10,
+          1,
+          1,
+          1
+        ]
+      ],
+      "initial": [
+        64,
+        389,
+        552,
+        2
+      ],
+      "deleted": 4,
+      "result": {
+        "status": "TRAPPED",
+        "direct": false,
+        "states_discovered": 3,
+        "states_expanded": 3,
+        "valid_neighbor_checks": 6,
+        "exchange_depth": null,
+        "witness": null,
+        "path": [],
+        "reason": "Every reachable partition and all EFX ownerships exhausted",
+        "seconds": 0.0009162139999716601,
+        "closed_component": [
+          [
+            2,
+            64,
+            389,
+            552
+          ],
+          [
+            16,
+            64,
+            389,
+            552
+          ],
+          [
+            2,
+            16,
+            389,
+            552
+          ]
+        ]
+      },
+      "closure_verified": true,
+      "unrestricted_status": "FOUND",
+      "unrestricted_witnesses": [
+        {
+          "deleted": 0,
+          "recipient": 0,
+          "predecessor": [
+            2,
+            20,
+            936,
+            64
+          ],
+          "allocation": [
+            3,
+            20,
+            936,
+            64
+          ],
+          "scaled_margins": [
+            null,
+            "6",
+            "4",
+            "14"
+          ]
+        }
+      ]
+    }
+  ]
+}

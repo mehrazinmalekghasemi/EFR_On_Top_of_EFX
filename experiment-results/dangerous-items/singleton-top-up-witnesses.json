@@ -1,0 +1,432 @@
+[
+  {
+    "name": "singleton_late",
+    "values": [
+      [
+        10,
+        13,
+        0,
+        0,
+        0,
+        5,
+        0,
+        0,
+        0,
+        8
+      ],
+      [
+        0,
+        3,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        2
+      ],
+      [
+        5,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        12,
+        3,
+        3,
+        3,
+        18,
+        3,
+        3,
+        3,
+        3
+      ]
+    ],
+    "initial": [
+      1,
+      2,
+      28,
+      480
+    ],
+    "priority": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "result": {
+      "scope": "D12-D14 local moves",
+      "move": {
+        "kind": "dominant_augmented_blocker",
+        "allocation": [
+          544,
+          92,
+          1,
+          386
+        ],
+        "old_utilities": [
+          "10",
+          "3",
+          "3",
+          "27"
+        ],
+        "new_utilities": [
+          "13",
+          "4",
+          "5",
+          "18"
+        ],
+        "blocker": 1,
+        "envied_subset": 92,
+        "top_up": 384,
+        "threshold": "18",
+        "deficit": "6"
+      },
+      "attempts": []
+    }
+  },
+  {
+    "name": "singleton_early",
+    "values": [
+      [
+        10,
+        13,
+        0,
+        0,
+        0,
+        5,
+        0,
+        0,
+        0,
+        8
+      ],
+      [
+        0,
+        3,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        2
+      ],
+      [
+        5,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        24,
+        6,
+        6,
+        6,
+        18,
+        4,
+        4,
+        4,
+        3
+      ]
+    ],
+    "initial": [
+      1,
+      2,
+      28,
+      480
+    ],
+    "priority": [
+      3,
+      0,
+      1,
+      2
+    ],
+    "result": {
+      "scope": "D12-D14 local moves",
+      "move": {
+        "kind": "dominant_augmented_blocker",
+        "allocation": [
+          544,
+          92,
+          1,
+          386
+        ],
+        "old_utilities": [
+          "10",
+          "3",
+          "3",
+          "30"
+        ],
+        "new_utilities": [
+          "13",
+          "4",
+          "5",
+          "32"
+        ],
+        "blocker": 1,
+        "envied_subset": 92,
+        "top_up": 384,
+        "threshold": "30",
+        "deficit": "6"
+      },
+      "attempts": []
+    }
+  },
+  {
+    "name": "champion_early",
+    "values": [
+      [
+        10,
+        0,
+        6,
+        0,
+        0,
+        4,
+        6,
+        0,
+        0,
+        7
+      ],
+      [
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        5,
+        5,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        0,
+        6,
+        6,
+        6,
+        18,
+        4,
+        4,
+        4,
+        3
+      ]
+    ],
+    "initial": [
+      1,
+      2,
+      28,
+      480
+    ],
+    "priority": [
+      3,
+      0,
+      1,
+      2
+    ],
+    "result": {
+      "scope": "D12-D14 local moves",
+      "move": {
+        "kind": "dominant_augmented_blocker",
+        "allocation": [
+          68,
+          2,
+          1,
+          568
+        ],
+        "old_utilities": [
+          "10",
+          "3",
+          "3",
+          "30"
+        ],
+        "new_utilities": [
+          "12",
+          "3",
+          "5",
+          "33"
+        ],
+        "blocker": 0,
+        "envied_subset": 68,
+        "top_up": 24,
+        "threshold": "30",
+        "deficit": "9"
+      },
+      "attempts": []
+    }
+  },
+  {
+    "name": "champion_safety_failure",
+    "values": [
+      [
+        10,
+        0,
+        6,
+        2,
+        2,
+        4,
+        6,
+        0,
+        0,
+        7
+      ],
+      [
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        5,
+        5,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        0,
+        6,
+        6,
+        6,
+        18,
+        4,
+        4,
+        4,
+        3
+      ]
+    ],
+    "initial": [
+      1,
+      2,
+      28,
+      480
+    ],
+    "priority": [
+      3,
+      0,
+      1,
+      2
+    ],
+    "result": {
+      "scope": "D12-D14 local moves; failure is not global impossibility",
+      "move": null,
+      "attempts": [
+        {
+          "blocker": 0,
+          "envied_subset": 68,
+          "threshold": "30",
+          "deficit": "9",
+          "available_value": "20",
+          "minimal_top_ups": [
+            24,
+            136,
+            264,
+            144,
+            272
+          ],
+          "failures": [
+            {
+              "top_up": 24,
+              "unsafe_to": [
+                0
+              ]
+            },
+            {
+              "top_up": 136,
+              "unsafe_to": [
+                0
+              ]
+            },
+            {
+              "top_up": 264,
+              "unsafe_to": [
+                0
+              ]
+            },
+            {
+              "top_up": 144,
+              "unsafe_to": [
+                0
+              ]
+            },
+            {
+              "top_up": 272,
+              "unsafe_to": [
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "base_obstructions": [
+        {
+          "compensation": 476,
+          "blockers": [
+            {
+              "agent": 0,
+              "subset": 68,
+              "displaced_value": "21"
+            }
+          ]
+        }
+      ]
+    },
+    "mode_c_witness": {
+      "deleted": 7,
+      "recipient": 2,
+      "predecessor": [
+        832,
+        10,
+        5,
+        48
+      ],
+      "allocation": [
+        832,
+        10,
+        133,
+        48
+      ]
+    }
+  }
+]

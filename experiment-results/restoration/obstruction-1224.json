@@ -1,0 +1,236 @@
+{
+  "profile": [
+    1,
+    2,
+    2,
+    4
+  ],
+  "status": "sat",
+  "values": [
+    [
+      "10",
+      "8",
+      "3",
+      "5",
+      "2",
+      "1",
+      "1",
+      "1",
+      "1",
+      "5"
+    ],
+    [
+      "1",
+      "8",
+      "1",
+      "1",
+      "2",
+      "1",
+      "3",
+      "1",
+      "3",
+      "7"
+    ],
+    [
+      "18",
+      "1",
+      "10",
+      "5",
+      "5",
+      "6",
+      "1",
+      "1",
+      "1",
+      "5"
+    ],
+    [
+      "11",
+      "11",
+      "1",
+      "5",
+      "6",
+      "4",
+      "4",
+      "4",
+      "1",
+      "9"
+    ]
+  ],
+  "initial": [
+    1,
+    6,
+    24,
+    480
+  ],
+  "omitted": 9,
+  "analysis": {
+    "graph": [
+      [
+        1
+      ],
+      [],
+      [
+        0,
+        1
+      ],
+      []
+    ],
+    "sources": [
+      2,
+      3
+    ],
+    "options": [
+      {
+        "source": 2,
+        "reachable_agents": [
+          0,
+          1,
+          2
+        ],
+        "candidates": [
+          {
+            "bundle": 528,
+            "champions": [
+              3
+            ],
+            "reachable": []
+          },
+          {
+            "bundle": 520,
+            "champions": [
+              3
+            ],
+            "reachable": []
+          }
+        ]
+      },
+      {
+        "source": 3,
+        "reachable_agents": [
+          3
+        ],
+        "candidates": [
+          {
+            "bundle": 768,
+            "champions": [
+              1
+            ],
+            "reachable": []
+          },
+          {
+            "bundle": 576,
+            "champions": [
+              1
+            ],
+            "reachable": []
+          },
+          {
+            "bundle": 544,
+            "champions": [
+              2
+            ],
+            "reachable": []
+          }
+        ]
+      }
+    ],
+    "moves": []
+  },
+  "integer_values": [
+    [
+      10,
+      8,
+      3,
+      5,
+      2,
+      1,
+      1,
+      1,
+      1,
+      5
+    ],
+    [
+      1,
+      8,
+      1,
+      1,
+      2,
+      1,
+      3,
+      1,
+      3,
+      7
+    ],
+    [
+      18,
+      1,
+      10,
+      5,
+      5,
+      6,
+      1,
+      1,
+      1,
+      5
+    ],
+    [
+      11,
+      11,
+      1,
+      5,
+      6,
+      4,
+      4,
+      4,
+      1,
+      9
+    ]
+  ],
+  "nearest_escape": {
+    "status": "FOUND",
+    "max_radius": 5,
+    "completed_radii": [
+      {
+        "radius": 0,
+        "partitions_checked": 1
+      }
+    ],
+    "partitions_checked": 9,
+    "seconds": 0.013521674999992683,
+    "minimum_radius": 1,
+    "witness": {
+      "predecessor": [
+        280,
+        6,
+        1,
+        224
+      ],
+      "deleted": 9,
+      "recipient": 2,
+      "allocation": [
+        280,
+        6,
+        513,
+        224
+      ]
+    },
+    "movement": {
+      "distance": 1,
+      "target_agent_by_initial_block": [
+        2,
+        1,
+        0,
+        3
+      ],
+      "changed_goods": [
+        {
+          "good": 8,
+          "from_slot": 3,
+          "to_slot": 2
+        }
+      ],
+      "omitted_slot": 4
+    },
+    "minimum_certified": true
+  }
+}

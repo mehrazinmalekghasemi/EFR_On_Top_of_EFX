@@ -5,8 +5,7 @@ import tarfile
 import tempfile
 import unittest
 from unittest.mock import patch
-import ci
-
+from efr import ci
 class WorkflowTests(unittest.TestCase):
     def checkpoint(self,path,goal='extension',shards=4,shard=1):
         ci.save(path/'campaign.json',ci.identity(goal,shards,shard))

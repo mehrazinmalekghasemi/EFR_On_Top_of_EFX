@@ -1,0 +1,83 @@
+{
+  "run_id": 35576951293,
+  "commit": "632526ba89bf3e33f499907330233f1d3356a232",
+  "conclusion": "success",
+  "jobs": [
+    {
+      "seed": 42,
+      "requested_profiles": 40,
+      "budget_seconds": 180,
+      "seconds": 0.8135552159999975,
+      "skipped_starts": 14,
+      "regressions": {
+        "cases": 9,
+        "stages": {
+          "direct": 3,
+          "TRAPPED": 4,
+          "exchange": 1,
+          "ownership": 1
+        },
+        "exchange_depths": {
+          "0": 4,
+          "1": 1
+        },
+        "verified_traps": 4,
+        "traps_with_unrestricted_extension": 4
+      },
+      "samples": {
+        "cases": 66,
+        "stages": {
+          "direct": 50,
+          "TRAPPED": 6,
+          "ownership": 2,
+          "exchange": 8
+        },
+        "exchange_depths": {
+          "0": 52,
+          "1": 8
+        },
+        "verified_traps": 6,
+        "traps_with_unrestricted_extension": 6
+      },
+      "scope": "Finite seeded samples and exact restricted-graph certificates; no universal claim."
+    },
+    {
+      "seed": 1729,
+      "requested_profiles": 40,
+      "budget_seconds": 180,
+      "seconds": 0.5590267990000015,
+      "skipped_starts": 10,
+      "regressions": {
+        "cases": 9,
+        "stages": {
+          "direct": 3,
+          "TRAPPED": 4,
+          "exchange": 1,
+          "ownership": 1
+        },
+        "exchange_depths": {
+          "0": 4,
+          "1": 1
+        },
+        "verified_traps": 4,
+        "traps_with_unrestricted_extension": 4
+      },
+      "samples": {
+        "cases": 70,
+        "stages": {
+          "direct": 58,
+          "TRAPPED": 3,
+          "ownership": 5,
+          "exchange": 4
+        },
+        "exchange_depths": {
+          "0": 63,
+          "1": 4
+        },
+        "verified_traps": 3,
+        "traps_with_unrestricted_extension": 3
+      },
+      "scope": "Finite seeded samples and exact restricted-graph certificates; no universal claim."
+    }
+  ]
+}

@@ -1,13 +1,12 @@
-"""Run: python3 -m unittest -v test_engine. Deliberately independent small oracle."""
+"""Run: python3 -m unittest -v tests.test_engine. Deliberately independent small oracle."""
 import itertools,json,tempfile,unittest
 from pathlib import Path
 from fractions import Fraction
 import numpy as np
 import z3
-import oracle as o
-import search
-import verify
-
+from efr import oracle as o
+from efr import search
+from efr import verify
 def brute_counts(V,missing):
     m=len(V[0]);goods=[g for g in range(m) if g!=missing]
     efx=0;ext=0
