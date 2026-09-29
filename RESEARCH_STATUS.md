@@ -1,5 +1,14 @@
 # EFX-nine to EFR-ten: research status and proof roadmap
 
+Latest whole-template attempt (2026-09-29): [trying to close 1125_041](research/TRYING_TO_CLOSE_1125_041.md)
+retains four exact rational probes. They refute sufficiency of one-good
+replacement, arbitrary self-trimming plus reverse compensation, and all
+pool-free one-item-for-subset Pareto swaps. Every retained point has an
+independently checked EFX Pareto escape. D24 adds weak endpoint acceptance
+on a strict envy path; D25 combines source exchange, g, and released goods.
+The low-pool branch is covered by D19, but the full high-pool disjunction is
+unproved. No template count changes and no global campaign was launched.
+
 Latest focused results (2026-09-28): [three-source targets and return](research/THREE_SOURCE_TARGETS_AND_RETURN.md)
 proves D21 (singleton pair champion repairs mutual triple danger outside the
 D17 guard), D22 (a sole forbidden-pair observer reachable from the quad source

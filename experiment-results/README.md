@@ -98,3 +98,11 @@ reroutings, not all moves or EFR existence. See
 for both priority branches, an early-champion repair, and a case with enough
 leftover value but no safe top-up. The latter includes an independently checked
 Mode C witness. Scope and proofs: [D14–D15](../research/SINGLETON_BLOCKER_TOP_UP.md).
+
+## Targeted attempt at `1125_041` (2026-09-29)
+
+`template-1125-041/witnesses.json` contains four normalized exact rational
+instances refuting specified repair menus, with independently verified EFX
+Pareto escapes. These are not EFR counterexamples. The bounded reproducer is
+`scripts/research/probe_1125_041.py`; the proofs and scope are in
+[the template note](../research/TRYING_TO_CLOSE_1125_041.md).
